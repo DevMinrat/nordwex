@@ -21,6 +21,8 @@ html {
   }
 }
 
+
+
 *,
 *:before,
 *:after {
@@ -99,7 +101,9 @@ svg {
 
 @import "blocks/product";
 
-@import "blocks/catalog.scss";
+@import "blocks/catalog";
+
+@import "blocks/compare.scss";
 
 @import "blocks/footer";
 

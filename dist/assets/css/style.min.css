@@ -4110,6 +4110,68 @@ button.swiper-pagination-bullet {
   margin-right: 0.5rem;
 }
 
+.compare-cards {
+  margin-bottom: 11rem;
+}
+
+.compare-cards {
+  display: flex;
+}
+
+.compare-cards__item {
+  width: 100%;
+  max-width: 30rem;
+}
+.compare-cards__item + .compare-cards__item {
+  margin-left: 2rem;
+}
+
+.compare-cards__item-link {
+  display: block;
+  padding: 2rem 1.8rem 1.4rem;
+  border: 1px solid #dadada;
+}
+.compare-cards__item-link:hover {
+  border-color: #e30613;
+}
+
+.compare-cards__item-img {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  height: auto;
+  margin: 0 auto 2rem;
+}
+
+.compare-unsimilar label {
+  color: black;
+  font-size: 1.6rem;
+}
+
+.compare-info__item {
+  padding: 2.1rem 2.4rem;
+  height: 8.9rem;
+}
+.compare-info__item:nth-child(odd) {
+  background: rgba(183, 26, 26, 0.05);
+}
+
+.compare-info__item-heading {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5rem;
+}
+
+.compare-info__item-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  column-gap: 2rem;
+}
+.compare-info__item-content p {
+  font-size: 1.6rem;
+}
+
 .footer {
   padding: 5rem 0 4rem;
   background-color: #231f20;
