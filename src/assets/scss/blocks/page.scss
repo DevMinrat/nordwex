@@ -1,0 +1,17 @@
+.page {
+  overflow: hidden;
+}
+
+.page-heading {
+  font-weight: 700;
+  font-size: 4rem;
+  color: $black;
+
+  margin-bottom: 4rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+
+    margin-bottom: 2.4rem;
+  }
+}

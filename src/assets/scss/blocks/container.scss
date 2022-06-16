@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+  max-width: 130rem;
+
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  @include breakpoint($sm-bp) {
+    padding: 0 0.8rem;
+  }
+}
