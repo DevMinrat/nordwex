@@ -4288,6 +4288,7 @@ button.swiper-pagination-bullet {
 @media (max-width: 500px) {
   .brandsTitle {
     padding: 0 0.8rem;
+    margin-top: 2rem;
   }
 }
 
@@ -4307,6 +4308,12 @@ button.swiper-pagination-bullet {
   background-size: 100%;
 }
 
+@media (max-width: 500px) {
+  .product-acc {
+    display: none;
+  }
+}
+
 .searchBrand::-webkit-input-placeholder {
   text-align: center;
 }
@@ -4318,12 +4325,44 @@ button.swiper-pagination-bullet {
 
 .redLine {
   border: 1px solid #B71A1B;
+  margin-bottom: 3.9rem;
+}
+@media (max-width: 500px) {
+  .redLine {
+    display: none;
+  }
+}
+@media (max-width: 920px) {
+  .redLine {
+    display: none;
+  }
 }
 
+.mainContent {
+  margin-bottom: 11.3rem;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .mainContent {
+    flex-direction: column;
+    margin-top: 3.9rem;
+  }
+}
 .mainContent .mainContentItems {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: 14rem;
+}
+@media (max-width: 500px) {
+  .mainContent .mainContentItems {
+    flex-direction: column;
+    gap: 3.9rem;
+  }
+}
+@media (max-width: 920px) {
+  .mainContent .mainContentItems {
+    gap: 2.9rem;
+  }
 }
 .mainContent .mainContentItems .capitalLetter {
   width: 2.9rem;
@@ -4338,6 +4377,10 @@ button.swiper-pagination-bullet {
   line-height: 140%;
   text-align: center;
   color: #000000;
+  margin-bottom: 2rem;
+}
+.mainContent .mainContentItems .capitalLetter:not(:first-child) {
+  margin-top: 2rem;
 }
 .mainContent .mainContentItems .oterText {
   padding-left: 0.4rem;
@@ -4352,6 +4395,86 @@ button.swiper-pagination-bullet {
   font-size: 1.6rem;
   line-height: 140%;
   color: #503E3F;
+}
+
+.mobilePopularTitle {
+  display: none;
+  height: 8rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-align: center;
+  color: #FFFFFF;
+  background: #B71A1B;
+}
+@media (max-width: 500px) {
+  .mobilePopularTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.mobileBrandItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logoContainer {
+  display: none;
+}
+@media (max-width: 500px) {
+  .logoContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+  .logoContainer div {
+    align-self: center;
+  }
+  .logoContainer div .euroChemLogo {
+    width: 15.1rem;
+    height: 3rem;
+  }
+  .logoContainer div .rosneftLogo {
+    width: 11.3rem;
+    height: 5.9rem;
+  }
+  .logoContainer div .nlmkLogo {
+    width: 9.3rem;
+    height: 4.9rem;
+  }
+}
+
+.mobileBrandItem {
+  margin-top: 2rem;
+}
+
+.chevrondownIco {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.moreBrandsContainer {
+  display: none;
+}
+@media (max-width: 500px) {
+  .moreBrandsContainer {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 100%;
+    color: #E30613;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.8rem;
+    margin-bottom: 4.8rem;
+  }
 }
 
 .hide {

@@ -4904,6 +4904,100 @@ button.swiper-pagination-bullet {
     }
 }
 
+.brandsTitle {
+    width: 100%;
+    max-width: 130rem;
+    padding: 0 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6rem;
+    font-weight: bold;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.9rem;
+    color: #240E0E;
+}
+
+@media (max-width: 500px) {
+    .brandsTitle {
+        padding: 0 0.8rem;
+    }
+}
+
+.searchBrand {
+    background-image: url(../../images/icons/search.svg);
+    border: 1px solid #DADADA;
+    width: 62.1rem;
+    height: 6rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 140%;
+    color: #240E0E;
+    outline: none;
+    padding-left: 1.5rem;
+    background-size: 100%;
+}
+
+.searchBrand::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.searchContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.redLine {
+    border: 1px solid #B71A1B;
+}
+
+.mainContent .mainContentItems {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mainContent .mainContentItems .capitalLetter {
+    width: 2.9rem;
+    height: 3.4rem;
+    opacity: 0.5;
+    border-bottom: 2px solid #000000;
+    text-align: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 140%;
+    text-align: center;
+    color: #000000;
+}
+
+.mainContent .mainContentItems .oterText {
+    padding-left: 0.4rem;
+    gap: 2.8rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.mainContent .mainContentItems .oterText p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 140%;
+    color: #503E3F;
+}
+
 .hide {
     display: none;
 }
