@@ -10653,6 +10653,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     }
+  }); //about page benefits slider
+
+  var apBenefitsSlider = new Swiper(".aboutPage-benefits", {
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    freeMode: true
   });
 
   var ItcTabs = /*#__PURE__*/function () {
