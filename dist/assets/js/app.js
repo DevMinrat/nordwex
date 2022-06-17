@@ -10411,7 +10411,31 @@ document.addEventListener("DOMContentLoaded", function () {
     var modules = [Virtual, Keyboard, Mousewheel, Navigation, Pagination, Scrollbar, Parallax, Zoom, Lazy, Controller, A11y, History, HashNavigation, Autoplay, Thumb, freeMode, Grid, Manipulation, EffectFade, EffectCube, EffectFlip, EffectCoverflow, EffectCreative, EffectCards];
     Swiper.use(modules);
     return Swiper;
-  }); // intro slider
+  });
+
+  var compareSectTitle = document.querySelectorAll(".compare-info__section-heading"),
+      compareSectContent = document.querySelectorAll(".compare-info__section-content");
+
+  if (compareSectTitle.length > 0) {
+    var _loop2 = function _loop2(i) {
+      compareSectContent[0].style.maxHeight = compareSectContent[0].scrollHeight + "px";
+      compareSectTitle[0].classList.add("active");
+      compareSectTitle[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = compareSectContent[i];
+
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    };
+
+    for (var i = 0; i < compareSectTitle.length; i++) {
+      _loop2(i);
+    }
+  } // intro slider
 
 
   var introFractCurrent = document.querySelector(".intro-fraction-current");
@@ -10758,12 +10782,13 @@ document.addEventListener("DOMContentLoaded", function () {
       prodAccContent = document.querySelectorAll(".product-section__content");
 
   if (prodAccTitle.length > 0) {
-    var _loop2 = function _loop2(i) {
+    var _loop3 = function _loop3(_i14) {
       prodAccContent[0].style.maxHeight = prodAccContent[0].scrollHeight + "px";
       prodAccTitle[0].classList.add("active");
-      prodAccTitle[i].addEventListener("click", function () {
+
+      prodAccTitle[_i14].addEventListener("click", function () {
         this.classList.toggle("active");
-        var panel = prodAccContent[i];
+        var panel = prodAccContent[_i14];
 
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
@@ -10773,8 +10798,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     };
 
-    for (var i = 0; i < prodAccTitle.length; i++) {
-      _loop2(i);
+    for (var _i14 = 0; _i14 < prodAccTitle.length; _i14++) {
+      _loop3(_i14);
     }
   } // catalog & filter
 
@@ -10790,14 +10815,14 @@ document.addEventListener("DOMContentLoaded", function () {
       filterItemContent = document.querySelectorAll(".filter-item__content");
 
   if (filterTitle.length > 0) {
-    var _loop3 = function _loop3(_i14) {
+    var _loop4 = function _loop4(_i15) {
       filterItemContent[0].style.maxHeight = filterItemContent[0].scrollHeight + "px";
       filterTitle[0].classList.add("active");
 
-      filterTitle[_i14].addEventListener("click", function () {
+      filterTitle[_i15].addEventListener("click", function () {
         this.classList.toggle("active");
-        var panel = filterItemContent[_i14];
-        console.log(panel, filterItemContent[_i14], _i14);
+        var panel = filterItemContent[_i15];
+        console.log(panel, filterItemContent[_i15], _i15);
 
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
@@ -10807,8 +10832,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     };
 
-    for (var _i14 = 0; _i14 < filterTitle.length; _i14++) {
-      _loop3(_i14);
+    for (var _i15 = 0; _i15 < filterTitle.length; _i15++) {
+      _loop4(_i15);
     }
   }
 
