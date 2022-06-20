@@ -1,0 +1,469 @@
+.brandsSecondLevelTitleContainer {
+    width: 100%;
+    max-width: 130rem;
+    padding: 0 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6rem;
+
+    .brandName {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 4.9rem;
+        color: #240E0E;
+        margin-bottom: 4rem;
+    }
+
+    .yokogamaLogo {
+        margin-bottom: 2.4rem;
+    }
+
+    .brandSubtitle {
+        width: 65rem;
+        height: 12rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 140%;
+        color: #240E0E;
+        opacity: 0.8;
+    }
+
+    .japan {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 140%;
+        color: #503E3F;
+    }
+}
+
+//////////////////
+
+.popular__heading-wrapperSec {
+    width: 100%;
+    border-top: 0.1rem solid #dadada;
+    background-image: url(../../images/brands/Rectangle.jpg);
+  }
+  
+  .popular__heading {
+    width: max-content;
+  
+    padding: 4.3rem 0;
+  
+    background-color: $secondary;
+  
+    clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+  
+    @include breakpoint($lg-bp) {
+      width: 100%;
+  
+      clip-path: none;
+      padding: 3rem 5rem;
+    }
+  
+    @include breakpoint($sm-bp) {
+      padding: 1.6rem 5rem;
+    }
+  
+    h2 {
+      font-weight: 700;
+      font-size: 4rem;
+      color: white;
+  
+      margin-left: 33rem;
+      margin-right: 10.6rem;
+  
+      @include breakpoint($lg-bp) {
+        text-align: center;
+  
+        margin: 0 auto;
+      }
+  
+      @include breakpoint($sm-bp) {
+        max-width: unset;
+  
+        font-size: 2rem;
+  
+        margin: 0 0.8rem;
+      }
+    }
+  }
+
+/////////////
+
+
+.productsControlPanel {
+    
+    margin-bottom: 4.6rem;
+
+    @include breakpoint($sm-bp) {
+        display: none;
+      }
+    
+    .helpPositionContainer {
+        display: flex;
+        width: 100%;
+        max-width: 130rem;
+        padding: 0 2rem;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+
+.leftControllPanelContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding-top: 3.2rem;
+}
+
+.productsControlPanel {
+    background: #2E2A2B;
+}
+
+.controlPanelImgContainer {
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlTitle {
+    display: flex;
+    gap: 1.8rem;   
+}
+
+.controlText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radioCotainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    border-left: 0.1rem solid #393536;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #FFFFFF;
+    margin-left: 9.1rem;
+    padding-bottom: 3.65rem;
+    padding-top: 2.6rem;
+
+    label {
+        cursor: pointer;
+    }
+
+    .radioElementContainer {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        padding-left: 2.8rem;
+    }
+
+    .radioElement {
+        cursor: pointer;
+        position: relative;
+        height: 1.6rem;
+        width: 1.6rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        border: 0.1rem solid #ffffff73;
+        border-radius: 50%;
+      }
+      
+      .radioElement:checked:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #E30613;
+        border: none;
+      }
+      
+      .radioElement:checked::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 50%;
+        background-color: #2E2A2B;
+        transform: translate(-50%, -50%);
+        visibility: visible;
+      }
+}
+
+.productContainer {
+    display: flex;
+    width: 100%;
+    max-width: 130rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4.25rem;
+    margin-bottom: 14.3rem;
+    gap: 1.9rem;
+
+    .controlPannel {
+        width: 100%;
+        max-width: 30rem;
+        height: 71rem;
+      
+        padding: 2rem;
+        margin-right: 2.1rem;
+      
+        background-color: #2e2a2b;
+      
+        @include breakpoint($lg-bp) {
+          max-width: unset;
+      
+          margin-right: 0;
+        }
+      }
+      
+      .filter-heading {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+      
+        padding: 0.8rem 0.8rem 0.8rem 1.6rem;
+      
+        background-color: #2e2a2b;
+      
+        cursor: pointer;
+      
+        &.active {
+          .filter-heading__chevron {
+            transform: rotate(90deg);
+          }
+        }
+      
+        @include breakpoint($lg-bp) {
+          display: flex;
+        }
+      }
+      
+      .filter-heading__left {
+        display: flex;
+        align-items: center;
+      
+        svg {
+          width: 2rem;
+          height: 2rem;
+      
+          fill: white;
+      
+          margin-right: 1.2rem;
+        }
+      
+        p {
+          font-size: 1.6rem;
+          line-height: 1.25rem;
+          color: white;
+        }
+      }
+      
+      .filter-heading__chevron {
+        width: 2.4rem;
+        height: 2.4rem;
+      
+        fill: white;
+      
+        transform: rotate(-90deg);
+      }
+      
+      .filter-item {
+        margin-bottom: 2.2rem;
+      
+        &:not(:first-child) {
+          padding-top: 2rem;
+      
+          border-top: 0.1rem solid rgba(218, 218, 218, 0.1);
+        }
+      }
+      
+      .filter-price__heading {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5rem;
+        color: white;
+      
+        cursor: pointer;
+      
+        margin-bottom: 0.8rem;
+      }
+      
+      .filter-item__content {
+        overflow: hidden;
+        max-height: 0;
+      
+        transition: all 0.1s linear;
+      }
+      
+      .filter-item__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5rem;
+        color: white;
+      
+        cursor: pointer;
+      
+        margin-bottom: 0;
+      
+        &.active {
+          margin-bottom: 1.6rem;
+          svg {
+            transform: rotate(-90deg);
+          }
+        }
+      
+        svg {
+          width: 2.8rem;
+          height: 2.8rem;
+      
+          fill: white;
+      
+          transform: rotate(90deg);
+        }
+      }
+      
+      .filter-price__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.2rem;
+      
+        margin-bottom: 2.4rem;
+      
+        label {
+          position: relative;
+        }
+      
+        label span {
+          position: absolute;
+          left: 0.8rem;
+          top: 0.4rem;
+          z-index: 1;
+      
+          font-weight: 500;
+          font-size: 1rem;
+          color: #dadada;
+        }
+      
+        input {
+          width: 100%;
+          height: 4.1rem;
+      
+          font-weight: 500;
+          font-size: 1.4rem;
+          color: #240e0e;
+      
+          padding: 1.6rem 0.8rem 0.5rem;
+      
+          background-color: white;
+          border: none;
+        }
+      }
+}
+
+    .productsItems {
+    
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.1rem;
+
+        .productItem {
+            width: 30rem;
+            height: 53rem;
+            border: 0.1rem solid #DADADA;
+        }
+    
+        .productItemName {
+            width: 19.7rem;
+            height: 5.2rem;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 2.2rem;
+            line-height: 120%;
+            color: #240E0E;
+            margin-top: 2.4rem;
+            margin-left: 2.8rem;
+        }
+    
+        .productItemImageContainer {
+            height: 32.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .productItemDescriptionContainer {
+    
+            padding-top: 1.3rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            border-top: 0.1rem solid #DADADA;
+    
+            .productItemTitle {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 120%;
+                color: #240E0E;
+            }
+    
+            .productItemDescription {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 1.4rem;
+                line-height: 140%;
+                color: #240E0E;
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .catalog-grid2 {
+        display: none;
+        align-items: center;
+        justify-content: flex-end;
+      
+        margin-bottom: 2.5rem;
+      
+        @include breakpoint($sm-bp) {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 1.5rem;
+        }
+      }
