@@ -4294,6 +4294,12 @@ button.swiper-pagination-bullet {
   font-size: 1.6rem;
 }
 
+@media (max-width: 500px) {
+  .aboutPage {
+    margin-top: 2rem;
+  }
+}
+
 .aboutPage-intro {
   width: 100%;
   max-width: 134rem;
@@ -4305,11 +4311,23 @@ button.swiper-pagination-bullet {
   background: url(../images/about-page/about-p-bg.png) no-repeat;
   background-size: cover;
 }
+@media (max-width: 500px) {
+  .aboutPage-intro {
+    height: 17rem;
+    margin: 0 auto 2rem;
+  }
+}
 
 .aboutPage-intro__logo {
-  width: 65.8rem;
+  width: 100%;
+  max-width: 65.8rem;
   height: 18.3rem;
   fill: #e30613;
+}
+@media (max-width: 500px) {
+  .aboutPage-intro__logo {
+    max-width: 27.5rem;
+  }
 }
 
 .aboutPage-heading {
@@ -4318,12 +4336,23 @@ button.swiper-pagination-bullet {
   border-top: 0.1rem solid #dadada;
   border-bottom: 0.1rem solid #dadada;
 }
+@media (max-width: 500px) {
+  .aboutPage-heading {
+    padding: 1.2rem 0;
+    margin-bottom: 4rem;
+  }
+}
 
 .aboutPage-heading__text {
   text-align: center;
   font-weight: 500;
   font-size: 2.4rem;
   color: #b71a1b;
+}
+@media (max-width: 500px) {
+  .aboutPage-heading__text {
+    font-size: 1.4rem;
+  }
 }
 
 .aboutPage-team__inner {
@@ -4332,10 +4361,27 @@ button.swiper-pagination-bullet {
   display: flex;
   margin: 0 auto;
 }
+@media (max-width: 920px) {
+  .aboutPage-team__inner {
+    flex-direction: column;
+  }
+}
 
 .aboutPage-team__wrapper {
   display: flex;
   margin-right: 1.2rem;
+}
+@media (max-width: 920px) {
+  .aboutPage-team__wrapper {
+    align-self: center;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .aboutPage-team__wrapper {
+    flex-direction: column;
+  }
 }
 
 .aboutPage-team__item {
@@ -4345,6 +4391,12 @@ button.swiper-pagination-bullet {
 }
 .aboutPage-team__item + .aboutPage-team__item {
   margin-left: 1.2rem;
+}
+@media (max-width: 500px) {
+  .aboutPage-team__item + .aboutPage-team__item {
+    margin-left: 0;
+    margin-top: 4rem;
+  }
 }
 
 .aboutPage-team__item-img {
@@ -4357,6 +4409,11 @@ button.swiper-pagination-bullet {
   width: 100%;
   max-width: 53rem;
 }
+@media (max-width: 920px) {
+  .aboutPage-team__info {
+    align-self: center;
+  }
+}
 
 .aboutPage-team__info-heading {
   font-weight: 400;
@@ -4366,12 +4423,44 @@ button.swiper-pagination-bullet {
   padding: 3.3rem 0;
   background-color: #b71a1b;
 }
+@media (max-width: 920px) {
+  .aboutPage-team__info-heading {
+    display: none;
+  }
+}
+.aboutPage-team__info-heading--mob {
+  display: none;
+  margin-bottom: 2rem;
+}
+@media (max-width: 920px) {
+  .aboutPage-team__info-heading--mob {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .aboutPage-team__info-heading--mob {
+    font-size: 1.6rem;
+    margin: 0 -2rem 2.2rem;
+    padding: 2.2rem 5rem;
+  }
+}
 
 .aboutPage-team__info-descr {
   min-height: 27rem;
   padding: 5rem 2.7rem 3rem;
   border: 0.1rem solid #dadada;
   border-top: none;
+}
+@media (max-width: 920px) {
+  .aboutPage-team__info-descr {
+    border: none;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  .aboutPage-team__info-descr {
+    padding: 5rem 2rem 6rem;
+  }
 }
 
 .ap-info__descr-item {
@@ -4405,11 +4494,21 @@ button.swiper-pagination-bullet {
   border-left: 0.1rem solid #dadada;
   border-right: 0.1rem solid #dadada;
 }
+@media (max-width: 920px) {
+  .aboutPage-team__info-gap {
+    display: none;
+  }
+}
 
 .aboutPage-industries {
   display: flex;
   align-items: center;
   background-color: #231f20;
+}
+@media (max-width: 920px) {
+  .aboutPage-industries {
+    flex-direction: column;
+  }
 }
 
 .aboutPage-industries__heading-wrapper {
@@ -4431,7 +4530,7 @@ button.swiper-pagination-bullet {
 }
 @media (max-width: 500px) {
   .aboutPage-industries__heading-wrapper {
-    padding: 1.6rem 5rem 2.8rem;
+    padding: 2.2rem 1rem 6rem;
   }
 }
 
@@ -4457,7 +4556,8 @@ button.swiper-pagination-bullet {
 @media (max-width: 500px) {
   .aboutPage-industries__heading {
     max-width: unset;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
     margin: 0 0.8rem;
   }
 }
@@ -4466,6 +4566,18 @@ button.swiper-pagination-bullet {
   display: flex;
   align-items: center;
 }
+@media (max-width: 920px) {
+  .aboutPage-industries__content {
+    padding: 2rem 0;
+  }
+}
+@media (max-width: 500px) {
+  .aboutPage-industries__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 5rem;
+  }
+}
 .aboutPage-industries__content img {
   width: 100%;
   max-width: 11.6rem;
@@ -4473,12 +4585,27 @@ button.swiper-pagination-bullet {
 .aboutPage-industries__content img + img {
   margin-left: 2rem;
 }
+@media (max-width: 500px) {
+  .aboutPage-industries__content img + img {
+    margin-left: 0;
+  }
+}
 
 .aboutPage-benefits {
   padding: 4.5rem;
   margin-bottom: 6rem;
-  cursor: grab;
   border-bottom: 0.1rem solid #dadada;
+}
+@media (max-width: 920px) {
+  .aboutPage-benefits {
+    padding: 3.5rem 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .aboutPage-benefits {
+    padding: 2.5rem 0.8rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .aboutPage-benefits__item {
@@ -4488,6 +4615,18 @@ button.swiper-pagination-bullet {
   color: #240e0e;
   opacity: 0.5;
   padding: 0 3rem;
+  user-select: none;
+}
+@media (max-width: 920px) {
+  .aboutPage-benefits__item {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 500px) {
+  .aboutPage-benefits__item {
+    font-size: 1.4rem;
+    padding: 0 2rem;
+  }
 }
 .aboutPage-benefits__item:not(:first-child) {
   border-left: 0.1rem solid #dadada;
@@ -4502,6 +4641,12 @@ button.swiper-pagination-bullet {
   background: url(../images/about-page/about-p-bg.png) no-repeat;
   background-position: top center;
 }
+@media (max-width: 500px) {
+  .aboutPage-map {
+    padding-top: 4rem;
+    margin-bottom: 9rem;
+  }
+}
 
 .aboutPage-map__descr {
   position: relative;
@@ -4510,11 +4655,18 @@ button.swiper-pagination-bullet {
   font-weight: 300;
   font-size: 1.6rem;
   text-align: center;
-  color: #240e0e;
-  opacity: 0.8;
+  color: rgba(36, 14, 14, 0.8);
   margin: 0 auto 1.5rem;
   padding: 2.5rem 3.5rem;
   background-color: #fff;
+}
+@media (max-width: 500px) {
+  .aboutPage-map__descr {
+    max-width: 30rem;
+    padding: 2.5rem 0 0;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
 }
 .aboutPage-map__descr::before {
   content: "";

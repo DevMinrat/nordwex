@@ -1,3 +1,9 @@
+.aboutPage {
+  @include breakpoint($sm-bp) {
+    margin-top: 2rem;
+  }
+}
+
 .aboutPage-intro {
   width: 100%;
   max-width: 134rem;
@@ -11,13 +17,24 @@
 
   background: url(../images/about-page/about-p-bg.png) no-repeat;
   background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    height: 17rem;
+
+    margin: 0 auto 2rem;
+  }
 }
 
 .aboutPage-intro__logo {
-  width: 65.8rem;
+  width: 100%;
+  max-width: 65.8rem;
   height: 18.3rem;
 
   fill: $primary;
+
+  @include breakpoint($sm-bp) {
+    max-width: 27.5rem;
+  }
 }
 
 .aboutPage-heading {
@@ -26,6 +43,12 @@
 
   border-top: 0.1rem solid #dadada;
   border-bottom: 0.1rem solid #dadada;
+
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem 0;
+
+    margin-bottom: 4rem;
+  }
 }
 
 .aboutPage-heading__text {
@@ -33,6 +56,10 @@
   font-weight: 500;
   font-size: 2.4rem;
   color: #b71a1b;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+  }
 }
 
 .aboutPage-team__inner {
@@ -42,12 +69,27 @@
   display: flex;
 
   margin: 0 auto;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+  }
 }
 
 .aboutPage-team__wrapper {
   display: flex;
 
   margin-right: 1.2rem;
+
+  @include breakpoint($lg-bp) {
+    align-self: center;
+
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+  }
 }
 
 .aboutPage-team__item {
@@ -57,6 +99,11 @@
 
   & + & {
     margin-left: 1.2rem;
+
+    @include breakpoint($sm-bp) {
+      margin-left: 0;
+      margin-top: 4rem;
+    }
   }
 }
 
@@ -70,6 +117,10 @@
 .aboutPage-team__info {
   width: 100%;
   max-width: 53rem;
+
+  @include breakpoint($lg-bp) {
+    align-self: center;
+  }
 }
 
 .aboutPage-team__info-heading {
@@ -81,6 +132,26 @@
   padding: 3.3rem 0;
 
   background-color: $secondary;
+
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
+
+  &--mob {
+    display: none;
+    margin-bottom: 2rem;
+
+    @include breakpoint($lg-bp) {
+      display: block;
+    }
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.6rem;
+
+      margin: 0 -2rem 2.2rem;
+      padding: 2.2rem 5rem;
+    }
+  }
 }
 
 .aboutPage-team__info-descr {
@@ -90,6 +161,16 @@
 
   border: 0.1rem solid #dadada;
   border-top: none;
+
+  @include breakpoint($lg-bp) {
+    border: none;
+
+    margin: 0 auto;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 5rem 2rem 6rem;
+  }
 }
 
 .ap-info__descr-item {
@@ -129,6 +210,10 @@
 
   border-left: 0.1rem solid #dadada;
   border-right: 0.1rem solid #dadada;
+
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
 }
 
 .aboutPage-industries {
@@ -136,6 +221,10 @@
   align-items: center;
 
   background-color: #231f20;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+  }
 }
 
 .aboutPage-industries__heading-wrapper {
@@ -161,7 +250,7 @@
   }
 
   @include breakpoint($sm-bp) {
-    padding: 1.6rem 5rem 2.8rem;
+    padding: 2.2rem 1rem 6rem;
   }
 }
 
@@ -187,7 +276,8 @@
   @include breakpoint($sm-bp) {
     max-width: unset;
 
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
 
     margin: 0 0.8rem;
   }
@@ -197,6 +287,16 @@
   display: flex;
   align-items: center;
 
+  @include breakpoint($lg-bp) {
+    padding: 2rem 0;
+  }
+
+  @include breakpoint($sm-bp) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 5rem;
+  }
+
   img {
     width: 100%;
     max-width: 11.6rem;
@@ -204,6 +304,10 @@
 
   img + img {
     margin-left: 2rem;
+
+    @include breakpoint($sm-bp) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -211,9 +315,16 @@
   padding: 4.5rem;
   margin-bottom: 6rem;
 
-  cursor: grab;
-
   border-bottom: 0.1rem solid #dadada;
+
+  @include breakpoint($lg-bp) {
+    padding: 3.5rem 2rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 2.5rem 0.8rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .aboutPage-benefits__item {
@@ -226,7 +337,16 @@
 
   padding: 0 3rem;
 
-  //   white-space: nowrap;
+  user-select: none;
+
+  @include breakpoint($lg-bp) {
+    font-size: 1.8rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+    padding: 0 2rem;
+  }
 
   &:not(:first-child) {
     border-left: 0.1rem solid #dadada;
@@ -242,6 +362,11 @@
 
   background: url(../images/about-page/about-p-bg.png) no-repeat;
   background-position: top center;
+
+  @include breakpoint($sm-bp) {
+    padding-top: 4rem;
+    margin-bottom: 9rem;
+  }
 }
 
 .aboutPage-map__descr {
@@ -253,13 +378,21 @@
   font-weight: 300;
   font-size: 1.6rem;
   text-align: center;
-  color: #240e0e;
-  opacity: 0.8;
+  color: rgba(36, 14, 14, 0.8);
 
   margin: 0 auto 1.5rem;
   padding: 2.5rem 3.5rem;
 
   background-color: #fff;
+
+  @include breakpoint($sm-bp) {
+    max-width: 30rem;
+
+    padding: 2.5rem 0 0;
+
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
 
   &::before {
     content: "";

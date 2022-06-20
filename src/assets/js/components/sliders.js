@@ -260,4 +260,5 @@ let apBenefitsSlider = new Swiper(".aboutPage-benefits", {
   slidesPerView: "auto",
   spaceBetween: 0,
   freeMode: true,
+  grabCursor: true,
 });
