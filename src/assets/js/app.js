@@ -148,8 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let panel = filterItemContent[i];
 
-        console.log(panel, filterItemContent[i], i);
-
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
         } else {

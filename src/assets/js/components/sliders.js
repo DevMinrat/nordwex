@@ -256,6 +256,16 @@ let accessoriesSlider = new Swiper(".product-acc__slider", {
   },
 });
 
+
+//about page benefits slider
+
+let apBenefitsSlider = new Swiper(".aboutPage-benefits", {
+  slidesPerView: "auto",
+  spaceBetween: 0,
+  freeMode: true,
+  grabCursor: true,
+
+  
 //article slider
 
 const articleSlider = new Swiper(".mySwiper", {

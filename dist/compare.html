@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="index, follow">
     <meta name="description" content="">
-    <title>Главная страница</title>
+    <title>Сравнение товаров</title>
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700,300italic,italic,500italic,600italic,700italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Inter:500" rel="stylesheet" />
@@ -279,929 +279,233 @@
         <main>
 
             
-            <section class="intro">
+            <div class="breadcrumb-wrapper">
                 <div class="container">
-                    <div class="intro__inner">
-                        <div class="intro-top">
-                            <div class="intro-top__gaps">
-                                <div class="intro-top__gaps-left"></div>
-                                <div class="intro-top__gaps-right"></div>
-                            </div>
-                            <div class="intro-top__inner">
-                                <div class="intro-slider">
-                                    <div class="swiper-wrapper">
-                                        <a class="intro-slider__slide swiper-slide" href="#">
-                                            <picture>
-                                                <source srcset="assets/images/intro/intro-slider-bg-mob.png"
-                                                    media="(max-width: 500px)">
-                                                <source srcset="assets/images/intro/intro-slider-bg.png">
-                                                <img srcset="assets/images/intro/intro-slider-bg.png" alt="">
-                                            </picture>
-                                        </a>
-                                        <a class="intro-slider__slide swiper-slide" href="#">
-                                            <picture>
-                                                <source srcset="assets/images/intro/intro-slider-bg-mob.png"
-                                                    media="(max-width: 500px)">
-                                                <source srcset="assets/images/intro/intro-slider-bg.png">
-                                                <img srcset="assets/images/intro/intro-slider-bg.png" alt="">
-                                            </picture>
-                                        </a>
-                                        <a class="intro-slider__slide swiper-slide" href="#">
-                                            <picture>
-                                                <source srcset="assets/images/intro/intro-slider-bg-mob.png"
-                                                    media="(max-width: 500px)">
-                                                <source srcset="assets/images/intro/intro-slider-bg.png">
-                                                <img srcset="assets/images/intro/intro-slider-bg.png" alt="">
-                                            </picture>
-                                        </a>
-                                        <a class="intro-slider__slide swiper-slide" href="#">
-                                            <picture>
-                                                <source srcset="assets/images/intro/intro-slider-bg-mob.png"
-                                                    media="(max-width: 500px)">
-                                                <source srcset="assets/images/intro/intro-slider-bg.png">
-                                                <img srcset="assets/images/intro/intro-slider-bg.png" alt="">
-                                            </picture>
-                                        </a>
-                                    </div>
-                                    <div class="intro-navs">
-                                        <div class="intro-navs__left">
-                                            <div class="intro-fraction">
-                                                <span class="intro-fraction-current"></span>
-                                                /
-                                                <span class="intro-fraction-total"></span>
-                                            </div>
-                                            <div class="intro-pagination"></div>
-                                        </div>
-                                        <div class="slider-navs">
-                                            <div class="slider-button-prev">
-                                                <svg class="chevron">
-                                                    <use href="#chevron"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="slider-navs-gap"></div>
-                                            <div class="slider-button-next">
-                                                <svg class="chevron">
-                                                    <use href="#chevron"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="intro-top__nav-item" href="#">
-                                    <svg class="wheel-icon">
-                                        <use href="#wheel"></use>
-                                    </svg>
-                                    <p>Контрольно-измерительное оборудование</p>
+                    <nav aria-label="breadcrumb" class="breadcrumb">
+                        <a href="#">Главная</a>
+                        <span aria-current="page">Сравнение товаров</span>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="compare-navs">
+                <div class="container">
+                    <h1 class="page-heading">Сравнение товаров</h1>
+            
+                    <div class="compare-navs__inner">
+                        <a class="compare-navs__link" href="#">Контрольно-измерительные приборы
+                        </a>
+                        <a class="compare-navs__link" href="#">Автоматизация и роботизация
+                        </a>
+                        <a class="compare-navs__link" href="#">Метрологическое и лабораторно оборудование
+                        </a>
+                        <a class="compare-navs__link" href="#">Автоматизация и роботизация
+                        </a>
+                        <a class="compare-navs__link" href="#">Метрологическое и лабораторно оборудование
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="compare">
+                <div class="container">
+                    <div class="compare__inner">
+                        <div class="compare-cards">
+                            <div class="compare-cards__item">
+                                <a class="compare-cards__item-link" href="#">
+                                    <img class="compare-cards__item-img" src="assets/images/popular/equip-1.png" alt="">
+                                    <p class="compare-cards__item-heading">YokogawaElectric OGH-33456</p>
                                 </a>
-                            </div>
-                        </div>
-                        <div class="category-grid">
-                            <a class="category-grid__link" href="#">
-                                <svg class="meter-icon">
-                                    <use href="#meter"></use>
-                                </svg>
-                                <p>Неразрушающий контроль</p>
-                            </a>
-                            <a class="category-grid__link" href="#">
-                                <svg class="pump-icon">
-                                    <use href="#pump"></use>
-                                </svg>
-                                <p>Гидравилика и пневматика</p>
-                            </a>
-                            <a class="category-grid__link" href="#">
-                                <svg class="motor-icon">
-                                    <use href="#motor"></use>
-                                </svg>
-                                <p>Насосное и компрессорное оборудование</p>
-                            </a>
-                            <a class="category-grid__link" href="#">
-                                <svg class="bending-icon">
-                                    <use href="#bending"></use>
-                                </svg>
-                                <p>Мехатроника</p>
-                            </a>
-                            <a class="category-grid__link" href="#">
-                                <svg class="gauge-icon">
-                                    <use href="#gauge"></use>
-                                </svg>
-                                <p>Оптические системы и компоненты</p>
-                            </a>
-                            <a class="category-grid__link" href="#">
-                                <svg class="control-icon">
-                                    <use href="#control"></use>
-                                </svg>
-                                <p>Гидравилика и пневматика</p>
-                            </a>
-                            <a class="category-grid__link" href="#">
-                                <svg class="printer-icon">
-                                    <use href="#printer"></use>
-                                </svg>
-                                <p>Станочное оборудование</p>
-                            </a>
-                            <a class="category-grid__link" href="#">
-                                <svg class="tank-icon">
-                                    <use href="#tank"></use>
-                                </svg>
-                                <p>Насосное и компрессорное оборудование</p>
-                            </a>
-                            <a class="category-grid__link" href="#">
-                                <svg class="mechantron-icon">
-                                    <use href="#mechantron"></use>
-                                </svg>
-                                <p>Мехатроника</p>
-                            </a>
-                        </div>
-                        <button class="category-grid__show-more" type="button">
-                            <span>Смотреть еще</span>
-                            <svg>
-                                <use href="#chevron"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="producers">
-                <div class="producers__heading-wrapper">
-                    <div class="producers__heading">
-                        <h2>Только проверенные производители</h2>
-                    </div>
-                </div>
-            
-                <div class="producers__inner">
-                    <div class="producers-slider-thumbs">
-                        <div class="swiper-wrapper">
-                            <div class="prod-thumb__item swiper-slide">
-                                <img src="assets/images/producers/pr-1.png" alt="">
-                            </div>
-                            <div class="prod-thumb__item swiper-slide">
-                                <img src="assets/images/producers/pr-2.png" alt="">
-                            </div>
-                            <div class="prod-thumb__item swiper-slide">
-                                <img src="assets/images/producers/pr-3.png" alt="">
-                            </div>
-                            <div class="prod-thumb__item swiper-slide">
-                                <img src="assets/images/producers/pr-4.png" alt="">
-                            </div>
-                            <div class="prod-thumb__item swiper-slide">
-                                <img src="assets/images/producers/pr-5.png" alt="">
-                            </div>
-                            <div class="prod-thumb__item swiper-slide">
-                                <img src="assets/images/producers/pr-6.png" alt="">
-                            </div>
-                            <div class="prod-thumb__item swiper-slide">
-                                <img src="assets/images/producers/pr-7.png" alt="">
-                            </div>
-                            <div class="prod-thumb__item swiper-slide">
-                                <img src="assets/images/producers/pr-8.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="producers-slider__main-wrapper">
-                        <div class="producers-slider-main">
-                            <div class="swiper-wrapper">
-                                <div class="prod-main__item swiper-slide">
-                                    <img src="assets/images/producers/producers-item.png" alt="">
-                                    <div class="prod-main__item-content">
-                                        <p class="prod-main__item-descr">Инжиниринговая компания, работающая в области
-                                            измерительной
-                                            техники и промышленной автоматизации. Компания была основана в 1915 году
-                                            дипломированным
-                                            архитектором Тамисукэ Ёкогава. Штат сотрудников насчитывает около 19 500 человек в
-                                            50
-                                            странах мира.
-                                            Компания Yokogawa была одной из фирм, разработавших в 1975 году первую
-                                            распределённую
-                                            систему управления (РСУ CENTUM).</p>
-                                        <p class="prod-main__item-country">Страна: Япония</p>
-                                        <a class="prod-main__item-link" href="#">Перейти в каталог производителя</a>
-                                    </div>
-                                </div>
-                                <div class="prod-main__item swiper-slide">
-                                    <img src="assets/images/producers/producers-item.png" alt="">
-                                    <div class="prod-main__item-content">
-                                        <p class="prod-main__item-descr">Инжиниринговая компания, работающая в области
-                                            измерительной
-                                            техники и промышленной автоматизации. Компания была основана в 1915 году
-                                            дипломированным
-                                            архитектором Тамисукэ Ёкогава. Штат сотрудников насчитывает около 19 500 человек в
-                                            50
-                                            странах мира.
-                                            Компания Yokogawa была одной из фирм, разработавших в 1975 году первую
-                                            распределённую
-                                            систему управления (РСУ CENTUM).</p>
-                                        <p class="prod-main__item-country">Страна: Германия</p>
-                                        <a class="prod-main__item-link" href="#">Перейти в каталог производителя</a>
-                                    </div>
-                                </div>
-                                <div class="prod-main__item swiper-slide">
-                                    <img src="assets/images/producers/producers-item.png" alt="">
-                                    <div class="prod-main__item-content">
-                                        <p class="prod-main__item-descr">Инжиниринговая компания, работающая в области
-                                            измерительной
-                                            техники и промышленной автоматизации. Компания была основана в 1915 году
-                                            дипломированным
-                                            архитектором Тамисукэ Ёкогава. Штат сотрудников насчитывает около 19 500 человек в
-                                            50
-                                            странах мира.
-                                            Компания Yokogawa была одной из фирм, разработавших в 1975 году первую
-                                            распределённую
-                                            систему управления (РСУ CENTUM).</p>
-                                        <p class="prod-main__item-country">Страна: Франция</p>
-                                        <a class="prod-main__item-link" href="#">Перейти в каталог производителя</a>
-                                    </div>
-                                </div>
-                                <div class="prod-main__item swiper-slide">
-                                    <img src="assets/images/producers/producers-item.png" alt="">
-                                    <div class="prod-main__item-content">
-                                        <p class="prod-main__item-descr">Инжиниринговая компания, работающая в области
-                                            измерительной
-                                            техники и промышленной автоматизации. Компания была основана в 1915 году
-                                            дипломированным
-                                            архитектором Тамисукэ Ёкогава. Штат сотрудников насчитывает около 19 500 человек в
-                                            50
-                                            странах мира.
-                                            Компания Yokogawa была одной из фирм, разработавших в 1975 году первую
-                                            распределённую
-                                            систему управления (РСУ CENTUM).</p>
-                                        <p class="prod-main__item-country">Страна: Сирия</p>
-                                        <a class="prod-main__item-link" href="#">Перейти в каталог производителя</a>
-                                    </div>
-                                </div>
-                                <div class="prod-main__item swiper-slide">
-                                    <img src="assets/images/producers/producers-item.png" alt="">
-                                    <div class="prod-main__item-content">
-                                        <p class="prod-main__item-descr">Инжиниринговая компания, работающая в области
-                                            измерительной
-                                            техники и промышленной автоматизации. Компания была основана в 1915 году
-                                            дипломированным
-                                            архитектором Тамисукэ Ёкогава. Штат сотрудников насчитывает около 19 500 человек в
-                                            50
-                                            странах мира.
-                                            Компания Yokogawa была одной из фирм, разработавших в 1975 году первую
-                                            распределённую
-                                            систему управления (РСУ CENTUM).</p>
-                                        <p class="prod-main__item-country">Страна: Китай</p>
-                                        <a class="prod-main__item-link" href="#">Перейти в каталог производителя</a>
-                                    </div>
-                                </div>
-                                <div class="prod-main__item swiper-slide">
-                                    <img src="assets/images/producers/producers-item.png" alt="">
-                                    <div class="prod-main__item-content">
-                                        <p class="prod-main__item-descr">Инжиниринговая компания, работающая в области
-                                            измерительной
-                                            техники и промышленной автоматизации. Компания была основана в 1915 году
-                                            дипломированным
-                                            архитектором Тамисукэ Ёкогава. Штат сотрудников насчитывает около 19 500 человек в
-                                            50
-                                            странах мира.
-                                            Компания Yokogawa была одной из фирм, разработавших в 1975 году первую
-                                            распределённую
-                                            систему управления (РСУ CENTUM).</p>
-                                        <p class="prod-main__item-country">Страна: Швеция</p>
-                                        <a class="prod-main__item-link" href="#">Перейти в каталог производителя</a>
-                                    </div>
-                                </div>
-                                <div class="prod-main__item swiper-slide">
-                                    <img src="assets/images/producers/producers-item.png" alt="">
-                                    <div class="prod-main__item-content">
-                                        <p class="prod-main__item-descr">Инжиниринговая компания, работающая в области
-                                            измерительной
-                                            техники и промышленной автоматизации. Компания была основана в 1915 году
-                                            дипломированным
-                                            архитектором Тамисукэ Ёкогава. Штат сотрудников насчитывает около 19 500 человек в
-                                            50
-                                            странах мира.
-                                            Компания Yokogawa была одной из фирм, разработавших в 1975 году первую
-                                            распределённую
-                                            систему управления (РСУ CENTUM).</p>
-                                        <p class="prod-main__item-country">Страна: США</p>
-                                        <a class="prod-main__item-link" href="#">Перейти в каталог производителя</a>
-                                    </div>
-                                </div>
-                                <div class="prod-main__item swiper-slide">
-                                    <img src="assets/images/producers/producers-item.png" alt="">
-                                    <div class="prod-main__item-content">
-                                        <p class="prod-main__item-descr">Инжиниринговая компания, работающая в области
-                                            измерительной
-                                            техники и промышленной автоматизации. Компания была основана в 1915 году
-                                            дипломированным
-                                            архитектором Тамисукэ Ёкогава. Штат сотрудников насчитывает около 19 500 человек в
-                                            50
-                                            странах мира.
-                                            Компания Yokogawa была одной из фирм, разработавших в 1975 году первую
-                                            распределённую
-                                            систему управления (РСУ CENTUM).</p>
-                                        <p class="prod-main__item-country">Страна: Литва</p>
-                                        <a class="prod-main__item-link" href="#">Перейти в каталог производителя</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-navs">
-                                <div class="slider-button-prev">
-                                    <svg class="chevron">
-                                        <use href="#chevron"></use>
-                                    </svg>
-                                </div>
-                                <div class="slider-navs-gap"></div>
-                                <div class="slider-button-next">
-                                    <svg class="chevron">
-                                        <use href="#chevron"></use>
+                                <div class="compare-cards__close">
+                                    <svg>
+                                        <use href="#close-btn"></use>
                                     </svg>
                                 </div>
                             </div>
-                            <div class="swiper-pagination"></div>
+                            <div class="compare-cards__item">
+                                <a class="compare-cards__item-link" href="#">
+                                    <img class="compare-cards__item-img" src="assets/images/popular/equip-2.png" alt="">
+                                    <p class="compare-cards__item-heading">YokogawaElectric OGH-33456</p>
+                                </a>
+                                <div class="compare-cards__close">
+                                    <svg>
+                                        <use href="#close-btn"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="compare-cards__item">
+                                <a class="compare-cards__item-link" href="#">
+                                    <img class="compare-cards__item-img" src="assets/images/popular/equip-4.png" alt="">
+                                    <p class="compare-cards__item-heading">YokogawaElectric OGH-33456</p>
+                                </a>
+                                <div class="compare-cards__close">
+                                    <svg>
+                                        <use href="#close-btn"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="compare-cards__item">
+                                <a class="compare-cards__item-link" href="#">
+                                    <img class="compare-cards__item-img" src="assets/images/popular/equip-3.png" alt="">
+                                    <p class="compare-cards__item-heading">YokogawaElectric OGH-33456</p>
+                                </a>
+                                <div class="compare-cards__close">
+                                    <svg>
+                                        <use href="#close-btn"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="compare-cards__item">
+                                <a class="compare-cards__item-link" href="#">
+                                    <img class="compare-cards__item-img" src="assets/images/popular/equip-1.png" alt="">
+                                    <p class="compare-cards__item-heading">YokogawaElectric OGH-33456</p>
+                                </a>
+                                <div class="compare-cards__close">
+                                    <svg>
+                                        <use href="#close-btn"></use>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </section>
             
-            <section class="popular">
-                <div class="popular__heading-wrapper">
-                    <div class="popular__heading">
-                        <h2>Популярное оборудование</h2>
-                    </div>
-                </div>
-                <div class="popular-navs">
-                    <div class="container">
-                        <div class="popular-navs__inner">
-                            <button class="popular-navs__btn tabs-btn tabs-btn_active" type="button">Популярные</button>
-                            <button class="popular-navs__btn tabs-btn" type="button">Новые</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="popular-tabs">
-                        <div class="popular-tab tabs-pane tabs-pane_show">
-                            <div class="popular-tab__slider">
-                                <div class="swiper-wrapper">
-                                    <div class="popular-item swiper-slide">
-                                        <button class="popular-item__compare" type="button">
-                                            <svg>
-                                                <use href="#compare"></use>
-                                            </svg>
-                                        </button>
-                                        <a href="#">
-                                            <h3 class="popular-item__heading">YokogawaElectric OGH-33456</h3>
-                                        </a>
-                                        <a href="#">
-                                            <img class="popular-item__img" src="assets/images/popular/equip-1.png" alt="">
-                                        </a>
-                                        <div class="popular-item__content">
-                                            <p class="popular-item__descr">Измеритель напряжения 220</p>
-                                            <p class="popular-item__text">Краткое описание товара, Краткое описание товара,Краткое
-                                                описание
-                                                товара,Краткое описание товара</p>
-                                        </div>
-                                    </div>
-                                    <div class="popular-item swiper-slide">
-                                        <button class="popular-item__compare" type="button">
-                                            <svg>
-                                                <use href="#compare"></use>
-                                            </svg>
-                                        </button>
-                                        <a href="#">
-                                            <h3 class="popular-item__heading">YokogawaElectric OGH-33456</h3>
-                                        </a>
-                                        <a href="#">
-                                            <img class="popular-item__img" src="assets/images/popular/equip-2.png" alt="">
-                                        </a>
-                                        <div class="popular-item__content">
-                                            <p class="popular-item__descr">Измеритель высокого напряжения 220</p>
-                                            <p class="popular-item__text">Краткое описание товара, Краткое описание товара,Краткое
-                                                описание товара,Краткое описание товара</p>
-                                        </div>
-                                    </div>
-                                    <div class="popular-item swiper-slide">
-                                        <button class="popular-item__compare" type="button">
-                                            <svg>
-                                                <use href="#compare"></use>
-                                            </svg>
-                                        </button>
-                                        <a href="#">
-                                            <h3 class="popular-item__heading">YokogawaElectric OGH-33456</h3>
-                                        </a>
-                                        <a href="#">
-                                            <img class="popular-item__img" src="assets/images/popular/equip-3.png" alt="">
-                                        </a>
-                                        <div class="popular-item__content">
-                                            <p class="popular-item__descr">Измеритель напряжения 220</p>
-                                            <p class="popular-item__text">Краткое описание товара, Краткое описание товара,Краткое
-                                                описание товара,Краткое описание товара Краткое описание товара,Краткое описание
-                                                товара, Краткое описание товара</p>
-                                        </div>
-                                    </div>
-                                    <div class="popular-item swiper-slide">
-                                        <button class="popular-item__compare" type="button">
-                                            <svg>
-                                                <use href="#compare"></use>
-                                            </svg>
-                                        </button>
-                                        <a href="#">
-                                            <h3 class="popular-item__heading">YokogawaElectric OGH-33456</h3>
-                                        </a>
-                                        <a href="#">
-                                            <img class="popular-item__img" src="assets/images/popular/equip-4.png" alt="">
-                                        </a>
-                                        <div class="popular-item__content">
-                                            <p class="popular-item__descr">Измеритель напряжения 220</p>
-                                            <p class="popular-item__text">Краткое описание товара, Краткое описание товара,Краткое
-                                                описание
-                                                товара,Краткое описание товара</p>
-                                        </div>
-                                    </div>
-                                    <div class="popular-item swiper-slide">
-                                        <button class="popular-item__compare" type="button">
-                                            <svg>
-                                                <use href="#compare"></use>
-                                            </svg>
-                                        </button>
-                                        <a href="#">
-                                            <h3 class="popular-item__heading">YokogawaElectric OGH-33456</h3>
-                                        </a>
-                                        <a href="#">
-                                            <img class="popular-item__img" src="assets/images/popular/equip-3.png" alt="">
-                                        </a>
-                                        <div class="popular-item__content">
-                                            <p class="popular-item__descr">Измеритель напряжения 220</p>
-                                            <p class="popular-item__text">Краткое описание товара, Краткое описание товара,Краткое
-                                                описание товара,Краткое описание товара Краткое описание товара,Краткое описание
-                                                товара, Краткое описание товара</p>
-                                        </div>
-                                    </div>
-                                    <div class="popular-item swiper-slide">
-                                        <button class="popular-item__compare" type="button">
-                                            <svg>
-                                                <use href="#compare"></use>
-                                            </svg>
-                                        </button>
-                                        <a href="#">
-                                            <h3 class="popular-item__heading">YokogawaElectric OGH-33456</h3>
-                                        </a>
-                                        <a href="#">
-                                            <img class="popular-item__img" src="assets/images/popular/equip-4.png" alt="">
-                                        </a>
-                                        <div class="popular-item__content">
-                                            <p class="popular-item__descr">Измеритель напряжения 220</p>
-                                            <p class="popular-item__text">Краткое описание товара, Краткое описание товара,Краткое
-                                                описание
-                                                товара,Краткое описание товара</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-navs">
-                                    <div class="slider-button-prev">
-                                        <svg class="chevron">
-                                            <use href="#chevron"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="slider-navs-gap"></div>
-                                    <div class="slider-button-next">
-                                        <svg class="chevron">
-                                            <use href="#chevron"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
+                        <div class="compare-info">
+                            <div class="compare-different checkbox">
+                                <input class="custom-checkbox" type="checkbox" id="compare-different" name="compare-different">
+                                <label for="compare-different">Только различающиеся</label>
                             </div>
-                        </div>
-                        <div class="popular-tab tabs-pane">
-                            <div class="popular-tab__slider">
-                                <div class="swiper-wrapper">
-                                    <div class="popular-item swiper-slide">
-                                        <button class="popular-item__compare" type="button">
-                                            <svg>
-                                                <use href="#compare"></use>
-                                            </svg>
-                                        </button>
-                                        <a href="#">
-                                            <h3 class="popular-item__heading">YokogawaElectric OGH-33456</h3>
-                                        </a>
-                                        <a href="#">
-                                            <img class="popular-item__img" src="assets/images/popular/equip-3.png" alt="">
-                                        </a>
-                                        <div class="popular-item__content">
-                                            <p class="popular-item__descr">Измеритель напряжения 220</p>
-                                            <p class="popular-item__text">Краткое описание товара, Краткое описание товара,Краткое
-                                                описание
-                                                товара,Краткое описание товара</p>
-                                        </div>
-                                    </div>
-                                    <div class="popular-item swiper-slide">
-                                        <button class="popular-item__compare" type="button">
-                                            <svg>
-                                                <use href="#compare"></use>
-                                            </svg>
-                                        </button>
-                                        <a href="#">
-                                            <h3 class="popular-item__heading">YokogawaElectric OGH-33456</h3>
-                                        </a>
-                                        <a href="#">
-                                            <img class="popular-item__img" src="assets/images/popular/equip-1.png" alt="">
-                                        </a>
-                                        <div class="popular-item__content">
-                                            <p class="popular-item__descr">Измеритель высокого напряжения 220</p>
-                                            <p class="popular-item__text">Краткое описание товара, Краткое описание товара,Краткое
-                                                описание товара,Краткое описание товара</p>
-                                        </div>
-                                    </div>
-                                    <div class="popular-item swiper-slide">
-                                        <button class="popular-item__compare" type="button">
-                                            <svg>
-                                                <use href="#compare"></use>
-                                            </svg>
-                                        </button>
-                                        <a href="#">
-                                            <h3 class="popular-item__heading">YokogawaElectric OGH-33456</h3>
-                                        </a>
-                                        <a href="#">
-                                            <img class="popular-item__img" src="assets/images/popular/equip-2.png" alt="">
-                                        </a>
-                                        <div class="popular-item__content">
-                                            <p class="popular-item__descr">Измеритель напряжения 220</p>
-                                            <p class="popular-item__text">Краткое описание товара, Краткое описание товара,Краткое
-                                                описание товара,Краткое описание товара Краткое описание товара,Краткое описание
-                                                товара, Краткое описание товара</p>
-                                        </div>
-                                    </div>
-                                    <div class="popular-item swiper-slide">
-                                        <button class="popular-item__compare" type="button">
-                                            <svg>
-                                                <use href="#compare"></use>
-                                            </svg>
-                                        </button>
-                                        <a href="#">
-                                            <h3 class="popular-item__heading">YokogawaElectric OGH-33456</h3>
-                                        </a>
-                                        <a href="#">
-                                            <img class="popular-item__img" src="assets/images/popular/equip-4.png" alt="">
-                                        </a>
-                                        <div class="popular-item__content">
-                                            <p class="popular-item__descr">Измеритель напряжения 220</p>
-                                            <p class="popular-item__text">Краткое описание товара, Краткое описание товара,Краткое
-                                                описание
-                                                товара,Краткое описание товара</p>
-                                        </div>
-                                    </div>
-                                    <div class="popular-item swiper-slide">
-                                        <button class="popular-item__compare" type="button">
-                                            <svg>
-                                                <use href="#compare"></use>
-                                            </svg>
-                                        </button>
-                                        <a href="#">
-                                            <h3 class="popular-item__heading">YokogawaElectric OGH-33456</h3>
-                                        </a>
-                                        <a href="#">
-                                            <img class="popular-item__img" src="assets/images/popular/equip-3.png" alt="">
-                                        </a>
-                                        <div class="popular-item__content">
-                                            <p class="popular-item__descr">Измеритель напряжения 220</p>
-                                            <p class="popular-item__text">Краткое описание товара, Краткое описание товара,Краткое
-                                                описание товара,Краткое описание товара Краткое описание товара,Краткое описание
-                                                товара, Краткое описание товара</p>
-                                        </div>
-                                    </div>
-                                    <div class="popular-item swiper-slide">
-                                        <button class="popular-item__compare" type="button">
-                                            <svg>
-                                                <use href="#compare"></use>
-                                            </svg>
-                                        </button>
-                                        <a href="#">
-                                            <h3 class="popular-item__heading">YokogawaElectric OGH-33456</h3>
-                                        </a>
-                                        <a href="#">
-                                            <img class="popular-item__img" src="assets/images/popular/equip-4.png" alt="">
-                                        </a>
-                                        <div class="popular-item__content">
-                                            <p class="popular-item__descr">Измеритель напряжения 220</p>
-                                            <p class="popular-item__text">Краткое описание товара, Краткое описание товара,Краткое
-                                                описание
-                                                товара,Краткое описание товара</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-navs">
-                                    <div class="slider-button-prev">
-                                        <svg class="chevron">
-                                            <use href="#chevron"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="slider-navs-gap"></div>
-                                    <div class="slider-button-next">
-                                        <svg class="chevron">
-                                            <use href="#chevron"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             
-            </section>
-            
-            <section class="clients">
-                <div class="clients__heading-wrapper">
-                    <div class="clients__heading">
-                        <h2>Наши клиенты</h2>
-                    </div>
-                </div>
-            
-                <div class="clients__inner">
-                    <div class="clients-slider-thumbs">
-                        <div class="swiper-wrapper">
-                            <div class="clients-thumb__item swiper-slide">
-                                <img src="assets/images/clients/cl-1.png" alt="">
-                            </div>
-                            <div class="clients-thumb__item swiper-slide">
-                                <img src="assets/images/clients/cl-2.png" alt="">
-                            </div>
-                            <div class="clients-thumb__item swiper-slide">
-                                <img src="assets/images/clients/cl-3.png" alt="">
-                            </div>
-                            <div class="clients-thumb__item swiper-slide">
-                                <img src="assets/images/clients/cl-4.png" alt="">
-                            </div>
-                            <div class="clients-thumb__item swiper-slide">
-                                <img src="assets/images/clients/cl-5.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="clients-slider__main-wrapper">
-                            <div class="clients-main__item-top">
-                                <div class="clients-item__top-left"></div>
-                                <div class="clients-item__top-right"></div>
-                            </div>
-                            <div class="clients-slider-main">
-                                <div class="swiper-wrapper">
-                                    <div class="clients-main__item swiper-slide">
-                                        <div class="clients-main__item-inner">
-                                            <img class="clients-main__item-img" src="assets/images/clients/client.png" alt="">
-                                            <div class="clients-main__item-content">
-                                                <p class="clients-main__item-pos">Инженер «Роснефть»</p>
-                                                <p class="clients-main__item-name">Иванов Аркадий</p>
-                                                <div class="clients-main__item-descr">
-                                                    <p>Наша работа с компанией Nordwex вызывает только положительные впечетления.
-                                                    </p>
-                                                    <p>Ребята действительно профессионалы своего дела и прекрасно разбираются в
-                                                        техническом оснощение нефтеперерабатывающих предприятий.</p>
-                                                    <p>Спасибо за хорошую работу!</p>
-                                                </div>
-                                                <a class="clients-main__item-pdf" href="#">
-                                                    <svg>
-                                                        <use href="#pdf"></use>
-                                                    </svg>
-                                                    <span>Благодарственное письмо</span>
-                                                </a>
-                                            </div>
+                            <div class="compare-info__section">
+                                <div class="compare-info__section-heading">
+                                    <span>Технические характеристики</span>
+                                    <svg>
+                                        <use href="#chevron"></use>
+                                    </svg>
+                                </div>
+                                <div class="compare-info__section-content">
+                                    <div class="compare-info__item">
+                                        <p class="compare-info__item-heading">Тип оборудования:</p>
+                                        <div class="compare-info__item-content">
+                                            <p>Портативный плотномер</p>
+                                            <p>Портативный плотномер</p>
+                                            <p>Портативный плотномер</p>
+                                            <p>Портативный плотномер</p>
+                                            <p>Портативный плотномер</p>
                                         </div>
                                     </div>
-                                    <div class="clients-main__item swiper-slide">
-                                        <div class="clients-main__item-inner">
-                                            <img class="clients-main__item-img" src="assets/images/clients/client.png" alt="">
-                                            <div class="clients-main__item-content">
-                                                <p class="clients-main__item-pos">Инженер «Роснефть»</p>
-                                                <p class="clients-main__item-name">Иванов Аркадий</p>
-                                                <div class="clients-main__item-descr">
-                                                    <p>Наша работа с компанией Nordwex вызывает только положительные впечетления.
-                                                    </p>
-                                                    <p>Ребята действительно профессионалы своего дела и прекрасно разбираются в
-                                                        техническом оснощение нефтеперерабатывающих предприятий.</p>
-                                                    <p>Спасибо за хорошую работу!</p>
-                                                </div>
-                                                <a class="clients-main__item-pdf" href="#">
-                                                    <svg>
-                                                        <use href="#pdf"></use>
-                                                    </svg>
-                                                    <span>Благодарственное письмо</span>
-                                                </a>
-                                            </div>
+                                    <div class="compare-info__item">
+                                        <p class="compare-info__item-heading">Производитель:</p>
+                                        <div class="compare-info__item-content">
+                                            <p>YokogawaElectric OGH-33456</p>
+                                            <p>YokogawaElectric OGH-33456</p>
+                                            <p>YokogawaElectric OGH-33456</p>
+                                            <p>YokogawaElectric OGH-33456</p>
+                                            <p>YokogawaElectric OGH-33456</p>
                                         </div>
                                     </div>
-                                    <div class="clients-main__item swiper-slide">
-                                        <div class="clients-main__item-inner">
-                                            <img class="clients-main__item-img" src="assets/images/clients/client.png" alt="">
-                                            <div class="clients-main__item-content">
-                                                <p class="clients-main__item-pos">Инженер «Роснефть»</p>
-                                                <p class="clients-main__item-name">Иванов Аркадий</p>
-                                                <div class="clients-main__item-descr">
-                                                    <p>Наша работа с компанией Nordwex вызывает только положительные впечетления.
-                                                    </p>
-                                                    <p>Ребята действительно профессионалы своего дела и прекрасно разбираются в
-                                                        техническом оснощение нефтеперерабатывающих предприятий.</p>
-                                                    <p>Спасибо за хорошую работу!</p>
-                                                </div>
-                                                <a class="clients-main__item-pdf" href="#">
-                                                    <svg>
-                                                        <use href="#pdf"></use>
-                                                    </svg>
-                                                    <span>Благодарственное письмо</span>
-                                                </a>
-                                            </div>
+                                    <div class="compare-info__item different">
+                                        <p class="compare-info__item-heading">Страна:</p>
+                                        <div class="compare-info__item-content">
+                                            <p>Латвия</p>
+                                            <p>Россия</p>
+                                            <p>Россия</p>
+                                            <p>Китай</p>
+                                            <p>Китай</p>
                                         </div>
                                     </div>
-                                    <div class="clients-main__item swiper-slide">
-                                        <div class="clients-main__item-inner">
-                                            <img class="clients-main__item-img" src="assets/images/clients/client.png" alt="">
-                                            <div class="clients-main__item-content">
-                                                <p class="clients-main__item-pos">Инженер «Роснефть»</p>
-                                                <p class="clients-main__item-name">Иванов Аркадий</p>
-                                                <div class="clients-main__item-descr">
-                                                    <p>Наша работа с компанией Nordwex вызывает только положительные впечетления.
-                                                    </p>
-                                                    <p>Ребята действительно профессионалы своего дела и прекрасно разбираются в
-                                                        техническом оснощение нефтеперерабатывающих предприятий.</p>
-                                                    <p>Спасибо за хорошую работу!</p>
-                                                </div>
-                                                <a class="clients-main__item-pdf" href="#">
-                                                    <svg>
-                                                        <use href="#pdf"></use>
-                                                    </svg>
-                                                    <span>Благодарственное письмо</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="clients-main__item swiper-slide">
-                                        <div class="clients-main__item-inner">
-                                            <img class="clients-main__item-img" src="assets/images/clients/client.png" alt="">
-                                            <div class="clients-main__item-content">
-                                                <p class="clients-main__item-pos">Инженер «Роснефть»</p>
-                                                <p class="clients-main__item-name">Иванов Аркадий</p>
-                                                <div class="clients-main__item-descr">
-                                                    <p>Наша работа с компанией Nordwex вызывает только положительные впечетления.
-                                                    </p>
-                                                    <p>Ребята действительно профессионалы своего дела и прекрасно разбираются в
-                                                        техническом оснощение нефтеперерабатывающих предприятий.</p>
-                                                    <p>Спасибо за хорошую работу!</p>
-                                                </div>
-                                                <a class="clients-main__item-pdf" href="#">
-                                                    <svg>
-                                                        <use href="#pdf"></use>
-                                                    </svg>
-                                                    <span>Благодарственное письмо</span>
-                                                </a>
-                                            </div>
+                                    <div class="compare-info__item different">
+                                        <p class="compare-info__item-heading">Срок поставки</p>
+                                        <div class="compare-info__item-content">
+                                            <p>60 дней</p>
+                                            <p>40 дней</p>
+                                            <p>40 дней</p>
+                                            <p>60 дней</p>
+                                            <p>60 дней</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-pagination"></div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="areas-use">
-                <div class="container">
-                    <h2 class="areas-use__heading">Области применения</h2>
-                    <div class="areas-use__inner">
-                        <div class="areas-use__item">
-                            <img class="areas-use__icon" src="assets/images/areas-use/areas-use-i1.png" alt="">
-                            <p class="areas-use__descr">Химическая промышленность</p>
-                        </div>
-                        <div class="areas-use__item">
-                            <img class="areas-use__icon" src="assets/images/areas-use/areas-use-i2.png" alt="">
-                            <p class="areas-use__descr">Горнодобывающая промышленность</p>
-                        </div>
-                        <div class="areas-use__item">
-                            <img class="areas-use__icon" src="assets/images/areas-use/areas-use-i3.png" alt="">
-                            <p class="areas-use__descr">Целлюлозно-бумажная промышленность</p>
-                        </div>
-                        <div class="areas-use__item">
-                            <img class="areas-use__icon" src="assets/images/areas-use/areas-use-i4.png" alt="">
-                            <p class="areas-use__descr">Металлургия</p>
-                        </div>
-                        <div class="areas-use__item">
-                            <img class="areas-use__icon" src="assets/images/areas-use/areas-use-i5.png" alt="">
-                            <p class="areas-use__descr">Нефтепереработка</p>
-                        </div>
-                        <div class="areas-use__item">
-                            <img class="areas-use__icon" src="assets/images/areas-use/areas-use-i6.png" alt="">
-                            <p class="areas-use__descr">Добыча нефти и газа</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="about">
-                <div class="about__heading-wrapper">
-                    <div class="about__heading">
-                        <h2>О компании</h2>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="about__inner">
-                        <div class="about-us">
-                            <a class="about-us__heading" href="#">
-                                <span>О нас</span>
-                                <svg class="chevron">
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </a>
-                            <svg class="about-us__logo">
-                                <use href="#logo"></use>
-                            </svg>
-                            <div class="about-us__descr">
-                                <p>это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной
-                                    "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал
-                                    большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
-                                <p>Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в
-                                    электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset.</p>
-                                <p>С образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки
-                                    типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
-                            </div>
-                            <p class="about-us__benefits-heading">Наши приемущества</p>
-                            <div class="about-us__benefits">
-                                <div class="about-us__benefits-item">
-                                    <img src="assets/images/icons/truck.svg" alt="">
-                                    <p>Ассортимент</p>
+                            <div class="compare-info__section">
+                                <div class="compare-info__section-heading">
+                                    <span>Конфигурация</span>
+                                    <svg>
+                                        <use href="#chevron"></use>
+                                    </svg>
                                 </div>
-                                <div class="about-us__benefits-item">
-                                    <img src="assets/images/icons/tools.svg" alt="">
-                                    <p>Проверка качества</p>
-                                </div>
-                                <div class="about-us__benefits-item">
-                                    <img src="assets/images/icons/calendar.svg" alt="">
-                                    <p>Быстрые сроки</p>
-                                </div>
-                                <div class="about-us__benefits-item">
-                                    <img src="assets/images/icons/planet.svg" alt="">
-                                    <p>Не зависим от санкций</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about-blog">
-                            <a class="about-blog__heading" href="#">
-                                <span>Блог</span>
-                                <svg class="chevron">
-                                    <use href="#chevron"></use>
-                                </svg>
-                            </a>
-                            <div class="about-blog__slider-wrapper">
-                                <div class="about-blog__slider">
-                                    <div class="swiper-wrapper">
-                                        <a class="about-blog__item swiper-slide" href="#">
-                                            <img class="about-blog__item-img" src="assets/images/blog/blog-1.png" alt="">
-                                            <div class="about-blog__item-content">
-                                                <p class="about-blog__item-heading">Новостной заголовок</p>
-                                                <p class="about-blog__item-descr">Ребята действительно профессионалы своего дела и
-                                                    прекрасно разбираются в техническом оснощение техническо разбираются в
-                                                    техническом
-                                                    оснощение техническо</p>
-                                                <p class="about-blog__item-date">22.05.22</p>
-                                            </div>
-                                        </a>
-                                        <a class="about-blog__item swiper-slide" href="#">
-                                            <img class="about-blog__item-img" src="assets/images/blog/blog-2.png" alt="">
-                                            <div class="about-blog__item-content">
-                                                <p class="about-blog__item-heading">Новостной заголовок</p>
-                                                <p class="about-blog__item-descr">Ребята действительно профессионалы своего дела и
-                                                    прекрасно разбираются в техническом оснощение техническо разбираются в
-                                                    техническом
-                                                    оснощение техническо</p>
-                                                <p class="about-blog__item-date">22.05.22</p>
-                                            </div>
-                                        </a>
-                                        <a class="about-blog__item swiper-slide" href="#">
-                                            <img class="about-blog__item-img" src="assets/images/blog/blog-3.png" alt="">
-                                            <div class="about-blog__item-content">
-                                                <p class="about-blog__item-heading">Новостной заголовок</p>
-                                                <p class="about-blog__item-descr">Ребята действительно профессионалы своего дела и
-                                                    прекрасно разбираются в техническом оснощение техническо разбираются в
-                                                    техническом
-                                                    оснощение техническо</p>
-                                                <p class="about-blog__item-date">22.05.22</p>
-                                            </div>
-                                        </a>
-                                        <a class="about-blog__item swiper-slide" href="#">
-                                            <img class="about-blog__item-img" src="assets/images/blog/blog-1.png" alt="">
-                                            <div class="about-blog__item-content">
-                                                <p class="about-blog__item-heading">Новостной заголовок</p>
-                                                <p class="about-blog__item-descr">Ребята действительно профессионалы своего дела и
-                                                    прекрасно разбираются в техническом оснощение техническо разбираются в
-                                                    техническом
-                                                    оснощение техническо</p>
-                                                <p class="about-blog__item-date">22.05.22</p>
-                                            </div>
-                                        </a>
-                                        <a class="about-blog__item swiper-slide" href="#">
-                                            <img class="about-blog__item-img" src="assets/images/blog/blog-2.png" alt="">
-                                            <div class="about-blog__item-content">
-                                                <p class="about-blog__item-heading">Новостной заголовок</p>
-                                                <p class="about-blog__item-descr">Ребята действительно профессионалы своего дела и
-                                                    прекрасно разбираются в техническом оснощение техническо разбираются в
-                                                    техническом
-                                                    оснощение техническо</p>
-                                                <p class="about-blog__item-date">22.05.22</p>
-                                            </div>
-                                        </a>
+                                <div class="compare-info__section-content">
+                                    <div class="compare-info__item">
+                                        <p class="compare-info__item-heading">Тип оборудования:</p>
+                                        <div class="compare-info__item-content">
+                                            <p>Портативный плотномер</p>
+                                            <p>Портативный плотномер</p>
+                                            <p>Портативный плотномер</p>
+                                        </div>
                                     </div>
-                                    <div class="swiper-pagination"></div>
+                                    <div class="compare-info__item">
+                                        <p class="compare-info__item-heading">Производитель:</p>
+                                        <div class="compare-info__item-content">
+                                            <p>YokogawaElectric OGH-33456</p>
+                                            <p>YokogawaElectric OGH-33456</p>
+                                            <p>YokogawaElectric OGH-33456</p>
+                                        </div>
+                                    </div>
+                                    <div class="compare-info__item different">
+                                        <p class="compare-info__item-heading">Страна:</p>
+                                        <div class="compare-info__item-content">
+                                            <p>Латвия</p>
+                                            <p>Россия</p>
+                                            <p>Китай</p>
+                                        </div>
+                                    </div>
+                                    <div class="compare-info__item different">
+                                        <p class="compare-info__item-heading">Срок поставки</p>
+                                        <div class="compare-info__item-content">
+                                            <p>60 дней</p>
+                                            <p>40 дней</p>
+                                            <p>60 дней</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="compare-info__section">
+                                <div class="compare-info__section-heading">
+                                    <span>Документация и ПО</span>
+                                    <svg>
+                                        <use href="#chevron"></use>
+                                    </svg>
+                                </div>
+                                <div class="compare-info__section-content">
+                                    <div class="compare-info__item">
+                                        <p class="compare-info__item-heading">Тип оборудования:</p>
+                                        <div class="compare-info__item-content">
+                                            <p>Портативный плотномер</p>
+                                            <p>Портативный плотномер</p>
+                                            <p>Портативный плотномер</p>
+                                        </div>
+                                    </div>
+                                    <div class="compare-info__item">
+                                        <p class="compare-info__item-heading">Производитель:</p>
+                                        <div class="compare-info__item-content">
+                                            <p>YokogawaElectric OGH-33456</p>
+                                            <p>YokogawaElectric OGH-33456</p>
+                                            <p>YokogawaElectric OGH-33456</p>
+                                        </div>
+                                    </div>
+                                    <div class="compare-info__item different">
+                                        <p class="compare-info__item-heading">Страна:</p>
+                                        <div class="compare-info__item-content">
+                                            <p>Латвия</p>
+                                            <p>Россия</p>
+                                            <p>Китай</p>
+                                        </div>
+                                    </div>
+                                    <div class="compare-info__item different">
+                                        <p class="compare-info__item-heading">Срок поставки</p>
+                                        <div class="compare-info__item-content">
+                                            <p>60 дней</p>
+                                            <p>40 дней</p>
+                                            <p>60 дней</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

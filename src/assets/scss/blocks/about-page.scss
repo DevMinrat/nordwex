@@ -1,0 +1,421 @@
+.aboutPage {
+  @include breakpoint($sm-bp) {
+    margin-top: 2rem;
+  }
+}
+
+.aboutPage-intro {
+  width: 100%;
+  max-width: 134rem;
+  height: 30rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 7rem;
+
+  background: url(../images/about-page/about-p-bg.png) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($sm-bp) {
+    height: 17rem;
+
+    margin: 0 auto 2rem;
+  }
+}
+
+.aboutPage-intro__logo {
+  width: 100%;
+  max-width: 65.8rem;
+  height: 18.3rem;
+
+  fill: $primary;
+
+  @include breakpoint($sm-bp) {
+    max-width: 27.5rem;
+  }
+}
+
+.aboutPage-heading {
+  padding: 2.5rem 0 3rem;
+  margin-bottom: 8.6rem;
+
+  border-top: 0.1rem solid #dadada;
+  border-bottom: 0.1rem solid #dadada;
+
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem 0;
+
+    margin-bottom: 4rem;
+  }
+}
+
+.aboutPage-heading__text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2.4rem;
+  color: #b71a1b;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+  }
+}
+
+.aboutPage-team__inner {
+  width: 100%;
+  max-width: 126rem;
+
+  display: flex;
+
+  margin: 0 auto;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+  }
+}
+
+.aboutPage-team__wrapper {
+  display: flex;
+
+  margin-right: 1.2rem;
+
+  @include breakpoint($lg-bp) {
+    align-self: center;
+
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+  }
+}
+
+.aboutPage-team__item {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.6rem;
+
+  & + & {
+    margin-left: 1.2rem;
+
+    @include breakpoint($sm-bp) {
+      margin-left: 0;
+      margin-top: 4rem;
+    }
+  }
+}
+
+.aboutPage-team__item-img {
+  width: 100%;
+  max-width: 23rem;
+
+  margin-bottom: 0.8rem;
+}
+
+.aboutPage-team__info {
+  width: 100%;
+  max-width: 53rem;
+
+  @include breakpoint($lg-bp) {
+    align-self: center;
+  }
+}
+
+.aboutPage-team__info-heading {
+  font-weight: 400;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+
+  padding: 3.3rem 0;
+
+  background-color: $secondary;
+
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
+
+  &--mob {
+    display: none;
+    margin-bottom: 2rem;
+
+    @include breakpoint($lg-bp) {
+      display: block;
+    }
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.6rem;
+
+      margin: 0 -2rem 2.2rem;
+      padding: 2.2rem 5rem;
+    }
+  }
+}
+
+.aboutPage-team__info-descr {
+  min-height: 27rem;
+
+  padding: 5rem 2.7rem 3rem;
+
+  border: 0.1rem solid #dadada;
+  border-top: none;
+
+  @include breakpoint($lg-bp) {
+    border: none;
+
+    margin: 0 auto;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 5rem 2rem 6rem;
+  }
+}
+
+.ap-info__descr-item {
+  position: relative;
+
+  width: 100%;
+  max-width: 45rem;
+
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: #240e0e;
+  opacity: 0.8;
+
+  & + & {
+    margin-top: 3.5rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1.2rem;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+
+    width: 0.6rem;
+    height: 0.6rem;
+
+    background-color: $primary;
+    border-radius: 50%;
+  }
+}
+
+.aboutPage-team__info-gap {
+  height: 22rem;
+
+  border-left: 0.1rem solid #dadada;
+  border-right: 0.1rem solid #dadada;
+
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
+}
+
+.aboutPage-industries {
+  display: flex;
+  align-items: center;
+
+  background-color: #231f20;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+  }
+}
+
+.aboutPage-industries__heading-wrapper {
+  width: max-content;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 2.4rem 0;
+
+  background-color: $secondary;
+
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+
+  @include breakpoint($lg-bp) {
+    width: 100%;
+
+    text-align: center;
+
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    padding: 3rem 0 5rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 2.2rem 1rem 6rem;
+  }
+}
+
+.aboutPage-industries__heading {
+  width: 100%;
+  max-width: 54rem;
+
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: white;
+
+  margin-left: 33rem;
+  margin-right: 9.1rem;
+
+  @include breakpoint($xl-bp) {
+    margin-left: 6rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    margin: 0 auto;
+  }
+
+  @include breakpoint($sm-bp) {
+    max-width: unset;
+
+    font-size: 1.4rem;
+    line-height: 1.4;
+
+    margin: 0 0.8rem;
+  }
+}
+
+.aboutPage-industries__content {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint($lg-bp) {
+    padding: 2rem 0;
+  }
+
+  @include breakpoint($sm-bp) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 5rem;
+  }
+
+  img {
+    width: 100%;
+    max-width: 11.6rem;
+  }
+
+  img + img {
+    margin-left: 2rem;
+
+    @include breakpoint($sm-bp) {
+      margin-left: 0;
+    }
+  }
+}
+
+.aboutPage-benefits {
+  padding: 4.5rem;
+  margin-bottom: 6rem;
+
+  border-bottom: 0.1rem solid #dadada;
+
+  @include breakpoint($lg-bp) {
+    padding: 3.5rem 2rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 2.5rem 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.aboutPage-benefits__item {
+  width: max-content;
+
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #240e0e;
+  opacity: 0.5;
+
+  padding: 0 3rem;
+
+  user-select: none;
+
+  @include breakpoint($lg-bp) {
+    font-size: 1.8rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+    padding: 0 2rem;
+  }
+
+  &:not(:first-child) {
+    border-left: 0.1rem solid #dadada;
+  }
+  &:not(:last-child) {
+    border-right: 0.1rem solid #dadada;
+  }
+}
+
+.aboutPage-map {
+  padding-top: 6.5rem;
+  margin-bottom: 10rem;
+
+  background: url(../images/about-page/about-p-bg.png) no-repeat;
+  background-position: top center;
+
+  @include breakpoint($sm-bp) {
+    padding-top: 4rem;
+    margin-bottom: 9rem;
+  }
+}
+
+.aboutPage-map__descr {
+  position: relative;
+
+  width: 100%;
+  max-width: 62rem;
+
+  font-weight: 300;
+  font-size: 1.6rem;
+  text-align: center;
+  color: rgba(36, 14, 14, 0.8);
+
+  margin: 0 auto 1.5rem;
+  padding: 2.5rem 3.5rem;
+
+  background-color: #fff;
+
+  @include breakpoint($sm-bp) {
+    max-width: 30rem;
+
+    padding: 2.5rem 0 0;
+
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1.6rem;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+
+    width: 4.7rem;
+    height: 0.1rem;
+
+    background-color: $secondary;
+  }
+}
+
+.aboutPage-map__img {
+  display: block;
+
+  width: 100%;
+  max-width: 87rem;
+
+  margin: 0 auto;
+
+  transform: rotate(2.7deg);
+}
