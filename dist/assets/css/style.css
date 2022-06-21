@@ -5814,6 +5814,881 @@ button.swiper-pagination-bullet {
     }
 }
 
+.brandsTitle {
+    width: 100%;
+    max-width: 130rem;
+    padding: 0 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6rem;
+    font-weight: bold;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.9rem;
+    color: #240E0E;
+}
+
+@media (max-width: 500px) {
+    .brandsTitle {
+        padding: 0 0.8rem;
+        margin-top: 2rem;
+    }
+}
+
+.searchBrand {
+    background-image: url(../../images/icons/search.svg);
+    border: 1px solid #DADADA;
+    width: 62.1rem;
+    height: 6rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 140%;
+    color: #240E0E;
+    outline: none;
+    padding-left: 1.5rem;
+    background-size: 100%;
+}
+
+@media (max-width: 500px) {
+    .product-acc {
+        display: none;
+    }
+}
+
+.searchBrand::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.searchContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.redLine {
+    border: 0.1rem solid #B71A1B;
+    margin-bottom: 3.9rem;
+}
+
+@media (max-width: 500px) {
+    .redLine {
+        display: none;
+    }
+}
+
+@media (max-width: 920px) {
+    .redLine {
+        display: none;
+    }
+}
+
+.mainContent {
+    margin-bottom: 11.3rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .mainContent {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 3.9rem;
+    }
+}
+
+.mainContent .mainContentItems {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 14rem;
+}
+
+@media (max-width: 500px) {
+    .mainContent .mainContentItems {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 3.9rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .mainContent .mainContentItems {
+        gap: 2.9rem;
+    }
+}
+
+.mainContent .mainContentItems .capitalLetter {
+    width: 2.9rem;
+    height: 3.4rem;
+    opacity: 0.5;
+    border-bottom: 0.2rem solid #000000;
+    text-align: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 140%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+.mainContent .mainContentItems .capitalLetter:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.mainContent .mainContentItems .oterText {
+    padding-left: 0.4rem;
+    gap: 2.8rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.mainContent .mainContentItems .oterText p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 140%;
+    color: #503E3F;
+}
+
+.mobilePopularTitle {
+    display: none;
+    height: 8rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-align: center;
+    color: #FFFFFF;
+    background: #B71A1B;
+}
+
+@media (max-width: 500px) {
+    .mobilePopularTitle {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+.mobileBrandItem {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.logoContainer {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .logoContainer {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+    .logoContainer div {
+        -ms-flex-item-align: center;
+        align-self: center;
+    }
+
+    .logoContainer div .euroChemLogo {
+        width: 15.1rem;
+        height: 3rem;
+    }
+
+    .logoContainer div .rosneftLogo {
+        width: 11.3rem;
+        height: 5.9rem;
+    }
+
+    .logoContainer div .nlmkLogo {
+        width: 9.3rem;
+        height: 4.9rem;
+    }
+}
+
+.mobileBrandItem {
+    margin-top: 2rem;
+}
+
+.chevrondownIco {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.moreBrandsContainer {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .moreBrandsContainer {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 100%;
+        color: #E30613;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 0.8rem;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: 1.8rem;
+        margin-bottom: 4.8rem;
+    }
+}
+
+.brandsSecondLevelTitleContainer {
+    width: 100%;
+    max-width: 130rem;
+    padding: 0 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6rem;
+}
+
+.brandsSecondLevelTitleContainer .brandName {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.9rem;
+    color: #240E0E;
+    margin-bottom: 4rem;
+}
+
+.brandsSecondLevelTitleContainer .yokogamaLogo {
+    margin-bottom: 2.4rem;
+}
+
+.brandsSecondLevelTitleContainer .brandSubtitle {
+    width: 65rem;
+    height: 12rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 140%;
+    color: #240E0E;
+    opacity: 0.8;
+}
+
+.brandsSecondLevelTitleContainer .japan {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 140%;
+    color: #503E3F;
+}
+
+.popular__heading-wrapperSec {
+    width: 100%;
+    border-top: 0.1rem solid #dadada;
+}
+
+.popular__heading {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 4.3rem 0;
+    background-color: #b71a1b;
+    -webkit-clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+}
+
+@media (max-width: 920px) {
+    .popular__heading {
+        width: 100%;
+        -webkit-clip-path: none;
+        clip-path: none;
+        padding: 3rem 5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .popular__heading {
+        padding: 1.6rem 5rem;
+    }
+}
+
+.popular__heading h2 {
+    font-weight: 700;
+    font-size: 4rem;
+    color: white;
+    margin-left: 33rem;
+    margin-right: 10.6rem;
+}
+
+@media (max-width: 920px) {
+    .popular__heading h2 {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .popular__heading h2 {
+        max-width: unset;
+        font-size: 2rem;
+        margin: 0 0.8rem;
+    }
+}
+
+.productsControlPanel {
+    margin-bottom: 4.6rem;
+}
+
+@media (max-width: 500px) {
+    .productsControlPanel {
+        display: none;
+    }
+}
+
+.productsControlPanel .helpPositionContainer {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 130rem;
+    padding: 0 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leftControllPanelContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding-top: 3.2rem;
+}
+
+.productsControlPanel {
+    background: #2E2A2B;
+}
+
+.controlPanelImgContainer {
+    width: 2.8rem;
+    height: 2.8rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.controlTitle {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.8rem;
+}
+
+.controlText {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #FFFFFF;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.radioCotainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.6rem;
+    border-left: 0.1rem solid #393536;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #FFFFFF;
+    margin-left: 9.1rem;
+    padding-bottom: 3.65rem;
+    padding-top: 2.6rem;
+}
+
+.radioCotainer label {
+    cursor: pointer;
+}
+
+.radioCotainer .radioElementContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.7rem;
+    padding-left: 2.8rem;
+}
+
+.radioCotainer .radioElement {
+    cursor: pointer;
+    position: relative;
+    height: 1.6rem;
+    width: 1.6rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: 0.1rem solid rgba(255, 255, 255, 0.4509803922);
+    border-radius: 50%;
+}
+
+.radioCotainer .radioElement:checked:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #E30613;
+    border: none;
+}
+
+.radioCotainer .radioElement:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background-color: #2E2A2B;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    visibility: visible;
+}
+
+.productContainer {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 130rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4.25rem;
+    margin-bottom: 14.3rem;
+    gap: 1.9rem;
+}
+
+.productContainer .controlPannel {
+    width: 100%;
+    max-width: 30rem;
+    height: 71rem;
+    padding: 2rem;
+    margin-right: 2.1rem;
+    background-color: #2e2a2b;
+}
+
+@media (max-width: 920px) {
+    .productContainer .controlPannel {
+        max-width: unset;
+        margin-right: 0;
+    }
+}
+
+.productContainer .filter-heading {
+    display: none;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.8rem 0.8rem 0.8rem 1.6rem;
+    background-color: #2e2a2b;
+    cursor: pointer;
+}
+
+.productContainer .filter-heading.active .filter-heading__chevron {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+@media (max-width: 920px) {
+    .productContainer .filter-heading {
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+.productContainer .filter-heading__left {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.productContainer .filter-heading__left svg {
+    width: 2rem;
+    height: 2rem;
+    fill: white;
+    margin-right: 1.2rem;
+}
+
+.productContainer .filter-heading__left p {
+    font-size: 1.6rem;
+    line-height: 1.25rem;
+    color: white;
+}
+
+.productContainer .filter-heading__chevron {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: white;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.productContainer .filter-item {
+    margin-bottom: 2.2rem;
+}
+
+.productContainer .filter-item:not(:first-child) {
+    padding-top: 2rem;
+    border-top: 0.1rem solid rgba(218, 218, 218, 0.1);
+}
+
+.productContainer .filter-price__heading {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 0.8rem;
+}
+
+.productContainer .filter-item__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.1s linear;
+}
+
+.productContainer .filter-item__heading {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.productContainer .filter-item__heading.active {
+    margin-bottom: 1.6rem;
+}
+
+.productContainer .filter-item__heading.active svg {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.productContainer .filter-item__heading svg {
+    width: 2.8rem;
+    height: 2.8rem;
+    fill: white;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.productContainer .filter-price__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 1.2rem;
+    -moz-column-gap: 1.2rem;
+    column-gap: 1.2rem;
+    margin-bottom: 2.4rem;
+}
+
+.productContainer .filter-price__inner label {
+    position: relative;
+}
+
+.productContainer .filter-price__inner label span {
+    position: absolute;
+    left: 0.8rem;
+    top: 0.4rem;
+    z-index: 1;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #dadada;
+}
+
+.productContainer .filter-price__inner input {
+    width: 100%;
+    height: 4.1rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #240e0e;
+    padding: 1.6rem 0.8rem 0.5rem;
+    background-color: white;
+    border: none;
+}
+
+.productsItems {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2.1rem;
+}
+
+.productsItems .productItem {
+    width: 30rem;
+    height: 53rem;
+    border: 0.1rem solid #DADADA;
+}
+
+.productsItems .productItemName {
+    width: 19.7rem;
+    height: 5.2rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.2rem;
+    line-height: 120%;
+    color: #240E0E;
+    margin-top: 2.4rem;
+    margin-left: 2.8rem;
+}
+
+.productsItems .productItemImageContainer {
+    height: 32.5rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.productsItems .productItemDescriptionContainer {
+    padding-top: 1.3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-top: 0.1rem solid #DADADA;
+}
+
+.productsItems .productItemDescriptionContainer .productItemTitle {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    color: #240E0E;
+}
+
+.productsItems .productItemDescriptionContainer .productItemDescription {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 140%;
+    color: #240E0E;
+    opacity: 0.8;
+}
+
+.catalog-grid2 {
+    display: none;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-bottom: 2.5rem;
+}
+
+@media (max-width: 500px) {
+    .catalog-grid2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.newsContainer {
+    width: 100%;
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.newsContainer .newsBanner {
+    width: 77.15rem;
+    height: 8.2rem;
+    background: #2E2A2B;
+    background: linear-gradient(-127deg, transparent 5rem, #2E2A2B 0);
+    position: relative;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: 120%;
+    color: #FFFFFF;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding-right: 8.4rem;
+    -ms-flex-align: center;
+    align-items: center;
+    top: -5.1rem;
+    left: -35rem;
+}
+
+.newsContainer .dateContainer {
+    margin-bottom: 9rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.newsContainer .dateContainer .dateTitle {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 140%;
+    color: #503E3F;
+    opacity: 0.8;
+}
+
+.newsContainer .dateContainer .dateDescription {
+    width: 83.2rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 140%;
+    color: #503E3F;
+    opacity: 0.8;
+}
+
+.commasContainer {
+    width: 100%;
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3.4rem;
+}
+
+.commasContainer .quoteContainer {
+    width: 85.7rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 39px;
+    color: #454545;
+}
+
+.commasContainer .profileContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 3.9rem;
+    margin-top: 3rem;
+    margin-bottom: 9rem;
+}
+
+.commasContainer .profileContainer .avatarContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 3.9rem;
+}
+
+.commasContainer .profileContainer .avatarContainer .avatarNameContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.commasContainer .profileContainer .avatarContainer .avatarNameContainer h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+    color: #070C30;
+}
+
+.commasContainer .profileContainer .avatarContainer .avatarNameContainer p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 2.3rem;
+    color: #070C30;
+}
+
+.randomDescription {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 140%;
+    color: #503E3F;
+    opacity: 0.8;
+    width: 100%;
+    max-width: 130rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.randomDescription div {
+    width: 83.2rem;
+}
+
+.articleSlider {
+    min-width: 0;
+}
+
 .hide {
     display: none;
 }
