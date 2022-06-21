@@ -83,11 +83,11 @@ svg {
 @import "blocks/container";
 @import "blocks/breadcrumbs";
 @import "blocks/header";
-// @import "blocks/hollow-btn";
 @import "blocks/filled-btn";
 @import "blocks/tabs";
-@import "blocks/custom-checkbox.scss";
-// @import "blocks/section";
+@import "blocks/custom-checkbox";
+@import "blocks/custom-radio";
+
 // @import "blocks/menu";
 
 @import "blocks/intro";
@@ -108,6 +108,8 @@ svg {
 @import "blocks/about-page";
 
 @import "blocks/contacts.scss";
+
+@import "blocks/questnry.scss";
 
 @import "blocks/footer";
 
