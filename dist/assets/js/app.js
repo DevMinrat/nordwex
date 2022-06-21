@@ -10412,6 +10412,7 @@ document.addEventListener("DOMContentLoaded", function () {
     Swiper.use(modules);
     return Swiper;
   }); // intro slider
+  // intro slider
 
 
   var introFractCurrent = document.querySelector(".intro-fraction-current");
@@ -10628,6 +10629,20 @@ document.addEventListener("DOMContentLoaded", function () {
           type: "fraction"
         }
       }
+    }
+  }); //article slider
+
+  var articleSlider = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.arrowNext',
+      prevEl: '.arrowPrev'
+    }
+  }); //article slider mobile 
+
+  var articleSliderMobile = new Swiper(".mySwiperMobile", {
+    pagination: {
+      el: ".swiper-pagination"
     }
   });
 

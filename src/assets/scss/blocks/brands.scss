@@ -1,0 +1,246 @@
+
+
+.brandsTitle {
+    width: 100%;
+    max-width: 130rem;
+  
+    padding: 0 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6rem;
+
+    font-weight: bold;
+  
+    @include breakpoint($sm-bp) {
+      padding: 0 0.8rem;
+      margin-top: 2rem;
+    }
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.9rem;
+    color: #240E0E;
+}
+
+
+
+.searchBrand {
+    background-image: url(../../images/icons/search.svg);
+    border: 1px solid #DADADA;
+    width: 62.1rem;
+    height: 6rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 140%;
+    color: #240E0E;
+    outline:none;
+    padding-left: 1.5rem;
+    background-size: 100%;
+
+    
+}
+
+.product-acc {
+    @include breakpoint($sm-bp) {
+        display: none;
+    }
+}
+
+.searchBrand::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.redLine {
+    border: 0.1rem solid #B71A1B;
+    margin-bottom: 3.9rem;
+    @include breakpoint($sm-bp) {
+        display: none;
+    }
+
+    @include breakpoint($lg-bp) {
+        display: none;
+    }
+}
+
+.mainContent {
+margin-bottom: 11.3rem;
+display: flex;
+justify-content: center;
+@include breakpoint($sm-bp) {
+    flex-direction: column;
+    margin-top: 3.9rem;
+}
+
+    .mainContentItems {
+        display: flex;
+        gap: 14rem;
+        @include breakpoint($sm-bp) {
+            flex-direction: column;
+            gap: 3.9rem;
+        }
+
+        @include breakpoint($lg-bp) {
+            gap: 2.9rem;
+        }
+
+
+        .capitalLetter {
+            width: 2.9rem;
+            height: 3.4rem;
+            opacity: 0.5;
+            border-bottom: 0.2rem solid #000000;
+            text-align: center;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 2.4rem;
+            line-height: 140%;
+            text-align: center;
+            color: #000000;
+            margin-bottom: 2rem;
+        }
+
+        .capitalLetter:not(:first-child) {
+            margin-top: 2rem;
+        }
+
+        .oterText {
+            padding-left: 0.4rem;
+            gap: 2.8rem;
+            display: flex;
+            flex-direction: column;
+        
+            p {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 140%;
+                color: #503E3F;
+            }
+        }
+    }
+}
+
+
+.mobilePopularTitle {
+    display: none;
+    height: 8rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-align: center;
+    color: #FFFFFF;
+    background: #B71A1B;
+
+    @include breakpoint($sm-bp) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+.mobileBrandItem {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.logoContainer {
+    display: none;
+    @include breakpoint($sm-bp) {
+        display: flex;
+        justify-content: space-around;
+
+    div {
+        align-self: center;
+
+        .euroChemLogo {
+            width: 15.1rem;
+            height: 3rem;
+        }
+    
+        .rosneftLogo {
+            width: 11.3rem;
+            height: 5.9rem;
+        }
+
+        .nlmkLogo {
+            width: 9.3rem;
+            height: 4.9rem;
+        }
+    }
+
+    }
+    
+}
+
+.mobileBrandItem {
+    margin-top: 2rem;
+}
+
+.chevrondownIco {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.moreBrandsContainer {
+    display: none;
+    @include breakpoint($sm-bp) {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 100%;
+        color: #E30613;
+        display: flex;
+        gap: 0.8rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.8rem;
+        margin-bottom: 4.8rem;
+    }
+}
+
+.containerLogo {
+
+    // .swiper-slide {
+    //     width: 22rem;
+    // }
+
+    // .sliderItem {
+    //     width: 22rem;
+    // }
+    // .swiper-slide-active {
+    //     width: 22rem;
+    // }
+
+    // .swiper-wrapper {
+
+    //     width: 22rem;
+    // }
+}
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,5 +1,7 @@
 // intro slider
 
+// intro slider
+
 let introFractCurrent = document.querySelector(".intro-fraction-current");
 let introFractTotal = document.querySelector(".intro-fraction-total");
 let introSlidesAmount = document.querySelectorAll(
@@ -252,4 +254,23 @@ let accessoriesSlider = new Swiper(".product-acc__slider", {
       },
     },
   },
+});
+
+//article slider
+
+const articleSlider = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.arrowNext',
+    prevEl: '.arrowPrev',
+  },
+});
+
+//article slider mobile 
+
+const articleSliderMobile = new Swiper(".mySwiperMobile", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  
 });
