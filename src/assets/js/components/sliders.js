@@ -256,7 +256,6 @@ let accessoriesSlider = new Swiper(".product-acc__slider", {
   },
 });
 
-
 //about page benefits slider
 
 let apBenefitsSlider = new Swiper(".aboutPage-benefits", {
@@ -264,23 +263,22 @@ let apBenefitsSlider = new Swiper(".aboutPage-benefits", {
   spaceBetween: 0,
   freeMode: true,
   grabCursor: true,
+});
 
-  
 //article slider
 
 const articleSlider = new Swiper(".mySwiper", {
   spaceBetween: 30,
   navigation: {
-    nextEl: '.arrowNext',
-    prevEl: '.arrowPrev',
+    nextEl: ".arrowNext",
+    prevEl: ".arrowPrev",
   },
 });
 
-//article slider mobile 
+//article slider mobile
 
 const articleSliderMobile = new Swiper(".mySwiperMobile", {
   pagination: {
     el: ".swiper-pagination",
   },
-  
 });

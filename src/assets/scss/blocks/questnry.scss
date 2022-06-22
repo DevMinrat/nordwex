@@ -1,5 +1,20 @@
 .questnry {
   margin-bottom: 10rem;
+
+  input {
+    height: 4rem;
+
+    padding: 0 1.5rem;
+
+    border: 0.1rem solid #dadada;
+  }
+
+  label {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #503e3f;
+  }
 }
 
 .questnry__inner {
@@ -101,18 +116,7 @@
   row-gap: 0.8rem;
 
   label {
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1;
     color: rgba(0, 0, 0, 0.5);
-  }
-
-  input {
-    height: 4rem;
-
-    padding: 0 1.5rem;
-
-    border: 0.1rem solid #dadada;
   }
 }
 
@@ -127,18 +131,13 @@
   input {
     width: 100%;
     max-width: 84rem;
-    height: 4rem;
-
-    padding: 0 1.5rem;
-
-    border: 0.1rem solid #dadada;
   }
 }
 
 .questnry-checkbox__wrapper,
 .questnry-radio__wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem 4rem;
 }
 
@@ -157,10 +156,6 @@
   .custom-checkbox:checked + label::before {
     border-color: $secondary;
   }
-
-  label {
-    color: #503e3f;
-  }
 }
 
 .req-inputs-select__heading {
@@ -172,8 +167,100 @@
 .questnry-radio {
   display: flex;
   align-items: center;
+}
 
-  label {
-    color: #503e3f;
+.req-inputs__heading {
+  margin-bottom: 1.2rem;
+}
+
+.req-inputs__inner {
+  display: flex;
+}
+
+.req-inputs__item {
+  display: flex;
+  align-items: center;
+
+  & + & {
+    margin-left: 2rem;
   }
+
+  input {
+    margin-right: 1.2rem;
+  }
+}
+
+.req-input-lg {
+  width: 100%;
+  max-width: 22rem;
+}
+.req-input-sm {
+  width: 100%;
+  max-width: 11rem;
+}
+
+.questnry-checktabs__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem 2rem;
+}
+
+.questnry-checktab {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 0.1rem;
+  height: 0.1rem;
+}
+
+.questnry-checktab + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 1.3rem 1.7rem;
+  border: 0.1rem solid #dadada;
+  border-radius: 30rem;
+  transition: all 0.1s linear;
+  color: #240e0e;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.questnry-checktab:not(:disabled):not(:checked) + label:hover {
+  border-color: $primary;
+}
+
+.questnry-checktab:not(:disabled):active + label {
+  background-color: rgb(240, 134, 134);
+  border-color: $secondary;
+}
+
+.questnry-checktab:focus + label {
+  box-shadow: 0 0 0 0.1rem white;
+}
+
+.questnry-checktab:checked + label {
+  border: 0.1rem solid $primary;
+  background-color: $primary;
+  color: white;
+}
+
+.questnry-checktab:disabled + label {
+  background-color: #e9ecef;
+}
+
+.param-select__heading {
+  margin-bottom: 1.2rem;
+}
+
+.param-select__item {
+  width: 100%;
+  max-width: 30rem;
+}
+
+.questnry-def-select {
+  width: 100%;
+  max-width: 30rem;
 }

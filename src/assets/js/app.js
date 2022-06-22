@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   //= ../../../node_modules/swiper/swiper-bundle.js
+  //= ../../../node_modules/choices.js/public/assets/scripts/choices.js
   //= components/
 
   class ItcTabs {
@@ -186,6 +187,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // questnry selects
+
+  const questnryDefSelects = document.querySelectorAll(".questnry-def-select");
+
+  if (questnryDefSelects.length > 0) {
+    questnryDefSelects.forEach((el) => {
+      new Choices(el, {
+        searchEnabled: false,
+        shouldSort: false,
+        itemSelectText: "",
+      });
+    });
+  }
+
   // throttleScroll
 
   let isScrolling = false;
@@ -205,5 +220,3 @@ document.addEventListener("DOMContentLoaded", () => {
     isScrolling = true;
   }
 });
-
-
