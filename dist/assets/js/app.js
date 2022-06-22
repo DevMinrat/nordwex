@@ -10411,7 +10411,55 @@ document.addEventListener("DOMContentLoaded", function () {
     var modules = [Virtual, Keyboard, Mousewheel, Navigation, Pagination, Scrollbar, Parallax, Zoom, Lazy, Controller, A11y, History, HashNavigation, Autoplay, Thumb, freeMode, Grid, Manipulation, EffectFade, EffectCube, EffectFlip, EffectCoverflow, EffectCreative, EffectCards];
     Swiper.use(modules);
     return Swiper;
+  });
 
+  var compareSectTitle = document.querySelectorAll(".compare-info__section-heading"),
+      compareSectContent = document.querySelectorAll(".compare-info__section-content");
+
+  if (compareSectTitle.length > 0) {
+    var _loop2 = function _loop2(i) {
+      compareSectContent[0].style.maxHeight = compareSectContent[0].scrollHeight + "px";
+      compareSectTitle[0].classList.add("active");
+      compareSectTitle[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = compareSectContent[i];
+
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    };
+
+    for (var i = 0; i < compareSectTitle.length; i++) {
+      _loop2(i);
+    }
+  } // contacts page
+
+
+  var contactsSectTitle = document.querySelectorAll(".contacts-req__heading"),
+      contactsSectContent = document.querySelectorAll(".contacts-req__inner");
+
+  if (contactsSectTitle.length > 0) {
+    var _loop3 = function _loop3(_i14) {
+      contactsSectTitle[_i14].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = contactsSectContent[_i14];
+
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    };
+
+    for (var _i14 = 0; _i14 < contactsSectTitle.length; _i14++) {
+      _loop3(_i14);
+    }
+  } // intro slider
+  // intro slider
 
 
   var introFractCurrent = document.querySelector(".intro-fraction-current");
@@ -10629,6 +10677,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     }
+  }); //about page benefits slider
+
+  var apBenefitsSlider = new Swiper(".aboutPage-benefits", {
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    freeMode: true,
+    grabCursor: true
+  }); //article slider
+
+  var articleSlider = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.arrowNext',
+      prevEl: '.arrowPrev'
+    }
+  }); //article slider mobile 
+
+  var articleSliderMobile = new Swiper(".mySwiperMobile", {
+    pagination: {
+      el: ".swiper-pagination"
+    }
+  });
+
   var ItcTabs = /*#__PURE__*/function () {
     function ItcTabs(target, config) {
       _classCallCheck(this, ItcTabs);

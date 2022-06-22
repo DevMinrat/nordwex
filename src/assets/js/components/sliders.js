@@ -265,7 +265,7 @@ let apBenefitsSlider = new Swiper(".aboutPage-benefits", {
   freeMode: true,
   grabCursor: true,
 
-  
+});
 //article slider
 
 const articleSlider = new Swiper(".mySwiper", {
