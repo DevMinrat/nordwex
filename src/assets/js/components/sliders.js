@@ -284,3 +284,15 @@ const articleSliderMobile = new Swiper(".mySwiperMobile", {
   },
   
 });
+
+
+// brands slider
+
+const brandsSwiper = new Swiper(".brandsSwiper", {
+  slidesPerView: 8,
+  loop: true,
+  navigation: {
+    nextEl: '.arrowNextcontainer',
+    prevEl: '.arrowPrevContainer',
+  },
+});

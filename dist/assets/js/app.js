@@ -10698,6 +10698,15 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: {
       el: ".swiper-pagination"
     }
+  }); // brands slider
+
+  var brandsSwiper = new Swiper(".brandsSwiper", {
+    slidesPerView: 8,
+    loop: true,
+    navigation: {
+      nextEl: '.arrowNextcontainer',
+      prevEl: '.arrowPrevContainer'
+    }
   });
 
   var ItcTabs = /*#__PURE__*/function () {
