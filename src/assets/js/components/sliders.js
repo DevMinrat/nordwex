@@ -279,12 +279,14 @@ const articleSlider = new Swiper(".mySwiper", {
 //article slider mobile 
 
 const articleSliderMobile = new Swiper(".mySwiperMobile", {
+
   pagination: {
     el: ".swiper-pagination",
-  },
+    type: 'bullets',
+         clickable: true,
+  }, 
   
 });
-
 
 // brands slider
 

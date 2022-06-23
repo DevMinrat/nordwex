@@ -10696,7 +10696,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var articleSliderMobile = new Swiper(".mySwiperMobile", {
     pagination: {
-      el: ".swiper-pagination"
+      el: ".swiper-pagination",
+      type: 'bullets',
+      clickable: true
     }
   }); // brands slider
 

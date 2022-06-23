@@ -6044,7 +6044,7 @@ button.swiper-pagination-bullet {
 }
 
 .searchBrand {
-    background-image: url(../../images/icons/search.svg);
+    background-image: url(../images/icons/search.svg);
     border: 1px solid #DADADA;
     width: 62.1rem;
     height: 6rem;
@@ -6120,6 +6120,7 @@ button.swiper-pagination-bullet {
         -ms-flex-direction: column;
         flex-direction: column;
         gap: 3.9rem;
+        margin-left: 2rem;
     }
 }
 
@@ -6165,6 +6166,10 @@ button.swiper-pagination-bullet {
     font-size: 1.6rem;
     line-height: 140%;
     color: #503E3F;
+}
+
+.mainContent .mainContentItems .oterText a {
+    cursor: pointer;
 }
 
 .mobilePopularTitle {
@@ -6265,6 +6270,113 @@ button.swiper-pagination-bullet {
     }
 }
 
+@media (max-width: 920px) {
+    .popularContainer {
+        display: none;
+    }
+}
+
+.popularBanner {
+    height: 9rem;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 1px solid #DADADA;
+    border-bottom: 1px solid #DADADA;
+}
+
+.popularBanner .popularTextContainer {
+    width: 50%;
+    background: #B71A1B;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.popularBanner .arrowsContainer {
+    width: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.popularBanner .arrowsContainer .arrowNavHelpContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.popularBanner .arrowsContainer .arrowPrevContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.popularBanner .arrowsContainer .arrowPrev {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+}
+
+.popularBanner .arrowsContainer .arrowNextcontainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.popularBanner .arrowsContainer .borderLineContainer {
+    border: 1px solid rgba(36, 14, 14, 0.3098039216);
+    width: 8.4rem;
+    height: 0rem;
+}
+
+.popularBanner .arrowsContainer .arrowNext {
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+}
+
+.brandsSwiper {
+    height: 12rem;
+    border-bottom: 1px solid #DADADA;
+    margin-bottom: 8.1rem;
+}
+
+.brandsSwiper a {
+    cursor: pointer;
+}
+
+.brandsSwiper .swiper-slide {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 .brandsSecondLevelTitleContainer {
     width: 100%;
     max-width: 130rem;
@@ -6272,6 +6384,13 @@ button.swiper-pagination-bullet {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 6rem;
+}
+
+@media (max-width: 500px) {
+    .brandsSecondLevelTitleContainer {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
 }
 
 .brandsSecondLevelTitleContainer .brandName {
@@ -6284,13 +6403,27 @@ button.swiper-pagination-bullet {
     margin-bottom: 4rem;
 }
 
+@media (max-width: 500px) {
+    .brandsSecondLevelTitleContainer .brandName {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        margin-top: 2rem;
+    }
+}
+
 .brandsSecondLevelTitleContainer .yokogamaLogo {
     margin-bottom: 2.4rem;
 }
 
+@media (max-width: 500px) {
+    .brandsSecondLevelTitleContainer .yokogamaLogo img {
+        width: 18.8rem;
+    }
+}
+
 .brandsSecondLevelTitleContainer .brandSubtitle {
     width: 65rem;
-    height: 12rem;
+    margin-bottom: 1.2rem;
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 300;
@@ -6298,6 +6431,12 @@ button.swiper-pagination-bullet {
     line-height: 140%;
     color: #240E0E;
     opacity: 0.8;
+}
+
+@media (max-width: 500px) {
+    .brandsSecondLevelTitleContainer .brandSubtitle {
+        width: auto;
+    }
 }
 
 .brandsSecondLevelTitleContainer .japan {
@@ -6743,9 +6882,22 @@ button.swiper-pagination-bullet {
 @media (max-width: 500px) {
     .catalog-grid2 {
         display: block;
+        margin-bottom: 1.5rem;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .catalogBrands .catalog-content {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
     }
 }
 
@@ -6765,7 +6917,8 @@ button.swiper-pagination-bullet {
     width: 77.15rem;
     height: 8.2rem;
     background: #2E2A2B;
-    background: linear-gradient(-127deg, transparent 5rem, #2E2A2B 0);
+    -webkit-clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
     position: relative;
     font-family: "Montserrat";
     font-style: normal;
@@ -7170,7 +7323,8 @@ button.swiper-pagination-bullet {
     width: 77.15rem;
     height: 8.2rem;
     background: #2E2A2B;
-    background: linear-gradient(-127deg, transparent 5rem, #2E2A2B 0);
+    -webkit-clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 300;
@@ -7277,10 +7431,10 @@ button.swiper-pagination-bullet {
 .subtitleContainer .warningContainer {
     margin-top: 9rem;
     width: 93.3rem;
-    height: 21.2rem;
     background-color: #2E2A2B;
     position: relative;
     margin-bottom: 9rem;
+    padding-bottom: 3.9rem;
 }
 
 @media (max-width: 920px) {
@@ -7399,8 +7553,9 @@ button.swiper-pagination-bullet {
 .specificationsBanner {
     width: 87.35rem;
     height: 8.2rem;
-    background: #2E2A2B;
-    background: linear-gradient(-127deg, transparent 5rem, #B71A1B 0);
+    background: #B71A1B;
+    -webkit-clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 300;
@@ -7414,6 +7569,48 @@ button.swiper-pagination-bullet {
     padding-right: 8.4rem;
     -ms-flex-align: center;
     align-items: center;
+}
+
+@media (max-width: 920px) {
+    .specificationsBanner {
+        display: none;
+    }
+}
+
+.specificationsBannerMobile {
+    display: none;
+}
+
+@media (max-width: 920px) {
+    .specificationsBannerMobile {
+        display: -ms-flexbox;
+        display: flex;
+        background: #B71A1B;
+        width: 100%;
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: max-content;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        color: #FFFFFF;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 8rem;
+        padding-left: 1.3rem;
+        padding-right: 1.3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .specificationsBannerMobile .specificationsBannerMobileText {
+        width: 17.3rem;
+        height: 4.8rem;
+    }
 }
 
 .specificationsContainer {
@@ -7446,6 +7643,20 @@ button.swiper-pagination-bullet {
     margin-bottom: 2rem;
 }
 
+@media (max-width: 920px) {
+    .specificationsContainer .main tbody tr {
+        gap: 17rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .specificationsContainer .main tbody tr {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+}
+
 .specificationsContainer .main tbody tr td:first-child {
     width: 16rem;
     font-family: "Montserrat";
@@ -7458,11 +7669,18 @@ button.swiper-pagination-bullet {
 
 .specificationsContainer .main tbody tr td:last-child {
     font-family: "Montserrat";
+    width: 45.5rem;
     font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 100%;
     color: #000000;
+}
+
+@media (max-width: 500px) {
+    .specificationsContainer .main tbody tr td:last-child {
+        width: 35rem;
+    }
 }
 
 .specificationsContainer .main tbody tr td:last-child a {
@@ -7473,6 +7691,13 @@ button.swiper-pagination-bullet {
     background-color: #000000;
     display: -ms-flexbox;
     display: flex;
+}
+
+@media (max-width: 920px) {
+    .mediaBannerContainer {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
 }
 
 .mediaBannerContainer .mediaBannerConnectContainer {
@@ -7486,6 +7711,30 @@ button.swiper-pagination-bullet {
     margin-left: 5.2rem;
 }
 
+@media (max-width: 920px) {
+    .mediaBannerContainer .mediaBannerConnectContainer {
+        margin-left: none;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 2.2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .mediaBannerContainer .mediaBannerConnectContainer {
+        margin-left: unset;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 2.2rem;
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+    }
+}
+
 .mediaBannerContainer .mediaBannerConnectText {
     width: 59.5rem;
     font-family: "Montserrat";
@@ -7495,6 +7744,22 @@ button.swiper-pagination-bullet {
     line-height: 140%;
     color: #FFFFFF;
     opacity: 0.8;
+}
+
+@media (max-width: 920px) {
+    .mediaBannerContainer .mediaBannerConnectText {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .mediaBannerContainer .mediaBannerConnectText {
+        width: 100%;
+        padding: 0rem;
+        padding-left: 1.2rem;
+        padding-right: 0.8rem;
+    }
 }
 
 .mediaBannerContainer button {
@@ -7511,11 +7776,22 @@ button.swiper-pagination-bullet {
     height: 5.6rem;
 }
 
+@media (max-width: 500px) {
+    .mediaBannerContainer button {
+        width: 100%;
+        padding: 0rem;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+}
+
 .mediaBannerContainer .mediaBanner {
     width: 94.25rem;
     height: 24.3rem;
-    background: #2E2A2B;
-    background: linear-gradient(-115deg, transparent 10.5rem, #B71A1B 0);
+    background-image: url(../images/article/Rectangle.svg);
+    background-color: #B71A1B;
+    -webkit-clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 300;
@@ -7531,6 +7807,30 @@ button.swiper-pagination-bullet {
     align-items: center;
 }
 
+@media (max-width: 500px) {
+    .mediaBannerContainer .mediaBanner {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0rem;
+        height: 19.2rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .mediaBannerContainer .mediaBanner {
+        -ms-flex-pack: center;
+        justify-content: center;
+        background: #B71A1B;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    }
+}
+
 .mediaBannerContainer .mediaBanner .mediaBannerText {
     width: 49.9rem;
     font-family: "Montserrat";
@@ -7539,6 +7839,25 @@ button.swiper-pagination-bullet {
     font-size: 3.2rem;
     line-height: 140%;
     color: #FFFFFF;
+}
+
+@media (max-width: 920px) {
+    .mediaBannerContainer .mediaBanner .mediaBannerText {
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .mediaBannerContainer .mediaBanner .mediaBannerText {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        text-align: center;
+        color: #FFFFFF;
+        width: 24.8rem;
+    }
 }
 
 .mediaBannerRandom {

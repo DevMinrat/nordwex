@@ -13,12 +13,17 @@ title: article
 </div>
 
 <div class="newsContainer">
-    <div>
+    <div class="newsImgContainer">
         <img src="./assets/images/article/articleNewsImg.svg" alt="#">
     </div>
 
-    <div class="newsBanner">
-        Новостной заголовок
+    <div class="helpNewsBannerContainer">
+        <div class="product-section__heading">
+            <h2>Новостной заголовок</h2>
+            <svg>
+                <use href="#chevron"></use>
+            </svg>
+        </div>
     </div>
 
     <div class="dateContainer">
@@ -33,7 +38,7 @@ title: article
 </div>
 
 <div class="newsContainerMobile">
-    <div>
+    <div class="newsImgContainer">
         <img src="./assets/images/article/articleNewsImg.svg" alt="#">
     </div>
 
@@ -66,7 +71,7 @@ title: article
             <div class="avatarContainer">
                 <div><img src="./assets/images/article/avatar.svg" alt="#"></div>
                 <div class="avatarNameContainer">
-                    <h1>Константинов</h1>
+                    <p>Константинов</p>
                     <p>Константин Михайлович</p>
                 </div>
             </div>
@@ -76,7 +81,7 @@ title: article
 </div>
 
 <div class="commasContainerMobile">
-    <div>
+    <div class="commasImgContainer">
         <img src="./assets/images/article/commas.svg" alt="#">
     </div>
 
@@ -86,11 +91,11 @@ title: article
         </div>
 
         <div class="profileContainer">
-            <div><img src="./assets/images/article/redLine.svg" alt="#"></div>
+            <div class="redLineContainer"><img src="./assets/images/article/redLine.svg" alt="#"></div>
             <div class="avatarContainer">
                 <div><img src="./assets/images/article/avatar.svg" alt="#"></div>
                 <div class="avatarNameContainer">
-                    <h1>Константинов</h1>
+                    <p>Константинов</p>
                     <p>Константин Михайлович</p>
                 </div>
             </div>
@@ -203,9 +208,14 @@ title: article
         </div>
     </div>
 
-<div class="subtitleBannerContainer">
-    Текст подзаголовка
-</div>
+    <div class="subtitleBannerContainer">
+        <div class="product-section__heading">
+            <h2>Текст подзаголовка</h2>
+            <svg>
+                <use href="#chevron"></use>
+            </svg>
+        </div>
+    </div>
 
 <div class="subtitleBannerContainerMobile">
     Текест заголовока в две и более строки
@@ -232,7 +242,7 @@ title: article
         </div>
     </div>
 
-    <table class="tableContainer">
+    <!-- <table class="tableContainer">
         <thead>
             <tr>
                 <td>название </td>
@@ -281,113 +291,121 @@ title: article
                 <td>1234456</td>
             </tr>
         </tbody>
-    </table>
-</div>
+    </table> -->
 
-<div class="specificationsBanner">
-    Технические характеристики
-</div>
-
-<div class="specificationsBannerMobile">
-    <div class="specificationsBannerMobileText">Технические характеристики</div>
-    <div><img src="./assets/images/article/arrowUp.svg" alt="#"></div>
-</div>
-
-<div class="specificationsContainer">
-    <table class="main">
-        <thead>
-            <tr>
-                <td>Основные</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Тип оборудования:</td>
-                <td>Портативный плотномер</td>
-            </tr>
-            <tr>
-                <td>Производитель:</td>
-                <td><a href="#">LEMIS Baltic</a></td>
-            </tr>
-            <tr>
-                <td>Страна</td>
-                <td>Латвия</td>
-            </tr>
-            <tr>
-                <td>Срок поставки</td>
-                <td>60 дней</td>
-            </tr>
-            <tr>
-                <td>Тип оборудования</td>
-                <td>Портативный плотномер</td>
-            </tr>
-            <tr>
-                <td>Производитель</td>
-                <td><a href="#">LEMIS Baltic</a></td>
-            </tr>
-            <tr>
-                <td>Страна</td>
-                <td>Латвия</td>
-            </tr>
-            <tr>
-                <td>Срок поставки</td>
-                <td>60 дней</td>
-            </tr>
-            <tr>
-                <td>Тип оборудования</td>
-                <td>Портативный плотномер</td>
-            </tr>
-            <tr>
-                <td>Производитель</td>
-                <td>Ав­то­ма­ти­че­ская цен­тра­ли­зо­ван­ная, по­лу­ав­то­ма­ти­че­ская</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table class="main">
-        <thead>
-            <tr>
-                <td>Дополнительные</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Тип оборудования:</td>
-                <td>Портативный плотномер</td>
-            </tr>
-            <tr>
-                <td>Производитель:</td>
-                <td><a href="#">LEMIS Baltic</a></td>
-            </tr>
-            <tr>
-                <td>Страна</td>
-                <td>Латвия</td>
-            </tr>
-            <tr>
-                <td>Срок поставки</td>
-                <td>60 дней</td>
-            </tr>
-            <tr>
-                <td>Тип оборудования</td>
-                <td>Портативный плотномер</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<div class="mediaBannerContainer">
-    <div class="mediaBanner">
-        <div class="mediaBannerText">
-            Объявление, банер или возможнось донести прочую информацию
+    <div class="tableContainer">
+        <div class="parent">
+            <div class="div1">название</div>
+            <div class="div2">параметры</div>
+            <div class="div3">Lorem</div>
+            <div class="div4">123456</div>
+            <div class="div5">Lorem</div>
+            <div class="div6">123456</div>
+            <div class="div7">Lorem</div>
+            <div class="div8">123456</div>
+            <div class="div9">Lorem</div>
+            <div class="div10">123456</div>
+            <div class="div11">Lorem</div>
+            <div class="div12">123456</div>
+            <div class="div13">Lorem</div>
+            <div class="div14">123456</div>
+            <div class="div15">Lorem</div>
+            <div class="div16">123456</div>
+            <div class="div17">Lorem</div>
+            <div class="div18">123456</div>
+            <div class="div19">Lorem</div>
+            <div class="div20">123456</div>
+            <div class="div21">Lorem</div>
+            <div class="div22">123456</div>
         </div>
     </div>
-    <div class="mediaBannerConnectContainer">
-        <div class="mediaBannerConnectText">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget
+</div>
+
+<section class="helpProductSpec">
+<section class="product-spec product-section" id="pr-s2">
+    <div class="product-section__heading">
+        <h2>Технические характеристики</h2>
+        <svg>
+            <use href="#chevron"></use>
+        </svg>
+    </div>
+    <div class="container product-section__content">
+        <div class="product-section__inner product-spec__inner">
+            <div class="product-spec__item">
+                <p class="product-section__item-heading">Основные</p>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Тип оборудования:</p>
+                    <p class="product-spec__value">Портативный плотномер</p>
+                </div>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Производитель:</p>
+                    <p class="product-spec__value"><a href="#">LEMIS Baltic</a></p>
+                </div>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Страна</p>
+                    <p class="product-spec__value">Латвия</p>
+                </div>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Срок поставки</p>
+                    <p class="product-spec__value">60 дней</p>
+                </div>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Тип оборудования:</p>
+                    <p class="product-spec__value">Портативный плотномер</p>
+                </div>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Производитель:</p>
+                    <p class="product-spec__value"><a href="#">LEMIS Baltic</a></p>
+                </div>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Страна</p>
+                    <p class="product-spec__value">Латвия</p>
+                </div>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Производитель</p>
+                    <p class="product-spec__value">Ав­то­ма­ти­че­ская цен­тра­ли­зо­ван­ная, по­лу­ав­то­ма­ти­че­ская
+                    </p>
+                </div>
+            </div>
+            <div class="product-spec__item">
+                <p class="product-section__item-heading">Дополнительные</p>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Тип оборудования:</p>
+                    <p class="product-spec__value">Портативный плотномер</p>
+                </div>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Производитель:</p>
+                    <p class="product-spec__value"><a href="#">LEMIS Baltic</a></p>
+                </div>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Страна</p>
+                    <p class="product-spec__value">Латвия</p>
+                </div>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Срок поставки</p>
+                    <p class="product-spec__value">60 дней</p>
+                </div>
+                <div class="product-spec__item-char">
+                    <p class="product-spec__prop">Тип оборудования:</p>
+                    <p class="product-spec__value">Портативный плотномер</p>
+                </div>
+            </div>
         </div>
-        <button>
-            Связаться с менеджером
-        </button>
+    </div>
+</section>
+</section>
+
+<div class="category-offer">
+    <div class="category-offer__heading-wrapper">
+        <p class="category-offer__heading">Мы предлагаем подбор, конфигурирование и сборку изделия под проект</p>
+    </div>
+    <div class="category-offer__content">
+        <div class="category-offer__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+            bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales
+            pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam
+            fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan
+            eget</div>
+        <button class="category-offer__btn filled-btn">Связаться с менеджером</button>
     </div>
 </div>
 
@@ -400,16 +418,16 @@ title: article
         <h5>H5</h5>
     </div>
     <div>
-        <h5>Lorem ipsum dolor:</h5>
+        <p>Lorem ipsum dolor:</p>
         <ul>
             <li><span>fish1</span></li>
-            <ul class="output">
+            <ul>
                 <li><span>beer1</span></li>
                 <li><span>beer2</span></li>
                 <li><span>beer3</span></li>
             </ul>
             <li><span>fish2</span></li>
-            <ul class="output">
+            <ul>
                 <li><span>beer1</span></li>
                 <li><span>beer2</span></li>
                 <li><span>beer3</span></li>
@@ -704,29 +722,3 @@ title: article
     </div>
 
 </section>
-
-
-
-<div class="mobilePopularTitle">Популярные</div>
-<div class="mobileBrandItem">
-    <div class="logoContainer">
-        <div><img class="euroChemLogo" src="./assets/images/producersColor/EuroChem_logo_eng 5.svg" alt="#"></div>
-        <div><img class="rosneftLogo" src="./assets/images/producersColor/Rosneft_Logo 3.svg" alt="#"></div>
-    </div>
-    <div class="logoContainer">
-        <div><img class="nlmkLogo" src="./assets/images/producersColor/NLMK_Logo 3.svg" alt="#"></div>
-        <div><img class="euroChemLogo" src="./assets/images/producersColor/EuroChem_logo_eng 5.svg" alt="#"></div>
-    </div>
-    <div class="logoContainer">
-        <div><img class="euroChemLogo" src="./assets/images/producersColor/EuroChem_logo_eng 5.svg" alt="#"></div>
-        <div><img class="rosneftLogo" src="./assets/images/producersColor/Rosneft_Logo 3.svg" alt="#"></div>
-    </div>
-    <div class="logoContainer">
-        <div><img class="nlmkLogo" src="./assets/images/producersColor/NLMK_Logo 3.svg" alt="#"></div>
-        <div><img class="euroChemLogo" src="./assets/images/producersColor/EuroChem_logo_eng 5.svg" alt="#"></div>
-    </div>
-    <div class="moreBrandsContainer">
-        <div class="moreBrandsTitle">Больше брендов</div>
-        <div><img class="chevrondownIco" src="./assets/images/icons/chevron-down.svg" alt="#"></div>
-    </div>
-</div>

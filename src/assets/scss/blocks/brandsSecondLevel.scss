@@ -6,6 +6,12 @@
     margin-right: auto;
     margin-bottom: 6rem;
 
+    @include breakpoint($sm-bp) {
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+    }
+
+    
     .brandName {
         font-family: 'Montserrat';
         font-style: normal;
@@ -14,15 +20,27 @@
         line-height: 4.9rem;
         color: #240E0E;
         margin-bottom: 4rem;
+
+        @include breakpoint($sm-bp) {
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          margin-top: 2rem;
+        }
+    
     }
 
     .yokogamaLogo {
         margin-bottom: 2.4rem;
+        @include breakpoint($sm-bp) {
+          img {
+            width: 18.8rem;
+          }
+        }
     }
 
     .brandSubtitle {
         width: 65rem;
-        height: 12rem;
+        margin-bottom: 1.2rem;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 300;
@@ -30,6 +48,10 @@
         line-height: 140%;
         color: #240E0E;
         opacity: 0.8;
+
+        @include breakpoint($sm-bp) {
+          width: auto;
+        }
     }
 
     .japan {
@@ -176,6 +198,14 @@
         align-items: center;
         gap: 0.7rem;
         padding-left: 2.8rem;
+    }
+
+    .radioElementContainer:hover {
+
+      .radioElement {
+        border: 1px solid #FFFFFF;
+        transition: 0.3s;
+      }
     }
 
     .radioElement {
@@ -457,13 +487,35 @@
         display: none;
         align-items: center;
         justify-content: flex-end;
-      
         margin-bottom: 2.5rem;
       
         @include breakpoint($sm-bp) {
           display: block;
+          margin-bottom: 1.5rem;
           margin-left: auto;
           margin-right: auto;
-          margin-bottom: 1.5rem;
         }
       }
+
+.container {
+  @include breakpoint($sm-bp) {
+    padding: 0;
+  }
+}
+
+.catalogBrands {
+  .container {
+    padding: 0px;
+  }
+
+  .catalog-content {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+  .catalog-content {
+    @include breakpoint($sm-bp) {
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+    }
+  }
+}
