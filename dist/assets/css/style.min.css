@@ -1186,6 +1186,11 @@ button.swiper-pagination-bullet {
   background: url(../images/header-bg.png) no-repeat;
   background-size: cover;
 }
+@media (max-width: 920px) {
+  .header {
+    display: none;
+  }
+}
 
 .header__top {
   display: flex;
@@ -1290,6 +1295,144 @@ button.swiper-pagination-bullet {
 }
 .header__compare svg:hover {
   fill: white;
+}
+
+@media (max-width: 920px) {
+  main {
+    margin-top: 108px;
+  }
+}
+
+.headerMobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  z-index: 11111;
+  background-image: url(/assets/images/backgroundHeaderMobile.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+@media (max-width: 920px) {
+  .headerMobile {
+    display: block;
+  }
+}
+.headerMobile .mainContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4.5rem;
+}
+.headerMobile .iconsContainer {
+  margin-top: 3.3rem;
+  margin-right: 0.8rem;
+}
+.headerMobile .logoContainer {
+  margin-top: 1.6rem;
+  margin-left: 0.8rem;
+}
+.headerMobile .logoContainer .mobileLogo {
+  width: 13.3rem;
+  height: 3.7rem;
+  fill: white;
+}
+.headerMobile .searchIco {
+  background-color: transparent;
+  border: none;
+}
+.headerMobile .searchIco svg {
+  stroke: rgba(255, 255, 255, 0.4);
+  fill: transparent;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.headerMobile .searchIco svg:hover {
+  stroke: white;
+}
+.headerMobile .compare {
+  margin-bottom: 0;
+}
+.headerMobile .compare svg {
+  fill: rgba(255, 255, 255, 0.5);
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.headerMobile .compare svg:hover {
+  fill: white;
+}
+.headerMobile .burgerBtn {
+  background-color: transparent;
+  border: none;
+}
+.headerMobile .burgerBtn svg {
+  stroke: rgba(255, 255, 255, 0.4);
+  fill: transparent;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.headerMobile .burgerBtn svg:hover {
+  stroke: white;
+}
+
+@media (max-width: 920px) {
+  .navigation__fixed .headerMobile {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .navigation__fixed main {
+    margin-top: 108px;
+  }
+
+  .navigation__fixed.navigation__hidden .headerMobile {
+    top: -10.8rem;
+  }
+  .navigation__fixed.navigation__hidden main {
+    margin-top: 108px;
+  }
+}
+.desctopSlickyHeader {
+  background-color: #231F20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10.2rem;
+  padding-right: 33rem;
+}
+.desctopSlickyHeader .leftContainer {
+  display: flex;
+}
+.desctopSlickyHeader .header__logo {
+  display: flex;
+  align-items: center;
+}
+.desctopSlickyHeader .header__logo-icon {
+  width: 12.7rem;
+  height: 3.5rem;
+  margin-bottom: 0;
+}
+.desctopSlickyHeader .header__catalog-btn {
+  width: 23.8rem;
+  height: 5.6rem;
+}
+.desctopSlickyHeader .header__nav {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  gap: 5rem;
+  align-items: center;
+}
+.desctopSlickyHeader .header__nav a {
+  margin-left: 0;
+}
+.desctopSlickyHeader .header__search svg {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.desctopSlickyHeader .header__compare svg {
+  width: 2.8rem;
+  height: 2.8rem;
 }
 
 .filled-btn {

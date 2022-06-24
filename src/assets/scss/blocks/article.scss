@@ -68,6 +68,7 @@
 
 .newsContainerMobile {
     display: none;
+    
 
     @include breakpoint($lg-bp) {
         display: block;

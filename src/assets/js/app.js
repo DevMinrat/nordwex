@@ -207,3 +207,114 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+//headerMobile scroll
+
+
+// let headerMobile = document.querySelector(".headerMobileFixed"),
+// 	scrollPrev = 500;
+//   console.log(scrollPrev)
+
+// window.addEventListener("scroll", () => {
+//   let scrolled = document.documentElement.scrollTop;
+
+//   console.log(scrolled)
+ 
+// 	if (scrolled == 0 || scrolled > scrollPrev ) {
+// 		headerMobile.classList.add('out');
+// 	} else {
+// 		headerMobile.classList.remove('out');
+// 	}
+// 	scrollPrev = scrolled;
+// });
+
+
+// let stickyHeader = document.querySelector('.headerMobile')
+// let offset = stickyHeader.offsetTop
+// offset = 108
+// console.log(stickyHeader)
+// window.addEventListener("scroll", () => {
+//   let scrolled = document.documentElement.scrollTop;
+
+// console.log(scrolled, 'asfsf')
+
+
+
+//   if (scrolled > offset) {
+//     stickyHeader.classList.add('out');
+//   } else if (scrolled < offset) {
+//     stickyHeader.classList.remove('out');
+//   }
+
+// })
+
+
+
+// let scrolled1 = window.scrollY;
+
+// console.log(window.scrollY, 'asfsf')
+
+
+const hideNav = () => {
+  const hiddenNavClassName = 'navigation__hidden';
+  const fixedNavClassName = 'navigation__fixed';
+  const headerHeight = 108;
+  const navHeight = 0;
+  let initialYvalue = window.scrollY;
+  let body = document.querySelector('body');
+  // console.log(body)
+  let main = document.querySelector('main')
+  // main.style.paddingTop = '10.8rem'
+
+  let isItHidden = false;
+  let isItFixed = false;
+
+  window.addEventListener('scroll', (ev) => {
+      const scrollY = window.scrollY;
+      if (scrollY > headerHeight) {
+          makeItFixed();
+
+          if (scrollY > headerHeight + navHeight && scrollY > initialYvalue) {
+              hide();
+          } else {
+              show();
+          }
+      } else {
+          makeItNotFixed();
+      }
+
+      initialYvalue = scrollY;
+  });
+
+  function hide() {
+      if (!isItHidden) {
+          body.classList.add(hiddenNavClassName);
+          isItHidden = true;
+      }
+  }
+
+  function show() {
+      if (isItHidden) {
+          body.classList.remove(hiddenNavClassName);
+          isItHidden = false;
+      }
+  }
+
+  function makeItFixed() {
+      if (!isItFixed) {
+          body.classList.add(fixedNavClassName);
+          isItFixed = true;
+      }
+  }
+
+  function makeItNotFixed() {
+      if (isItFixed) {
+          body.classList.remove(fixedNavClassName);
+          isItFixed = false;
+      }
+  }
+}
+
+hideNav()
+
+
+

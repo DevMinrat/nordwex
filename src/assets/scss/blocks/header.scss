@@ -3,6 +3,9 @@
 
   background: url(../images/header-bg.png) no-repeat;
   background-size: cover;
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
 }
 
 .header__top {
@@ -134,3 +137,283 @@
     }
   }
 }
+
+
+//header mobile
+
+
+main {
+  @include breakpoint($lg-bp) {
+    margin-top: 108px;
+  }
+}
+
+.headerMobile {
+  display: none;
+  position: fixed;
+	top: 0; 
+  left: 0;
+  width: 100%;
+	transition: all 0.3s ease;
+  // transform: translateY(0);
+  z-index: 11111;
+
+
+  background-image: url(/assets/images/backgroundHeaderMobile.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  // height: 27.5rem;
+
+  @include breakpoint($lg-bp) {
+    display: block;
+  }
+
+  .mainContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4.5rem;
+  }
+
+  .iconsContainer {
+    margin-top: 3.3rem;
+    margin-right: 0.8rem;
+  }
+
+  .logoContainer {
+    margin-top: 1.6rem;
+    margin-left: 0.8rem;
+    .mobileLogo {
+      width: 13.3rem;
+      height: 3.7rem;
+      fill: white;
+  
+    }
+  }
+
+  
+
+  .searchIco {
+    background-color: transparent;
+    border: none;
+
+  svg {
+    stroke: rgba(255, 255, 255, 0.4);
+    fill: transparent;
+    width: 2.4rem;
+    height: 2.4rem;
+    &:hover {
+      stroke: white;
+    }
+  }
+  }
+
+  .compare {
+
+    margin-bottom: 0;
+    svg {
+      fill: rgba(255, 255, 255, 0.5);
+      width: 2.4rem;
+      height: 2.4rem;
+      &:hover {
+        fill: white;
+      }
+    }
+  }
+
+  .burgerBtn {
+    background-color: transparent;
+    border: none;
+
+  svg {
+    stroke: rgba(255, 255, 255, 0.4);
+    fill: transparent;
+    width: 2.4rem;
+    height: 2.4rem;
+    &:hover {
+      stroke: white;
+    }
+  }
+  }
+
+}
+
+
+
+
+// .headerMobileFixed {
+//   display: none;
+//   z-index: 11111;
+// 	top: 0; 
+//   left: 0;
+//   width: 100%;
+// 	transition: all 0.3s ease;
+//   transform: translateY(0);
+
+
+//   background-image: url(/assets/images/backgroundHeaderMobile.svg);
+//   background-size: 100%;
+//   background-repeat: no-repeat;
+//   // height: 27.5rem;
+
+//   @include breakpoint($lg-bp) {
+//     display: block;
+//   }
+
+//   .mainContainer {
+//     display: flex;
+//     justify-content: space-between;
+//     padding-bottom: 4.5rem;
+//   }
+
+//   .iconsContainer {
+//     margin-top: 3.3rem;
+//     margin-right: 0.8rem;
+//   }
+
+//   .logoContainer {
+//     margin-top: 1.6rem;
+//     margin-left: 0.8rem;
+//     .mobileLogo {
+//       width: 13.3rem;
+//       height: 3.7rem;
+//       fill: white;
+  
+//     }
+//   }
+
+  
+
+//   .searchIco {
+//     background-color: transparent;
+//     border: none;
+
+//   svg {
+//     stroke: rgba(255, 255, 255, 0.4);
+//     fill: transparent;
+//     width: 2.4rem;
+//     height: 2.4rem;
+//     &:hover {
+//       stroke: white;
+//     }
+//   }
+//   }
+
+//   .compare {
+
+//     margin-bottom: 0;
+//     svg {
+//       fill: rgba(255, 255, 255, 0.5);
+//       width: 2.4rem;
+//       height: 2.4rem;
+//       &:hover {
+//         fill: white;
+//       }
+//     }
+//   }
+
+//   .burgerBtn {
+//     background-color: transparent;
+//     border: none;
+
+//   svg {
+//     stroke: rgba(255, 255, 255, 0.4);
+//     fill: transparent;
+//     width: 2.4rem;
+//     height: 2.4rem;
+//     &:hover {
+//       stroke: white;
+//     }
+//   }
+//   }
+
+// }
+
+// .out {
+// 	// transform: translateY(-100%);
+//   position: fixed;
+//   top: 0;
+//   z-index: 111111;
+  
+//   // .headerMobile {
+//   //   display: block;
+//   // }
+// }
+
+@include breakpoint($lg-bp) {
+  .navigation__fixed {
+    .headerMobile {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        // transition: all .3s ease;
+    }
+    main {
+        margin-top: 108px;
+    }
+  }
+  
+  .navigation__fixed.navigation__hidden {
+    .headerMobile {
+        top: -10.8rem;
+        // transition: all .3s ease;
+    }
+    main {
+        margin-top: 108px;
+    }
+  }
+}
+
+
+.desctopSlickyHeader {
+  background-color: #231F20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10.2rem;
+  padding-right: 33rem;
+  .leftContainer {
+    display: flex;
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__logo-icon {
+    width: 12.7rem;
+    height: 3.5rem;
+    margin-bottom: 0;
+  }
+
+  .header__catalog-btn {
+    width: 23.8rem;
+    height: 5.6rem;
+  }
+
+  .header__nav {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    gap: 5rem;
+    align-items: center;
+    a {
+      margin-left: 0;
+    }
+  }
+
+  .header__search {
+    svg {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+    
+  }
+
+  .header__compare {
+    svg {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+  }
+}
+
