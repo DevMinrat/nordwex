@@ -5,7 +5,7 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 24px;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 .choices:focus {
   outline: none;
@@ -33,9 +33,9 @@
 .choices[data-type*="select-one"] {
   cursor: pointer;
 }
-.choices[data-type*="select-one"] .choices__inner {
-  padding-bottom: 1.3rem;
-}
+// .choices[data-type*="select-one"] .choices__inner {
+//   padding-bottom: 1.3rem;
+// }
 .choices[data-type*="select-one"] .choices__input {
   display: block;
   width: 100%;
@@ -72,20 +72,20 @@
 }
 .choices[data-type*="select-one"]::after {
   content: "";
-  height: 0;
-  width: 0;
-  border-style: solid;
-  border-color: #333 transparent transparent transparent;
-  border-width: 5px;
+  height: 2.8rem;
+  width: 2.8rem;
+  background: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.40071 9.0507L5.75079 10.7006L14.0004 18.9502L22.25 10.7006L20.6001 9.05066L14.0004 15.6504L7.40071 9.0507Z' fill='%23240E0E'/%3E%3C/svg%3E")
+    no-repeat;
+  background-size: cover;
   position: absolute;
   right: 11.5px;
   top: 50%;
-  margin-top: -2.5px;
+  transform: translateY(-50%);
   pointer-events: none;
 }
 .choices[data-type*="select-one"].is-open::after {
-  border-color: transparent transparent #333 transparent;
-  margin-top: -7.5px;
+  transform: translateY(-50%) rotate(180deg);
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.40071 9.0507L5.75079 10.7006L14.0004 18.9502L22.25 10.7006L20.6001 9.05066L14.0004 15.6504L7.40071 9.0507Z' fill='%23E30613'/%3E%3C/svg%3E");
 }
 .choices[data-type*="select-one"][dir="rtl"]::after {
   left: 11.5px;
@@ -127,15 +127,20 @@
 }
 
 .choices__inner {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   width: 100%;
   background-color: #fff;
-  padding: 1.3rem 1.6rem;
+  padding: 1rem 1.6rem;
   border: 1px solid #dadada;
   font-size: 1.4rem;
   line-height: 1;
-  min-height: 44px;
+  height: 4rem;
   overflow: hidden;
+
+  &:hover {
+    border-color: $primary;
+  }
 }
 .is-focused .choices__inner,
 .is-open .choices__inner {
@@ -144,8 +149,17 @@
 .is-open .choices__inner {
   border-bottom: none;
 }
+.is-flipped.is-open {
+  border-top: none;
+  border-bottom: 0.1rem solid $primary;
+}
 .is-flipped.is-open .choices__inner {
   border-radius: 0 0 2.5px 2.5px;
+}
+
+.is-flipped.is-open .choices__list[aria-expanded] {
+  border-bottom: none;
+  border-top: 0.1rem solid $primary;
 }
 
 .choices__list {
