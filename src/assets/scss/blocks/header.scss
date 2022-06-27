@@ -142,20 +142,12 @@
 //header mobile
 
 
-main {
-  @include breakpoint($lg-bp) {
-    margin-top: 108px;
-  }
-}
 
 .headerMobile {
   display: none;
-  position: fixed;
-	top: 0; 
-  left: 0;
   width: 100%;
 	transition: all 0.3s ease;
-  // transform: translateY(0);
+
   z-index: 11111;
 
 
@@ -179,7 +171,7 @@ main {
     margin-right: 0.8rem;
   }
 
-  .logoContainer {
+  .logoContainerHeader {
     margin-top: 1.6rem;
     margin-left: 0.8rem;
     .mobileLogo {
@@ -238,107 +230,6 @@ main {
 }
 
 
-
-
-// .headerMobileFixed {
-//   display: none;
-//   z-index: 11111;
-// 	top: 0; 
-//   left: 0;
-//   width: 100%;
-// 	transition: all 0.3s ease;
-//   transform: translateY(0);
-
-
-//   background-image: url(/assets/images/backgroundHeaderMobile.svg);
-//   background-size: 100%;
-//   background-repeat: no-repeat;
-//   // height: 27.5rem;
-
-//   @include breakpoint($lg-bp) {
-//     display: block;
-//   }
-
-//   .mainContainer {
-//     display: flex;
-//     justify-content: space-between;
-//     padding-bottom: 4.5rem;
-//   }
-
-//   .iconsContainer {
-//     margin-top: 3.3rem;
-//     margin-right: 0.8rem;
-//   }
-
-//   .logoContainer {
-//     margin-top: 1.6rem;
-//     margin-left: 0.8rem;
-//     .mobileLogo {
-//       width: 13.3rem;
-//       height: 3.7rem;
-//       fill: white;
-  
-//     }
-//   }
-
-  
-
-//   .searchIco {
-//     background-color: transparent;
-//     border: none;
-
-//   svg {
-//     stroke: rgba(255, 255, 255, 0.4);
-//     fill: transparent;
-//     width: 2.4rem;
-//     height: 2.4rem;
-//     &:hover {
-//       stroke: white;
-//     }
-//   }
-//   }
-
-//   .compare {
-
-//     margin-bottom: 0;
-//     svg {
-//       fill: rgba(255, 255, 255, 0.5);
-//       width: 2.4rem;
-//       height: 2.4rem;
-//       &:hover {
-//         fill: white;
-//       }
-//     }
-//   }
-
-//   .burgerBtn {
-//     background-color: transparent;
-//     border: none;
-
-//   svg {
-//     stroke: rgba(255, 255, 255, 0.4);
-//     fill: transparent;
-//     width: 2.4rem;
-//     height: 2.4rem;
-//     &:hover {
-//       stroke: white;
-//     }
-//   }
-//   }
-
-// }
-
-// .out {
-// 	// transform: translateY(-100%);
-//   position: fixed;
-//   top: 0;
-//   z-index: 111111;
-  
-//   // .headerMobile {
-//   //   display: block;
-//   // }
-// }
-
 @include breakpoint($lg-bp) {
   .navigation__fixed {
     .headerMobile {
@@ -348,7 +239,7 @@ main {
         // transition: all .3s ease;
     }
     main {
-        margin-top: 108px;
+        margin-top: 10.8rem;
     }
   }
   
@@ -358,7 +249,7 @@ main {
         // transition: all .3s ease;
     }
     main {
-        margin-top: 108px;
+        margin-top: 10.8rem;
     }
   }
 }
@@ -371,6 +262,12 @@ main {
   justify-content: space-between;
   padding-left: 10.2rem;
   padding-right: 33rem;
+  width: 100%;
+  @include breakpoint($xl-bp) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .leftContainer {
     display: flex;
   }
@@ -416,4 +313,196 @@ main {
     }
   }
 }
+
+
+.headerMob {
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.4);
+  &.can-animate {
+    transition: transform 0.3s ease, visibility 0s 0.3s linear;
+  }
+  &.is-fixed {
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    transform: translate3d(0, -100%, 0);
+    display: flex;
+  }
+  &.scroll-up {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.sect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.slickyContainer {
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.4);
+
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
+
+
+
+  &.can-animate {
+    transition: transform 0.3s ease, visibility 0s 0.3s linear;
+  }
+  &.is-fixed {
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    transform: translate3d(0, -100%, 0);
+    display: flex;
+    top: 0;
+    @include breakpoint($lg-bp) {
+      display: none;
+    }
+  }
+  &.scroll-up {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+//menu tabs 
+
+.menuContainer {
+  background: #231F20;
+  display: none;
+  position: absolute;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+  height: 90rem;
+  border-top: 0.2rem solid #393536;
+  z-index: 9999;
+  width: 100%;
+  top: 38.5rem;
+  left: 0;
+  
+
+  .textContainer {
+    padding-left: 6.2rem;
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    opacity: 0.7;
+  }
+  
+  .titleText {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+  }
+  
+
+  .menuTabsContainer {
+    display: flex;
+    flex-direction: column;
+
+    .generalTabs {
+      display: flex;
+      align-items: center;
+      border-bottom: 0.2rem solid #393536;
+      padding-top: 4rem;
+      padding-left: 5rem;
+      gap: 2.8rem;
+
+      .changeCategoryActive {
+        border-bottom: 0.3rem solid #E30613;
+      }
+      
+      button {
+        border: none;
+        background: unset;
+        opacity: none;
+        color: #FFFFFF;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        padding-bottom: 1rem;
+      }
+    }
+
+
+    .menuTabs {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 5rem;
+
+      button {
+        border: none;
+        background: unset;
+        opacity: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: #FFFFFF;
+      }
+    }
+
+    .menuTabsActive {
+      display: flex;
+    }
+  }
+
+  .menuContentContainer {
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-left: 0.2rem solid #393536;
+  }
+
+  .contentActive {
+    display: flex;
+    
+  }
+}
+
+.menuContainerActive {
+  display: flex;
+}
+
+.activeMenuTabBtn {
+  background: #FFFFFF;
+  opacity: 0.5;
+}
+
+
+.headerButton:hover {
+  .menuContainer {
+    display: flex;
+  }
+}
+
+
 

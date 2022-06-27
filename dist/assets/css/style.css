@@ -1399,6 +1399,12 @@ button.swiper-pagination-bullet {
     fill: white;
 }
 
+@media (max-width: 920px) {
+    main {
+        margin-top: 108px;
+    }
+}
+
 .headerMobile {
     display: none;
     position: fixed;
@@ -1406,8 +1412,7 @@ button.swiper-pagination-bullet {
     left: 0;
     width: 100%;
     transition: all 0.3s ease;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    z-index: 11111;
     background-image: url(/assets/images/backgroundHeaderMobile.svg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -1489,13 +1494,81 @@ button.swiper-pagination-bullet {
     stroke: white;
 }
 
-.headerMobile.out {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
+@media (max-width: 920px) {
+    .navigation__fixed .headerMobile {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .navigation__fixed main {
+        margin-top: 108px;
+    }
+
+    .navigation__fixed.navigation__hidden .headerMobile {
+        top: -10.8rem;
+    }
+
+    .navigation__fixed.navigation__hidden main {
+        margin-top: 108px;
+    }
 }
 
-.neBagAFicha {
-    height: 10.8rem;
+.desctopSlickyHeader {
+    background-color: #231F20;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-left: 10.2rem;
+    padding-right: 33rem;
+}
+
+.desctopSlickyHeader .leftContainer {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.desctopSlickyHeader .header__logo {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.desctopSlickyHeader .header__logo-icon {
+    width: 12.7rem;
+    height: 3.5rem;
+    margin-bottom: 0;
+}
+
+.desctopSlickyHeader .header__catalog-btn {
+    width: 23.8rem;
+    height: 5.6rem;
+}
+
+.desctopSlickyHeader .header__nav {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    gap: 5rem;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.desctopSlickyHeader .header__nav a {
+    margin-left: 0;
+}
+
+.desctopSlickyHeader .header__search svg {
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.desctopSlickyHeader .header__compare svg {
+    width: 2.8rem;
+    height: 2.8rem;
 }
 
 .filled-btn {

@@ -1297,17 +1297,8 @@ button.swiper-pagination-bullet {
   fill: white;
 }
 
-@media (max-width: 920px) {
-  main {
-    margin-top: 108px;
-  }
-}
-
 .headerMobile {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   transition: all 0.3s ease;
   z-index: 11111;
@@ -1329,11 +1320,11 @@ button.swiper-pagination-bullet {
   margin-top: 3.3rem;
   margin-right: 0.8rem;
 }
-.headerMobile .logoContainer {
+.headerMobile .logoContainerHeader {
   margin-top: 1.6rem;
   margin-left: 0.8rem;
 }
-.headerMobile .logoContainer .mobileLogo {
+.headerMobile .logoContainerHeader .mobileLogo {
   width: 13.3rem;
   height: 3.7rem;
   fill: white;
@@ -1383,14 +1374,14 @@ button.swiper-pagination-bullet {
     width: 100%;
   }
   .navigation__fixed main {
-    margin-top: 108px;
+    margin-top: 10.8rem;
   }
 
   .navigation__fixed.navigation__hidden .headerMobile {
     top: -10.8rem;
   }
   .navigation__fixed.navigation__hidden main {
-    margin-top: 108px;
+    margin-top: 10.8rem;
   }
 }
 .desctopSlickyHeader {
@@ -1400,6 +1391,13 @@ button.swiper-pagination-bullet {
   justify-content: space-between;
   padding-left: 10.2rem;
   padding-right: 33rem;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .desctopSlickyHeader {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 .desctopSlickyHeader .leftContainer {
   display: flex;
@@ -1433,6 +1431,170 @@ button.swiper-pagination-bullet {
 .desctopSlickyHeader .header__compare svg {
   width: 2.8rem;
   height: 2.8rem;
+}
+
+.headerMob {
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.4);
+}
+.headerMob.can-animate {
+  transition: transform 0.3s ease, visibility 0s 0.3s linear;
+}
+.headerMob.is-fixed {
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  transform: translate3d(0, -100%, 0);
+  display: flex;
+}
+.headerMob.scroll-up {
+  transform: translate3d(0, 0, 0);
+}
+
+.sect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slickyContainer {
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.4);
+}
+@media (max-width: 920px) {
+  .slickyContainer {
+    display: none;
+  }
+}
+.slickyContainer.can-animate {
+  transition: transform 0.3s ease, visibility 0s 0.3s linear;
+}
+.slickyContainer.is-fixed {
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  transform: translate3d(0, -100%, 0);
+  display: flex;
+  top: 0;
+}
+@media (max-width: 920px) {
+  .slickyContainer.is-fixed {
+    display: none;
+  }
+}
+.slickyContainer.scroll-up {
+  transform: translate3d(0, 0, 0);
+}
+
+.menuContainer {
+  background: #231F20;
+  display: none;
+  position: absolute;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+  height: 90rem;
+  border-top: 0.2rem solid #393536;
+  z-index: 9999;
+  width: 100%;
+  top: 38.5rem;
+  left: 0;
+}
+.menuContainer .textContainer {
+  padding-left: 6.2rem;
+}
+.menuContainer .text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+  opacity: 0.7;
+}
+.menuContainer .titleText {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+.menuContainer .menuTabsContainer {
+  display: flex;
+  flex-direction: column;
+}
+.menuContainer .menuTabsContainer .generalTabs {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.2rem solid #393536;
+  padding-top: 4rem;
+  padding-left: 5rem;
+  gap: 2.8rem;
+}
+.menuContainer .menuTabsContainer .generalTabs .changeCategoryActive {
+  border-bottom: 0.3rem solid #E30613;
+}
+.menuContainer .menuTabsContainer .generalTabs button {
+  border: none;
+  background: unset;
+  opacity: none;
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding-bottom: 1rem;
+}
+.menuContainer .menuTabsContainer .menuTabs {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 5rem;
+}
+.menuContainer .menuTabsContainer .menuTabs button {
+  border: none;
+  background: unset;
+  opacity: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+}
+.menuContainer .menuTabsContainer .menuTabsActive {
+  display: flex;
+}
+.menuContainer .menuContentContainer {
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-left: 0.2rem solid #393536;
+}
+.menuContainer .contentActive {
+  display: flex;
+}
+
+.menuContainerActive {
+  display: flex;
+}
+
+.activeMenuTabBtn {
+  background: #FFFFFF;
+  opacity: 0.5;
+}
+
+.headerButton:hover .menuContainer {
+  display: flex;
 }
 
 .filled-btn {
@@ -5793,6 +5955,11 @@ button.swiper-pagination-bullet {
   gap: 2.4rem;
   padding-top: 3.2rem;
 }
+.leftControllPanelContainer button {
+  background: unset;
+  outline: unset;
+  border: none;
+}
 
 .productsControlPanel {
   background: #2E2A2B;
@@ -5811,6 +5978,11 @@ button.swiper-pagination-bullet {
   gap: 1.8rem;
 }
 
+.activeTabBtn {
+  background: #FFFFFF;
+  opacity: 0.5;
+}
+
 .controlText {
   font-family: "Montserrat";
   font-style: normal;
@@ -5824,7 +5996,7 @@ button.swiper-pagination-bullet {
 }
 
 .radioCotainer {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 1.6rem;
   border-left: 0.1rem solid #393536;
@@ -5886,6 +6058,10 @@ button.swiper-pagination-bullet {
   background-color: #2E2A2B;
   transform: translate(-50%, -50%);
   visibility: visible;
+}
+
+.radioContainerActive {
+  display: flex;
 }
 
 .productContainer {

@@ -143,6 +143,12 @@
     flex-direction: column;
     gap: 2.4rem;
     padding-top: 3.2rem;
+
+    button {
+      background: unset;
+      outline: unset;
+      border: none;
+    }
 }
 
 .productsControlPanel {
@@ -162,6 +168,11 @@
     gap: 1.8rem;   
 }
 
+.activeTabBtn {
+  background: #FFFFFF;
+  opacity: 0.5;
+}
+
 .controlText {
     font-family: 'Montserrat';
     font-style: normal;
@@ -175,7 +186,7 @@
 }
 
 .radioCotainer {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 1.6rem;
     border-left: 0.1rem solid #393536;
@@ -246,6 +257,10 @@
         transform: translate(-50%, -50%);
         visibility: visible;
       }
+}
+
+.radioContainerActive {
+  display: flex;
 }
 
 .productContainer {
@@ -519,3 +534,6 @@
     }
   }
 }
+
+
+

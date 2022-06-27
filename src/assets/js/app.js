@@ -209,112 +209,192 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //headerMobile scroll
 
+const header = document.querySelector(".headerMob");
+let lastScroll = 0;
 
-// let headerMobile = document.querySelector(".headerMobileFixed"),
-// 	scrollPrev = 500;
-//   console.log(scrollPrev)
+const throttle = (func, time = 20) => {
+  let lastTime = 0;
+  return () => {
+    const now = new Date();
+    if (now - lastTime >= time) {
+      func();
+      time = now;
+    }
+  };
+};
 
-// window.addEventListener("scroll", () => {
-//   let scrolled = document.documentElement.scrollTop;
-
-//   console.log(scrolled)
- 
-// 	if (scrolled == 0 || scrolled > scrollPrev ) {
-// 		headerMobile.classList.add('out');
-// 	} else {
-// 		headerMobile.classList.remove('out');
-// 	}
-// 	scrollPrev = scrolled;
-// });
-
-
-// let stickyHeader = document.querySelector('.headerMobile')
-// let offset = stickyHeader.offsetTop
-// offset = 108
-// console.log(stickyHeader)
-// window.addEventListener("scroll", () => {
-//   let scrolled = document.documentElement.scrollTop;
-
-// console.log(scrolled, 'asfsf')
-
-
-
-//   if (scrolled > offset) {
-//     stickyHeader.classList.add('out');
-//   } else if (scrolled < offset) {
-//     stickyHeader.classList.remove('out');
-//   }
-
-// })
-
-
-
-// let scrolled1 = window.scrollY;
-
-// console.log(window.scrollY, 'asfsf')
-
-
-const hideNav = () => {
-  const hiddenNavClassName = 'navigation__hidden';
-  const fixedNavClassName = 'navigation__fixed';
-  const headerHeight = 108;
-  const navHeight = 0;
-  let initialYvalue = window.scrollY;
-  let body = document.querySelector('body');
-  // console.log(body)
-  let main = document.querySelector('main')
-  // main.style.paddingTop = '10.8rem'
-
-  let isItHidden = false;
-  let isItFixed = false;
-
-  window.addEventListener('scroll', (ev) => {
-      const scrollY = window.scrollY;
-      if (scrollY > headerHeight) {
-          makeItFixed();
-
-          if (scrollY > headerHeight + navHeight && scrollY > initialYvalue) {
-              hide();
-          } else {
-              show();
-          }
+const validateHeader = () => {
+  const windowY = window.scrollY;
+  const windowH = 108;
+  console.log(windowH)
+  if (windowY > windowH) {
+    header.classList.add("is-fixed");
+    if (windowY > windowH + 40) {
+      header.classList.add("can-animate");
+      if (windowY < lastScroll) {
+        header.classList.add("scroll-up");
       } else {
-          makeItNotFixed();
+        header.classList.remove("scroll-up");
       }
-
-      initialYvalue = scrollY;
-  });
-
-  function hide() {
-      if (!isItHidden) {
-          body.classList.add(hiddenNavClassName);
-          isItHidden = true;
-      }
+    } else {
+      header.classList.remove("scroll-up");
+    }
+  } else {
+    header.classList.remove("is-fixed", "can-animate");
   }
+  lastScroll = windowY;
+};
 
-  function show() {
-      if (isItHidden) {
-          body.classList.remove(hiddenNavClassName);
-          isItHidden = false;
-      }
-  }
+window.addEventListener("scroll", throttle(validateHeader, 20));
 
-  function makeItFixed() {
-      if (!isItFixed) {
-          body.classList.add(fixedNavClassName);
-          isItFixed = true;
-      }
-  }
 
-  function makeItNotFixed() {
-      if (isItFixed) {
-          body.classList.remove(fixedNavClassName);
-          isItFixed = false;
+//header desctop scroll
+
+const headerDesctop = document.querySelector(".slickyContainer");
+let lastScrollDesctop = 0;
+
+const throttleFunction = (func, time = 20) => {
+  let lastTime = 0;
+  return () => {
+    const now = new Date();
+    if (now - lastTime >= time) {
+      func();
+      time = now;
+    }
+  };
+};
+
+const validateHeaderFunction = () => {
+  const windowY = window.scrollY;
+  const windowH = 430;
+  if (windowY > windowH) {
+    headerDesctop.classList.add("is-fixed");
+    if (windowY > windowH + 40) {
+      headerDesctop.classList.add("can-animate");
+      if (windowY < lastScrollDesctop) {
+        headerDesctop.classList.add("scroll-up");
+      } else {
+        headerDesctop.classList.remove("scroll-up");
       }
+    } else {
+      headerDesctop.classList.remove("scroll-up");
+    }
+  } else {
+    headerDesctop.classList.remove("is-fixed", "can-animate");
   }
+  lastScrollDesctop = windowY;
+};
+
+window.addEventListener("scroll", throttleFunction(validateHeaderFunction, 20));
+
+
+//brandsSecondLevel tabs 
+
+const tabsBtn = document.querySelectorAll(".controlTitle");
+const tabsItems = document.querySelectorAll(".radioCotainer")
+
+tabsBtn.forEach(onTabClick);
+
+function onTabClick(item) {
+  item.addEventListener('click', function() {
+    let currentBtn = item;
+    let tabId = currentBtn.getAttribute("data-tab");
+    let currentTab = document.querySelector(tabId);
+
+    if( !currentBtn.classList.contains('activeTabBtn')) {
+      tabsBtn.forEach(function(item) {
+        item.classList.remove('activeTabBtn')
+      })
+  
+      tabsItems.forEach(function(item) {
+        item.classList.remove('radioContainerActive')
+      })
+  
+      currentBtn.classList.add('activeTabBtn')
+      currentTab.classList.add('radioContainerActive')
+    }
+
+    
+  })
 }
 
-hideNav()
+document.querySelector('.controlTitle').click();
 
 
 
+// menuTabs
+
+
+const menuTabsBtn = document.querySelectorAll(".menuControlTitle");
+const menuTabsItems = document.querySelectorAll(".menuContentContainer");
+
+menuTabsBtn.forEach(menuOnTabClick);
+
+function menuOnTabClick(item) {
+  item.addEventListener('click', function() {
+    let menuCurrentBtn = item;
+    let menuTabId = menuCurrentBtn.getAttribute("data-tab")
+
+    let menuCurrentTab = document.querySelector(menuTabId)
+
+    if( !menuCurrentBtn.classList.contains('activeMenuTabBtn') ) {
+      menuTabsBtn.forEach(function(item) {
+        item.classList.remove('activeMenuTabBtn')
+      })
+  
+      menuTabsItems.forEach(function(item) {
+        item.classList.remove('contentActive')
+      })
+  
+      menuCurrentBtn.classList.add('activeMenuTabBtn');
+  
+      menuCurrentTab.classList.add('contentActive')
+    }
+
+    
+
+  });
+}
+
+document.querySelector('.menuControlTitle').click();
+
+//menu category tabs
+
+const changeTabsBtn = document.querySelectorAll(".changeCategory");
+const menuTabs = document.querySelectorAll(".menuTabs");
+
+changeTabsBtn.forEach(changeOnTabClick);
+
+function changeOnTabClick(item) {
+  item.addEventListener('click', function() {
+    let changeCurrentBtn = item;
+    let changeTabId = changeCurrentBtn.getAttribute("data-tab")
+
+    let changeCurrentTab = document.querySelector(changeTabId)
+
+    if( !changeCurrentBtn.classList.contains('changeCategoryActive') ) {
+      changeTabsBtn.forEach(function(item) {
+        item.classList.remove('changeCategoryActive')
+      })
+  
+      menuTabs.forEach(function(item) {
+        item.classList.remove('menuTabsActive')
+      })
+  
+      changeCurrentBtn.classList.add('changeCategoryActive');
+  
+      changeCurrentTab.classList.add('menuTabsActive')
+    }
+
+  });
+}
+
+document.querySelector('.changeCategory').click();
+
+// onclick function 
+
+// let menuButton = document.querySelector('#menuButton');
+// console.log(menuButton)
+// function showMenu() {
+//   console.log('hello')
+// }
