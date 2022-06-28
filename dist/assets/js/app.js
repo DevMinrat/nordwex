@@ -10458,9 +10458,106 @@ document.addEventListener("DOMContentLoaded", function () {
     for (var _i14 = 0; _i14 < contactsSectTitle.length; _i14++) {
       _loop3(_i14);
     }
-  } // intro slider
-  // intro slider
+  } // menuTabs
 
+
+  var menuTabsBtn = document.querySelectorAll(".menuControlTitle");
+  var menuTabsItems = document.querySelectorAll(".menuContentContainer");
+  menuTabsBtn.forEach(menuOnTabClick);
+
+  function menuOnTabClick(item) {
+    item.addEventListener('click', function () {
+      var menuCurrentBtn = item;
+      var menuTabId = menuCurrentBtn.getAttribute("data-tab");
+      var menuCurrentTab = document.querySelector(menuTabId);
+
+      if (!menuCurrentBtn.classList.contains('activeMenuTabBtn')) {
+        menuTabsBtn.forEach(function (item) {
+          item.classList.remove('activeMenuTabBtn');
+        });
+        menuTabsItems.forEach(function (item) {
+          item.classList.remove('contentActive');
+        });
+        menuCurrentBtn.classList.add('activeMenuTabBtn');
+        menuCurrentTab.classList.add('contentActive');
+      }
+    });
+  }
+
+  document.querySelector('.menuControlTitle').click();
+  var changeTabsBtn = document.querySelectorAll(".changeCategory");
+  var menuTabs = document.querySelectorAll(".menuTabs");
+  changeTabsBtn.forEach(changeOnTabClick);
+
+  function changeOnTabClick(item) {
+    item.addEventListener('click', function () {
+      var changeCurrentBtn = item;
+      var changeTabId = changeCurrentBtn.getAttribute("data-tab");
+      var changeCurrentTab = document.querySelector(changeTabId);
+
+      if (!changeCurrentBtn.classList.contains('changeCategoryActive')) {
+        changeTabsBtn.forEach(function (item) {
+          item.classList.remove('changeCategoryActive');
+        });
+        menuTabs.forEach(function (item) {
+          item.classList.remove('menuTabsActive');
+        });
+        changeCurrentBtn.classList.add('changeCategoryActive');
+        changeCurrentTab.classList.add('menuTabsActive');
+      }
+    });
+  }
+
+  document.querySelector('.changeCategory').click();
+  var menuTabsBtn2 = document.querySelectorAll(".menuControlTitle2");
+  var menuTabsItems2 = document.querySelectorAll(".menuContentContainer2");
+  menuTabsBtn2.forEach(menuOnTabClick2);
+
+  function menuOnTabClick2(item) {
+    item.addEventListener('click', function () {
+      var menuCurrentBtn = item;
+      var menuTabId = menuCurrentBtn.getAttribute("data-tab");
+      var menuCurrentTab = document.querySelector(menuTabId);
+
+      if (!menuCurrentBtn.classList.contains('activeMenuTabBtn')) {
+        menuTabsBtn2.forEach(function (item) {
+          item.classList.remove('activeMenuTabBtn');
+        });
+        menuTabsItems2.forEach(function (item) {
+          item.classList.remove('contentActive');
+        });
+        menuCurrentBtn.classList.add('activeMenuTabBtn');
+        menuCurrentTab.classList.add('contentActive');
+      }
+    });
+  }
+
+  document.querySelector('.menuControlTitle2').click();
+  var changeTabsBtn2 = document.querySelectorAll(".changeCategory2");
+  var menuTabs2 = document.querySelectorAll(".menuTabs2");
+  changeTabsBtn2.forEach(changeOnTabClick2);
+
+  function changeOnTabClick2(item) {
+    item.addEventListener('click', function () {
+      var changeCurrentBtn = item;
+      var changeTabId = changeCurrentBtn.getAttribute("data-tab");
+      var changeCurrentTab = document.querySelector(changeTabId);
+
+      if (!changeCurrentBtn.classList.contains('changeCategoryActive')) {
+        changeTabsBtn2.forEach(function (item) {
+          item.classList.remove('changeCategoryActive');
+        });
+        menuTabs2.forEach(function (item) {
+          item.classList.remove('menuTabsActive');
+        });
+        changeCurrentBtn.classList.add('changeCategoryActive');
+        changeCurrentTab.classList.add('menuTabsActive');
+      }
+    });
+  }
+
+  document.querySelector('.changeCategory2').click(); // intro slider
+  // intro slider
 
   var introFractCurrent = document.querySelector(".intro-fraction-current");
   var introFractTotal = document.querySelector(".intro-fraction-total");
@@ -10954,7 +11051,6 @@ var throttle = function throttle(func) {
 var validateHeader = function validateHeader() {
   var windowY = window.scrollY;
   var windowH = 108;
-  console.log(windowH);
 
   if (windowY > windowH) {
     header.classList.add("is-fixed");
@@ -11045,59 +11141,4 @@ function onTabClick(item) {
   });
 }
 
-document.querySelector('.controlTitle').click(); // menuTabs
-
-var menuTabsBtn = document.querySelectorAll(".menuControlTitle");
-var menuTabsItems = document.querySelectorAll(".menuContentContainer");
-menuTabsBtn.forEach(menuOnTabClick);
-
-function menuOnTabClick(item) {
-  item.addEventListener('click', function () {
-    var menuCurrentBtn = item;
-    var menuTabId = menuCurrentBtn.getAttribute("data-tab");
-    var menuCurrentTab = document.querySelector(menuTabId);
-
-    if (!menuCurrentBtn.classList.contains('activeMenuTabBtn')) {
-      menuTabsBtn.forEach(function (item) {
-        item.classList.remove('activeMenuTabBtn');
-      });
-      menuTabsItems.forEach(function (item) {
-        item.classList.remove('contentActive');
-      });
-      menuCurrentBtn.classList.add('activeMenuTabBtn');
-      menuCurrentTab.classList.add('contentActive');
-    }
-  });
-}
-
-document.querySelector('.menuControlTitle').click(); //menu category tabs
-
-var changeTabsBtn = document.querySelectorAll(".changeCategory");
-var menuTabs = document.querySelectorAll(".menuTabs");
-changeTabsBtn.forEach(changeOnTabClick);
-
-function changeOnTabClick(item) {
-  item.addEventListener('click', function () {
-    var changeCurrentBtn = item;
-    var changeTabId = changeCurrentBtn.getAttribute("data-tab");
-    var changeCurrentTab = document.querySelector(changeTabId);
-
-    if (!changeCurrentBtn.classList.contains('changeCategoryActive')) {
-      changeTabsBtn.forEach(function (item) {
-        item.classList.remove('changeCategoryActive');
-      });
-      menuTabs.forEach(function (item) {
-        item.classList.remove('menuTabsActive');
-      });
-      changeCurrentBtn.classList.add('changeCategoryActive');
-      changeCurrentTab.classList.add('menuTabsActive');
-    }
-  });
-}
-
-document.querySelector('.changeCategory').click(); // onclick function 
-// let menuButton = document.querySelector('#menuButton');
-// console.log(menuButton)
-// function showMenu() {
-//   console.log('hello')
-// }
+document.querySelector('.controlTitle').click();
