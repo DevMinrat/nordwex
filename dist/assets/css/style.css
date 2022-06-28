@@ -1735,6 +1735,8 @@ button.swiper-pagination-bullet {
     -ms-flex-align: start;
     align-items: flex-start;
     padding-left: 5rem;
+    gap: 1.6rem;
+    padding-top: 1.8rem;
 }
 
 .menuContainer .menuTabsContainer .menuTabs button {
@@ -1747,6 +1749,18 @@ button.swiper-pagination-bullet {
     font-size: 1.6rem;
     line-height: 2rem;
     color: #FFFFFF;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1.8rem;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.menuContainer .menuTabsContainer .menuTabs button svg {
+    width: 2.8rem;
+    height: 2.8rem;
+    fill: #FFFFFF;
+    opacity: 0.6;
 }
 
 .menuContainer .menuTabsContainer .menuTabsActive {
@@ -1779,6 +1793,137 @@ button.swiper-pagination-bullet {
 }
 
 .headerButton:hover .menuContainer {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.slickyMenuContainer {
+    background: #231F20;
+    display: none;
+    position: absolute;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #FFFFFF;
+    height: 90rem;
+    border-top: 0.2rem solid #393536;
+    z-index: 9999;
+    width: 100%;
+    top: 5rem;
+    left: 0;
+}
+
+.slickyMenuContainer .textContainer {
+    padding-left: 6.2rem;
+}
+
+.slickyMenuContainer .text {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    opacity: 0.7;
+}
+
+.slickyMenuContainer .titleText {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+}
+
+.slickyMenuContainer .menuTabsContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.slickyMenuContainer .menuTabsContainer .generalTabs {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 0.2rem solid #393536;
+    padding-top: 4rem;
+    padding-left: 5rem;
+    gap: 2.8rem;
+}
+
+.slickyMenuContainer .menuTabsContainer .generalTabs .changeCategoryActive {
+    border-bottom: 0.3rem solid #E30613;
+}
+
+.slickyMenuContainer .menuTabsContainer .generalTabs button {
+    border: none;
+    background: unset;
+    opacity: none;
+    color: #FFFFFF;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding-bottom: 1rem;
+}
+
+.slickyMenuContainer .menuTabsContainer .menuTabs2 {
+    display: none;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-left: 5rem;
+    gap: 1.6rem;
+    padding-top: 1.8rem;
+}
+
+.slickyMenuContainer .menuTabsContainer .menuTabs2 button {
+    border: none;
+    background: unset;
+    opacity: none;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #FFFFFF;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1.8rem;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.slickyMenuContainer .menuTabsContainer .menuTabs2 button svg {
+    width: 2.8rem;
+    height: 2.8rem;
+    fill: #FFFFFF;
+    opacity: 0.6;
+}
+
+.slickyMenuContainer .menuTabsContainer .menuTabsActive {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.slickyMenuContainer .menuContentContainer2 {
+    display: none;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-left: 0.2rem solid #393536;
+}
+
+.slickyMenuContainer .contentActive {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.headerButtonSecond:hover .slickyMenuContainer {
     display: -ms-flexbox;
     display: flex;
 }
@@ -6768,6 +6913,8 @@ button.swiper-pagination-bullet {
 }
 
 .brandsSecondLevelTitleContainer {
+    font-family: "Montserrat";
+    font-style: normal;
     width: 100%;
     max-width: 130rem;
     padding: 0 2rem;
@@ -6784,8 +6931,6 @@ button.swiper-pagination-bullet {
 }
 
 .brandsSecondLevelTitleContainer .brandName {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 700;
     font-size: 4rem;
     line-height: 4.9rem;
@@ -6814,8 +6959,6 @@ button.swiper-pagination-bullet {
 .brandsSecondLevelTitleContainer .brandSubtitle {
     width: 65rem;
     margin-bottom: 1.2rem;
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 300;
     font-size: 1.4rem;
     line-height: 140%;
@@ -6830,8 +6973,6 @@ button.swiper-pagination-bullet {
 }
 
 .brandsSecondLevelTitleContainer .japan {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 140%;
@@ -7218,6 +7359,8 @@ button.swiper-pagination-bullet {
 }
 
 .productsItems {
+    font-family: "Montserrat";
+    font-style: normal;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -7234,8 +7377,6 @@ button.swiper-pagination-bullet {
 .productsItems .productItemName {
     width: 19.7rem;
     height: 5.2rem;
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 300;
     font-size: 2.2rem;
     line-height: 120%;
@@ -7262,8 +7403,6 @@ button.swiper-pagination-bullet {
 }
 
 .productsItems .productItemDescriptionContainer .productItemTitle {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 120%;
@@ -7271,8 +7410,6 @@ button.swiper-pagination-bullet {
 }
 
 .productsItems .productItemDescriptionContainer .productItemDescription {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 300;
     font-size: 1.4rem;
     line-height: 140%;
@@ -7365,8 +7502,6 @@ button.swiper-pagination-bullet {
 }
 
 .newsContainer .dateContainer .dateTitle {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 500;
     font-size: 2.4rem;
     line-height: 140%;
@@ -7376,8 +7511,6 @@ button.swiper-pagination-bullet {
 
 .newsContainer .dateContainer .dateDescription {
     width: 83.2rem;
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 140%;
@@ -7399,6 +7532,8 @@ button.swiper-pagination-bullet {
     .newsContainerMobile {
         display: block;
         width: 100%;
+        font-family: "Montserrat";
+        font-style: normal;
     }
 
     .newsContainerMobile .newsImgContainer {
@@ -7412,8 +7547,6 @@ button.swiper-pagination-bullet {
     .newsContainerMobile .newsBanner {
         width: 100%;
         height: 4.2rem;
-        font-family: "Montserrat";
-        font-style: normal;
         font-weight: 300;
         font-size: 1.6rem;
         line-height: 120%;
@@ -7434,8 +7567,6 @@ button.swiper-pagination-bullet {
     }
 
     .newsContainerMobile .dateContainer .dateTitle {
-        font-family: "Montserrat";
-        font-style: normal;
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 140%;
@@ -7446,8 +7577,6 @@ button.swiper-pagination-bullet {
 
     .newsContainerMobile .dateContainer .dateDescription {
         width: 100%;
-        font-family: "Montserrat";
-        font-style: normal;
         font-weight: 400;
         font-size: 1.4rem;
         line-height: 140%;
@@ -7457,6 +7586,8 @@ button.swiper-pagination-bullet {
 }
 
 .commasContainer {
+    font-family: "Montserrat";
+    font-style: normal;
     width: 100%;
     max-width: 130rem;
     margin: 0 auto;
@@ -7468,8 +7599,6 @@ button.swiper-pagination-bullet {
 
 .commasContainer .quoteContainer {
     width: 85.7rem;
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 300;
     font-size: 32px;
     line-height: 39px;
@@ -7504,8 +7633,6 @@ button.swiper-pagination-bullet {
 }
 
 .commasContainer .profileContainer .avatarContainer .avatarNameContainer h1 {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 400;
     font-size: 3.6rem;
     line-height: 4.4rem;
@@ -7513,8 +7640,6 @@ button.swiper-pagination-bullet {
 }
 
 .commasContainer .profileContainer .avatarContainer .avatarNameContainer p {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 200;
     font-size: 2.3rem;
     color: #070C30;
@@ -7535,6 +7660,8 @@ button.swiper-pagination-bullet {
 
 .commasContainerMobile {
     display: none;
+    font-family: "Montserrat";
+    font-style: normal;
 }
 
 .commasContainerMobile .redLineContainer img {
@@ -7544,8 +7671,6 @@ button.swiper-pagination-bullet {
 }
 
 .commasContainerMobile p:first-child {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 2rem;
@@ -7554,8 +7679,6 @@ button.swiper-pagination-bullet {
 }
 
 .commasContainerMobile p:last-child {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 300;
     font-size: 1.4rem;
     line-height: 1.7rem;
@@ -7579,8 +7702,6 @@ button.swiper-pagination-bullet {
 
     .commasContainerMobile .quoteContainer {
         text-align: center;
-        font-family: "Montserrat";
-        font-style: normal;
         font-weight: 300;
         font-size: 1.4rem;
         line-height: 1.7rem;
@@ -7660,7 +7781,6 @@ button.swiper-pagination-bullet {
         padding-left: 0.8rem;
         padding-right: 0.8rem;
         font-family: "Montserrat";
-        font-family: "Montserrat";
         font-style: normal;
         font-weight: 400;
         font-size: 1.4rem;
@@ -7675,6 +7795,8 @@ button.swiper-pagination-bullet {
     max-width: 130rem;
     padding: 0 2rem;
     margin-top: 6.8rem;
+    font-family: "Montserrat";
+    font-style: normal;
 }
 
 .mySwiper img {
@@ -7696,8 +7818,6 @@ button.swiper-pagination-bullet {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 1.2rem;
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 300;
     font-size: 1.8rem;
     line-height: 140%;
@@ -7759,6 +7879,8 @@ button.swiper-pagination-bullet {
     .mySwiperMobile {
         display: block;
         margin-top: 8rem;
+        font-family: "Montserrat";
+        font-style: normal;
     }
 
     .mySwiperMobile .swiper-pagination {
@@ -7769,8 +7891,6 @@ button.swiper-pagination-bullet {
         padding-left: 0.8rem;
         padding-right: 0.8rem;
         margin-top: 2.9rem;
-        font-family: "Montserrat";
-        font-style: normal;
         font-weight: 300;
         font-size: 1.4rem;
         line-height: 140%;
@@ -7894,6 +8014,8 @@ button.swiper-pagination-bullet {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     margin: 0 auto;
+    font-family: "Montserrat";
+    font-style: normal;
 }
 
 @media (max-width: 920px) {
@@ -7911,8 +8033,6 @@ button.swiper-pagination-bullet {
 
 .subtitleContainer .subtitleText {
     width: 63.4rem;
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 140%;
@@ -7995,6 +8115,8 @@ button.swiper-pagination-bullet {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 1.1rem;
+    font-family: "Montserrat";
+    font-style: normal;
 }
 
 @media (max-width: 920px) {
@@ -8008,8 +8130,6 @@ button.swiper-pagination-bullet {
 }
 
 .subtitleContainer .warningContainer .warningTextContainer h1 {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 500;
     font-size: 2.4rem;
     line-height: 120%;
@@ -8017,8 +8137,6 @@ button.swiper-pagination-bullet {
 }
 
 .subtitleContainer .warningContainer .warningTextContainer p {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 2.4rem;
@@ -8338,12 +8456,12 @@ button.swiper-pagination-bullet {
 }
 
 .specificationsContainer .main {
+    font-family: "Montserrat";
+    font-style: normal;
     margin-top: 6rem;
 }
 
 .specificationsContainer .main thead td {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 100%;
@@ -8374,8 +8492,6 @@ button.swiper-pagination-bullet {
 
 .specificationsContainer .main tbody tr td:first-child {
     width: 16rem;
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 100%;
@@ -8383,9 +8499,7 @@ button.swiper-pagination-bullet {
 }
 
 .specificationsContainer .main tbody tr td:last-child {
-    font-family: "Montserrat";
     width: 45.5rem;
-    font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 100%;
@@ -8588,11 +8702,11 @@ button.swiper-pagination-bullet {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 5.3rem;
+    font-family: "Montserrat";
+    font-style: normal;
 }
 
 .mediaBannerRandom p {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 120%;
@@ -8610,8 +8724,6 @@ button.swiper-pagination-bullet {
 }
 
 .mediaBannerRandom ul span {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 120%;

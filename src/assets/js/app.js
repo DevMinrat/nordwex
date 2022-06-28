@@ -226,7 +226,6 @@ const throttle = (func, time = 20) => {
 const validateHeader = () => {
   const windowY = window.scrollY;
   const windowH = 108;
-  console.log(windowH)
   if (windowY > windowH) {
     header.classList.add("is-fixed");
     if (windowY > windowH + 40) {
@@ -313,8 +312,6 @@ function onTabClick(item) {
       currentBtn.classList.add('activeTabBtn')
       currentTab.classList.add('radioContainerActive')
     }
-
-    
   })
 }
 
@@ -322,79 +319,3 @@ document.querySelector('.controlTitle').click();
 
 
 
-// menuTabs
-
-
-const menuTabsBtn = document.querySelectorAll(".menuControlTitle");
-const menuTabsItems = document.querySelectorAll(".menuContentContainer");
-
-menuTabsBtn.forEach(menuOnTabClick);
-
-function menuOnTabClick(item) {
-  item.addEventListener('click', function() {
-    let menuCurrentBtn = item;
-    let menuTabId = menuCurrentBtn.getAttribute("data-tab")
-
-    let menuCurrentTab = document.querySelector(menuTabId)
-
-    if( !menuCurrentBtn.classList.contains('activeMenuTabBtn') ) {
-      menuTabsBtn.forEach(function(item) {
-        item.classList.remove('activeMenuTabBtn')
-      })
-  
-      menuTabsItems.forEach(function(item) {
-        item.classList.remove('contentActive')
-      })
-  
-      menuCurrentBtn.classList.add('activeMenuTabBtn');
-  
-      menuCurrentTab.classList.add('contentActive')
-    }
-
-    
-
-  });
-}
-
-document.querySelector('.menuControlTitle').click();
-
-//menu category tabs
-
-const changeTabsBtn = document.querySelectorAll(".changeCategory");
-const menuTabs = document.querySelectorAll(".menuTabs");
-
-changeTabsBtn.forEach(changeOnTabClick);
-
-function changeOnTabClick(item) {
-  item.addEventListener('click', function() {
-    let changeCurrentBtn = item;
-    let changeTabId = changeCurrentBtn.getAttribute("data-tab")
-
-    let changeCurrentTab = document.querySelector(changeTabId)
-
-    if( !changeCurrentBtn.classList.contains('changeCategoryActive') ) {
-      changeTabsBtn.forEach(function(item) {
-        item.classList.remove('changeCategoryActive')
-      })
-  
-      menuTabs.forEach(function(item) {
-        item.classList.remove('menuTabsActive')
-      })
-  
-      changeCurrentBtn.classList.add('changeCategoryActive');
-  
-      changeCurrentTab.classList.add('menuTabsActive')
-    }
-
-  });
-}
-
-document.querySelector('.changeCategory').click();
-
-// onclick function 
-
-// let menuButton = document.querySelector('#menuButton');
-// console.log(menuButton)
-// function showMenu() {
-//   console.log('hello')
-// }

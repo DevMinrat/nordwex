@@ -1,4 +1,6 @@
 .brandsSecondLevelTitleContainer {
+    font-family: 'Montserrat';
+    font-style: normal;
     width: 100%;
     max-width: 130rem;
     padding: 0 2rem;
@@ -13,8 +15,6 @@
 
     
     .brandName {
-        font-family: 'Montserrat';
-        font-style: normal;
         font-weight: 700;
         font-size: 4rem;
         line-height: 4.9rem;
@@ -41,8 +41,6 @@
     .brandSubtitle {
         width: 65rem;
         margin-bottom: 1.2rem;
-        font-family: 'Montserrat';
-        font-style: normal;
         font-weight: 300;
         font-size: 1.4rem;
         line-height: 140%;
@@ -55,8 +53,6 @@
     }
 
     .japan {
-        font-family: 'Montserrat';
-        font-style: normal;
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 140%;
@@ -439,7 +435,8 @@
 }
 
     .productsItems {
-    
+        font-family: 'Montserrat';
+        font-style: normal;
         display: flex;
         flex-wrap: wrap;
         gap: 2.1rem;
@@ -453,8 +450,6 @@
         .productItemName {
             width: 19.7rem;
             height: 5.2rem;
-            font-family: 'Montserrat';
-            font-style: normal;
             font-weight: 300;
             font-size: 2.2rem;
             line-height: 120%;
@@ -478,8 +473,6 @@
             border-top: 0.1rem solid #DADADA;
     
             .productItemTitle {
-                font-family: 'Montserrat';
-                font-style: normal;
                 font-weight: 500;
                 font-size: 1.6rem;
                 line-height: 120%;
@@ -487,8 +480,6 @@
             }
     
             .productItemDescription {
-                font-family: 'Montserrat';
-                font-style: normal;
                 font-weight: 300;
                 font-size: 1.4rem;
                 line-height: 140%;
