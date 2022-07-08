@@ -86,6 +86,7 @@ justify-content: center;
         @include breakpoint($sm-bp) {
             flex-direction: column;
             gap: 3.9rem;
+            margin-left: 2rem;
         }
 
         @include breakpoint($lg-bp) {
@@ -126,6 +127,10 @@ justify-content: center;
                 font-size: 1.6rem;
                 line-height: 140%;
                 color: #503E3F;
+            }
+
+            a {
+                cursor: pointer;
             }
         }
     }
@@ -215,23 +220,90 @@ justify-content: center;
     }
 }
 
-.containerLogo {
+.popularContainer {
+    @include breakpoint($lg-bp) {
+        display: none;
+    }
+}
 
-    // .swiper-slide {
-    //     width: 22rem;
-    // }
+.popularBanner {
+    height: 9rem;
+    display: flex;
+    border-top: 1px solid #DADADA;
+    border-bottom: 1px solid #DADADA;
 
-    // .sliderItem {
-    //     width: 22rem;
-    // }
-    // .swiper-slide-active {
-    //     width: 22rem;
-    // }
+    
 
-    // .swiper-wrapper {
+    .popularTextContainer {
+        width: 50%;
+        background: #B71A1B;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 120%;
+        color: #FFFFFF;
+    }
 
-    //     width: 22rem;
-    // }
+    .arrowsContainer {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+
+        .arrowNavHelpContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .arrowPrevContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .arrowPrev {
+            transform: rotate(180deg);
+            display: flex;
+            cursor: pointer;
+        }
+
+        .arrowNextcontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .borderLineContainer {
+            border: 1px solid #240e0e4f;
+            width: 8.4rem;
+            height: 0rem;
+        }
+
+        .arrowNext {
+            display: flex;
+            cursor: pointer;
+        }
+    }
+}
+
+.brandsSwiper {
+    height: 12rem;
+    border-bottom: 1px solid #DADADA;;
+    margin-bottom: 8.1rem;
+
+    a {
+        cursor: pointer;
+    }
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
