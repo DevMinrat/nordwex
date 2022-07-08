@@ -450,9 +450,6 @@ textarea {
 
 html {
     box-sizing: border-box;
-<<<<<<< Updated upstream
-    font-size: 0.5208333333vw;
-=======
     font-size: 10px;
 }
 
@@ -460,16 +457,11 @@ html {
     html {
         font-size: 0.7462686567vw;
     }
->>>>>>> Stashed changes
 }
 
 @media (max-width: 1024px) {
     html {
-<<<<<<< Updated upstream
-        font-size: 0.7220216606vw;
-=======
         font-size: 0.7692307692vw;
->>>>>>> Stashed changes
     }
 }
 
@@ -1202,8 +1194,6 @@ button.swiper-pagination-bullet {
     padding: 0 0.4rem;
 }
 
-<<<<<<< Updated upstream
-=======
 /* ===============================
 =            Choices            =
 =============================== */
@@ -1630,7 +1620,6 @@ button.swiper-pagination-bullet {
 }
 
 /* =====  End of Choices  ====== */
->>>>>>> Stashed changes
 /* Blocks */
 .page {
     overflow: hidden;
@@ -2399,11 +2388,8 @@ button.swiper-pagination-bullet {
     position: absolute;
     z-index: -1;
     opacity: 0;
-<<<<<<< Updated upstream
-=======
     width: 0.1rem;
     height: 0.1rem;
->>>>>>> Stashed changes
 }
 
 .custom-checkbox + label {
@@ -2468,11 +2454,8 @@ button.swiper-pagination-bullet {
     position: absolute;
     z-index: -1;
     opacity: 0;
-<<<<<<< Updated upstream
-=======
     width: 0.1rem;
     height: 0.1rem;
->>>>>>> Stashed changes
 }
 
 .custom-radio + label {
@@ -2497,11 +2480,7 @@ button.swiper-pagination-bullet {
     flex-shrink: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
-<<<<<<< Updated upstream
-    border: 0.1rem solid rgba(255, 255, 255, 0.5);
-=======
     border: 0.1rem solid rgba(36, 14, 14, 0.411);
->>>>>>> Stashed changes
     border-radius: 50%;
     margin-right: 1.5rem;
     transition: all 0.1s linear;
@@ -6652,21 +6631,6 @@ button.swiper-pagination-bullet {
     margin-bottom: 10rem;
 }
 
-<<<<<<< Updated upstream
-.questnry__inner {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: start;
-    align-items: flex-start;
-}
-
-.questnry-nav {
-    display: grid;
-    width: 100%;
-    max-width: 30rem;
-    margin-right: 6rem;
-    background-color: #240e0e;
-=======
 @media (max-width: 500px) {
     .questnry {
         margin-top: 2rem;
@@ -6762,7 +6726,6 @@ button.swiper-pagination-bullet {
         max-height: 0;
         overflow: hidden;
     }
->>>>>>> Stashed changes
 }
 
 .questnry-nav__link {
@@ -6795,12 +6758,6 @@ button.swiper-pagination-bullet {
     width: 100%;
 }
 
-<<<<<<< Updated upstream
-.questnry-heading {
-    width: 100%;
-    max-width: 84.5rem;
-    height: 5.4rem;
-=======
 .questnry__content-wrapper {
     padding-bottom: 5rem;
     margin-bottom: 5rem;
@@ -6818,7 +6775,6 @@ button.swiper-pagination-bullet {
     width: 100%;
     max-width: 84.5rem;
     min-height: 5.4rem;
->>>>>>> Stashed changes
     padding: 1.2rem 2.4rem;
     margin-bottom: 6rem;
     font-weight: 500;
@@ -6829,8 +6785,6 @@ button.swiper-pagination-bullet {
     clip-path: polygon(0 0, 96% 0, 100% 100%, 0% 100%);
 }
 
-<<<<<<< Updated upstream
-=======
 @media (max-width: 500px) {
     .questnry-heading {
         min-height: unset;
@@ -6846,7 +6800,6 @@ button.swiper-pagination-bullet {
     margin-bottom: 4rem;
 }
 
->>>>>>> Stashed changes
 .questnry-subheading {
     font-weight: 600;
     font-size: 2rem;
@@ -6855,8 +6808,6 @@ button.swiper-pagination-bullet {
     margin-bottom: 3.2rem;
 }
 
-<<<<<<< Updated upstream
-=======
 @media (max-width: 500px) {
     .questnry-subheading {
         font-size: 1.6rem;
@@ -6864,14 +6815,11 @@ button.swiper-pagination-bullet {
     }
 }
 
->>>>>>> Stashed changes
 .questnry-section__inner {
     padding-left: 2.5rem;
     margin-bottom: 10rem;
 }
 
-<<<<<<< Updated upstream
-=======
 @media (max-width: 500px) {
     .questnry-section__inner {
         padding-left: 0;
@@ -6879,28 +6827,22 @@ button.swiper-pagination-bullet {
     }
 }
 
->>>>>>> Stashed changes
 .questnry-section__box + .questnry-section__box {
     margin-top: 5.2rem;
 }
 
-<<<<<<< Updated upstream
-=======
 @media (max-width: 500px) {
     .questnry-section__box + .questnry-section__box {
         margin-top: 4rem;
     }
 }
 
->>>>>>> Stashed changes
 .questnry-customer {
     display: grid;
     grid-template-columns: repeat(2, minmax(33rem, 40rem));
     gap: 2.8rem 4rem;
 }
 
-<<<<<<< Updated upstream
-=======
 @media (max-width: 500px) {
     .questnry-customer {
         grid-template-columns: 1fr;
@@ -6908,31 +6850,15 @@ button.swiper-pagination-bullet {
     }
 }
 
->>>>>>> Stashed changes
 .questnry-customer__item {
     display: grid;
     row-gap: 0.8rem;
 }
 
 .questnry-customer__item label {
-<<<<<<< Updated upstream
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1;
     color: rgba(0, 0, 0, 0.5);
 }
 
-.questnry-customer__item input {
-    height: 4rem;
-    padding: 0 1.5rem;
-    border: 0.1rem solid #dadada;
-}
-
-=======
-    color: rgba(0, 0, 0, 0.5);
-}
-
->>>>>>> Stashed changes
 .req-item {
     display: grid;
     row-gap: 1.2rem;
@@ -6945,25 +6871,14 @@ button.swiper-pagination-bullet {
 .req-item input {
     width: 100%;
     max-width: 84rem;
-<<<<<<< Updated upstream
-    height: 4rem;
-    padding: 0 1.5rem;
-    border: 0.1rem solid #dadada;
-=======
->>>>>>> Stashed changes
 }
 
 .questnry-checkbox__wrapper,
 .questnry-radio__wrapper {
-<<<<<<< Updated upstream
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-=======
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
->>>>>>> Stashed changes
     gap: 2rem 4rem;
 }
 
@@ -6988,13 +6903,6 @@ button.swiper-pagination-bullet {
     border-color: #b71a1b;
 }
 
-<<<<<<< Updated upstream
-.questnry-checkbox label {
-    color: #503e3f;
-}
-
-=======
->>>>>>> Stashed changes
 .req-inputs-select__heading {
     color: #503e3f;
     margin-bottom: 1.2rem;
@@ -7007,10 +6915,6 @@ button.swiper-pagination-bullet {
     align-items: center;
 }
 
-<<<<<<< Updated upstream
-.questnry-radio label {
-    color: #503e3f;
-=======
 .req-inputs__heading {
     margin-bottom: 1.2rem;
 }
@@ -7408,7 +7312,6 @@ button.swiper-pagination-bullet {
     .questnry-footer__btns button {
         width: 100%;
     }
->>>>>>> Stashed changes
 }
 
 .footer {
@@ -8033,10 +7936,7 @@ button.swiper-pagination-bullet {
 .popular__heading-wrapperSec {
     width: 100%;
     border-top: 0.1rem solid #dadada;
-<<<<<<< Updated upstream
-=======
     background: url(../images/brands/Rectangle.jpg);
->>>>>>> Stashed changes
 }
 
 .popular__heading {

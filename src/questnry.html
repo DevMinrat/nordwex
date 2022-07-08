@@ -18,91 +18,299 @@ title: Опросные листы
         <h1 class="page-heading">Опросные листы</h1>
         <div class="questnry__inner">
             <div class="questnry-nav">
-                <span class="questnry-nav__link active" href="#"><span>Неразрушающий контроль</span></span>
-                <a class="questnry-nav__link" href="#"><span>Гидравилика и пневматика</span></a>
-                <a class="questnry-nav__link" href="#"><span>Насосное и компрессорное оборудование</span></a>
-                <a class="questnry-nav__link" href="#"><span>Мехатроника</span></a>
-                <a class="questnry-nav__link" href="#"><span>Оптические системы и компоненты</span></a>
-                <a class="questnry-nav__link" href="#"><span>Гидравилика и пневматика</span></a>
-                <a class="questnry-nav__link" href="#"><span>Станочное оборудование</span></a>
-                <a class="questnry-nav__link" href="#"><span>Насосное и компрессорное оборудование</span></a>
-                <a class="questnry-nav__link" href="#"><span>Неразрушающий контроль</span></a>
-                <a class="questnry-nav__link" href="#"><span>Мехатроника</span></a>
+                <div class="questnry-nav__mob-heading">
+                    <span>Выбрать категорию</span>
+                    <svg>
+                        <use href="#chevron"></use>
+                    </svg>
+                </div>
+                <div class="questnry-nav__content">
+                    <span class="questnry-nav__link active" href="#"><span>Неразрушающий контроль</span></span>
+                    <a class="questnry-nav__link" href="#"><span>Гидравилика и пневматика</span></a>
+                    <a class="questnry-nav__link" href="#"><span>Насосное и компрессорное оборудование</span></a>
+                    <a class="questnry-nav__link" href="#"><span>Мехатроника</span></a>
+                    <a class="questnry-nav__link" href="#"><span>Оптические системы и компоненты</span></a>
+                    <a class="questnry-nav__link" href="#"><span>Гидравилика и пневматика</span></a>
+                    <a class="questnry-nav__link" href="#"><span>Станочное оборудование</span></a>
+                    <a class="questnry-nav__link" href="#"><span>Насосное и компрессорное оборудование</span></a>
+                    <a class="questnry-nav__link" href="#"><span>Неразрушающий контроль</span></a>
+                    <a class="questnry-nav__link" href="#"><span>Мехатроника</span></a>
+                </div>
             </div>
-            <div class="questnry__content">
-                <div class="questnry-section">
-                    <h2 class="questnry-heading">Заказчик</h2>
-                    <div class="questnry-customer questnry-section__inner">
-                        <div class="questnry-customer__item">
-                            <label for="questnry-company">Компания</label>
-                            <input type="text" id="questnry-company">
-                        </div>
-                        <div class="questnry-customer__item">
-                            <label for="questnry-name">ФИО представителя</label>
-                            <input type="text" id="questnry-name">
-                        </div>
-                        <div class="questnry-customer__item">
-                            <label for="questnry-tel">Телефон</label>
-                            <input type="tel" id="questnry-tel">
+            <form class="questnry__content">
+                <div class="questnry__content-wrapper">
+                    <div class="questnry-section">
+                        <h2 class="questnry-heading">Заказчик</h2>
+                        <div class="questnry-customer questnry-section__inner">
+                            <div class="questnry-customer__item">
+                                <label for="questnry-company">Компания</label>
+                                <input type="text" id="questnry-company">
+                            </div>
+                            <div class="questnry-customer__item">
+                                <label for="questnry-name">ФИО представителя</label>
+                                <input type="text" id="questnry-name">
+                            </div>
+                            <div class="questnry-customer__item">
+                                <label for="questnry-tel">Телефон</label>
+                                <input type="tel" id="questnry-tel">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="questnry-section">
-                    <h2 class="questnry-heading">Требования</h2>
-                    <div class="questnry-section__inner">
-                        <div class="questnry-section__box">
-                            <h3 class="questnry-subheading">Подзаголовок</h3>
-                            <div class="req-item">
-                                <label for="req-one">Вариант заполнения №1</label>
-                                <input type="text" id="req-one">
+                    <div class="questnry-section">
+                        <h2 class="questnry-heading">Требования</h2>
+                        <div class="questnry-section__inner">
+                            <div class="questnry-section__box">
+                                <h3 class="questnry-subheading">Подзаголовок</h3>
+                                <div class="req-item">
+                                    <label for="req-one">Вариант заполнения №1</label>
+                                    <input type="text" id="req-one">
+                                </div>
+                                <div class="req-item">
+                                    <label for="req-two">Вариант заполнения №2</label>
+                                    <input type="text" id="req-two">
+                                </div>
                             </div>
-                            <div class="req-item">
-                                <label for="req-two">Вариант заполнения №2</label>
-                                <input type="text" id="req-two">
+                            <div class="questnry-section__box">
+                                <h3 class="questnry-subheading">Подзаголовок</h3>
+                                <div class="questnry-checkbox__wrapper" style="margin-bottom: 4rem;">
+                                    <div class="questnry-checkbox">
+                                        <input class="custom-checkbox" type="checkbox" id="v-3-1"
+                                            name="Вариант заполнения №3" value="Вариант заполнения №3" checked>
+                                        <label for="v-3-1">Вариант заполнения №3</label>
+                                    </div>
+                                    <div class="questnry-checkbox">
+                                        <input class="custom-checkbox" type="checkbox" id="v-3-2"
+                                            name="Вариант заполнения №3" value="Вариант заполнения №3">
+                                        <label for="v-3-2">Вариант заполнения №3</label>
+                                    </div>
+                                    <div class="questnry-checkbox">
+                                        <input class="custom-checkbox" type="checkbox" id="v-3-3"
+                                            name="Вариант заполнения №3" value="Вариант заполнения №3">
+                                        <label for="v-3-3">Вариант заполнения №3</label>
+                                    </div>
+                                    <div class="questnry-checkbox">
+                                        <input class="custom-checkbox" type="checkbox" id="v-3-4"
+                                            name="Вариант заполнения №3" value="Вариант заполнения №3">
+                                        <label for="v-3-4">Вариант заполнения №3</label>
+                                    </div>
+                                </div>
+                                <div class="req-inputs_select">
+                                    <p class="req-inputs__heading">Вариант заполнения №4</p>
+                                    <div class="req-inputs__inner">
+                                        <div class="sm-select-wrapper req-inputs__item">
+                                            <input type="number">
+                                            <select class="questnry-def-select">
+                                                <option value="Гц">Гц</option>
+                                                <option value="Вт">Вт</option>
+                                                <option value="Час">Час</option>
+                                                <option value="Гц">Гц</option>
+                                                <option value="Вт">Вт</option>
+                                                <option value="Час">Час</option>
+                                            </select>
+                                        </div>
+                                        <div class="req-inputs__item">
+                                            <input class="req-input-sm" type="number" id="req-input-w"
+                                                name="req-input-w">
+                                            <label for="req-input-w">Вт</label>
+                                        </div>
+                                        <div class="req-inputs__item">
+                                            <input class="req-input-sm" type="number" id="req-input-h"
+                                                name="req-input-h">
+                                            <label for="req-input-h">Час</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questnry-section__box">
+                                <h3 class="questnry-subheading">Подзаголовок</h3>
+                                <div class="questnry-radio__wrapper" style="margin-bottom: 4rem;">
+                                    <div class="questnry-radio">
+                                        <input class="custom-radio" type="radio" name="cust-radio" id="cust-radio-1"
+                                            value="Вариант заполнения №3" checked>
+                                        <label for="cust-radio-1">Вариант заполнения №3</label>
+                                    </div>
+                                    <div class="questnry-radio">
+                                        <input class="custom-radio" type="radio" name="cust-radio" id="cust-radio-2"
+                                            value="Вариант заполнения №3">
+                                        <label for="cust-radio-2">Вариант заполнения №3</label>
+                                    </div>
+                                    <div class="questnry-radio">
+                                        <input class="custom-radio" type="radio" name="cust-radio" id="cust-radio-3"
+                                            value="Вариант заполнения №3">
+                                        <label for="cust-radio-3">Вариант заполнения №3</label>
+                                    </div>
+                                    <div class="questnry-radio">
+                                        <input class="custom-radio" type="radio" name="cust-radio" id="cust-radio-4"
+                                            value="Вариант заполнения №3">
+                                        <label for="cust-radio-4">Вариант заполнения №3</label>
+                                    </div>
+                                </div>
+                                <div class="req-inputs">
+                                    <p class="req-inputs__heading">Вариант заполнения №4</p>
+                                    <div class="req-inputs__inner">
+                                        <div class="req-inputs__item">
+                                            <input class="req-input-lg" type="number" id="req-input-gc"
+                                                name="req-input-gc">
+                                            <label for="req-input-gc">Гц</label>
+                                        </div>
+                                        <div class="req-inputs__item">
+                                            <input class="req-input-sm" type="number" id="req-input-w"
+                                                name="req-input-w">
+                                            <label for="req-input-w">Вт</label>
+                                        </div>
+                                        <div class="req-inputs__item">
+                                            <input class="req-input-sm" type="number" id="req-input-h"
+                                                name="req-input-h">
+                                            <label for="req-input-h">Час</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="questnry-section__box">
-                            <h3 class="questnry-subheading">Подзаголовок</h3>
-                            <div class="questnry-checkbox__wrapper" style="margin-bottom: 4rem;">
-                                <div class="questnry-checkbox">
-                                    <input class="custom-checkbox" type="checkbox" id="v-3-1"
-                                        name="Вариант заполнения №3" value="Вариант заполнения №3">
-                                    <label for="v-3-1">Вариант заполнения №3</label>
-                                </div>
-                                <div class="questnry-checkbox">
-                                    <input class="custom-checkbox" type="checkbox" id="v-3-2"
-                                        name="Вариант заполнения №3" value="Вариант заполнения №3">
-                                    <label for="v-3-2">Вариант заполнения №3</label>
-                                </div>
-                                <div class="questnry-checkbox">
-                                    <input class="custom-checkbox" type="checkbox" id="v-3-3"
-                                        name="Вариант заполнения №3" value="Вариант заполнения №3">
-                                    <label for="v-3-3">Вариант заполнения №3</label>
-                                </div>
-                                <div class="questnry-checkbox">
-                                    <input class="custom-checkbox" type="checkbox" id="v-3-4"
-                                        name="Вариант заполнения №3" value="Вариант заполнения №3">
-                                    <label for="v-3-4">Вариант заполнения №3</label>
+                    </div>
+                    <div class="questnry-section">
+                        <h2 class="questnry-heading">Параметры</h2>
+                        <div class="questnry-section__inner">
+                            <div class="questnry-section__box">
+                                <h3 class="questnry-subheading">Подзаголовок</h3>
+                                <div class="questnry-checktabs__wrapper">
+                                    <div class="questnry-checktab__item">
+                                        <input class="questnry-checktab" type="checkbox" id="questnry-checktab-1">
+                                        <label for="questnry-checktab-1">Выбор табами</label>
+                                    </div>
+                                    <div class="questnry-checktab__item">
+                                        <input class="questnry-checktab" type="checkbox" id="questnry-checktab-2"
+                                            checked>
+                                        <label for="questnry-checktab-2">Выбор табами</label>
+                                    </div>
+                                    <div class="questnry-checktab__item">
+                                        <input class="questnry-checktab" type="checkbox" id="questnry-checktab-3">
+                                        <label for="questnry-checktab-3">Выбор табами</label>
+                                    </div>
+                                    <div class="questnry-checktab__item">
+                                        <input class="questnry-checktab" type="checkbox" id="questnry-checktab-4">
+                                        <label for="questnry-checktab-4">Выбор табами 1123 2323</label>
+                                    </div>
+                                    <div class="questnry-checktab__item">
+                                        <input class="questnry-checktab" type="checkbox" id="questnry-checktab-5">
+                                        <label for="questnry-checktab-5">Выбор табами</label>
+                                    </div>
+                                    <div class="questnry-checktab__item">
+                                        <input class="questnry-checktab" type="checkbox" id="questnry-checktab-6">
+                                        <label for="questnry-checktab-6">Выбор табами</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="req-inputs_select">
-                                <p class="req-inputs_select__heading">Вариант заполнения №4</p>
+                            <div class="questnry-section__box">
+                                <h3 class="questnry-subheading">Подзаголовок</h3>
+                                <div class="questnry-checktabs__wrapper" style="margin-bottom: 4rem;">
+                                    <div class="param-select__item">
+                                        <p class="param-select__heading">Вариант заполнения №1</p>
+                                        <select class="questnry-def-select">
+                                            <option value="Селект с выбором">Селект с выбором</option>
+                                            <option value="Выбор №2">Выбор №2</option>
+                                            <option value="Выбор пункта №3">Выбор пункта №3</option>
+                                            <option value="Выбор №4">Выбор №4</option>
+                                            <option value="Выбор №5">Выбор №5</option>
+                                            <option value="Выбор пункта №6">Выбор пункта №6</option>
+                                        </select>
+                                    </div>
+                                    <div class="param-select__item">
+                                        <p class="param-select__heading">Вариант заполнения №1</p>
+                                        <div class="sm-select-wrapper">
+                                            <input type="text">
+                                            <select class="questnry-def-select">
+                                                <option value="Гц">Гц</option>
+                                                <option value="Вт">Вт</option>
+                                                <option value="Час">Час</option>
+                                                <option value="Гц">Гц</option>
+                                                <option value="Вт">Вт</option>
+                                                <option value="Час">Час</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="questnry-checktabs__wrapper">
+                                    <div class="param-select__item">
+                                        <p class="param-select__heading">Вариант заполнения №1</p>
+                                        <select class="questnry-def-select">
+                                            <option value="Селект с выбором">Селект с выбором</option>
+                                            <option value="Выбор №2">Выбор №2</option>
+                                            <option value="Выбор пункта №3">Выбор пункта №3</option>
+                                            <option value="Выбор №4">Выбор №4</option>
+                                            <option value="Выбор №5">Выбор №5</option>
+                                            <option value="Выбор пункта №6">Выбор пункта №6</option>
+                                        </select>
+                                    </div>
+                                    <div class="param-select__item">
+                                        <p class="param-select__heading">Вариант заполнения №1</p>
+                                        <div class="sm-select-wrapper">
+                                            <input type="text">
+                                            <select class="questnry-def-select">
+                                                <option value="Гц">Гц</option>
+                                                <option value="Вт">Вт</option>
+                                                <option value="Час">Час</option>
+                                                <option value="Гц">Гц</option>
+                                                <option value="Вт">Вт</option>
+                                                <option value="Час">Час</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questnry-section__box">
+                                <h3 class="questnry-subheading">Подзаголовок</h3>
+                                <div class="questnry-switch__wrapper">
+                                    <p class="questnry-switch-first active">Вариант заполнения №1</p>
+                                    <label class="questnry-switch" for="questnry-switch-checkbox1">
+                                        <input type="checkbox" id="questnry-switch-checkbox1" />
+                                        <div class="questnry-switch__slider round"></div>
+                                    </label>
+                                    <p class="questnry-switch-second">Вариант заполнения №2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questnry-section">
+                        <h2 class="questnry-heading questnry-heading--addl">Дополнительная информация</h2>
+                        <div>
+                            <textarea class="questnry-textarea"
+                                placeholder="Укажите дополнительные пожелания"></textarea>
+
+                            <div class="attachment-files__wrapper">
+                                <label for="attachment-files">
+                                    <a class="attach__up" role="button" aria-disabled="false">
+                                        <svg>
+                                            <use href="#attachment"></use>
+                                        </svg> <span>Прикрепить файл</span></a>
+
+                                </label>
+                                <input type="file" name="file[]" accept=".pdf" id="attachment-files"
+                                    style="visibility: hidden; position: absolute;" multiple />
 
                             </div>
-                        </div>
-                        <div class="questnry-section__box">
-                            <h3 class="questnry-subheading">Подзаголовок</h3>
-                            <div class="questnry-radio__wrapper">
-                                <div class="questnry-radio">
-                                    <input class="custom-radio" type="radio" name="cust-radio" id="cust-radio-1"
-                                        value="Вариант заполнения №3">
-                                    <label for="cust-radio-1">Вариант заполнения №3</label>
-                                </div>
+                            <div id="files-area">
+                                <span id="filesList">
+                                    <ol class="attach__item-list" id="files-names"></ol>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="questnry-footer">
+                    <div class="questnry-footer__privacy">
+                        <div class="questnry-checkbox">
+                            <input class="custom-checkbox" type="checkbox" id="q-f-p" required>
+                            <label for="q-f-p">Я согласен на обработку персональных данных </label>
+                        </div>
+                        <div class="questnry-footer__btns">
+                            <button class="filled-btn">Распечатать</button>
+                            <button class="filled-btn">Сохранить в world</button>
+                            <button class="filled-btn">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </section>
