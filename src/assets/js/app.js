@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   //= ../../../node_modules/swiper/swiper-bundle.js
+  //= ../../../node_modules/choices.js/public/assets/scripts/choices.js
   //= components/
 
   class ItcTabs {
@@ -186,6 +187,56 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // questnry selects
+
+  const questnryDefSelects = document.querySelectorAll(".questnry-def-select");
+
+  if (questnryDefSelects.length > 0) {
+    questnryDefSelects.forEach((el) => {
+      new Choices(el, {
+        searchEnabled: false,
+        shouldSort: false,
+        itemSelectText: "",
+      });
+    });
+  }
+
+  //questnry switch
+
+  let questnrySwitchsPar = document.querySelectorAll(
+    ".questnry-switch__wrapper"
+  );
+
+  questnrySwitchsPar.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      let target = e.target;
+      let firstElem = el.querySelector(".questnry-switch-first");
+      let secondElem = el.querySelector(".questnry-switch-second");
+
+      if (target && target.tagName == "INPUT") {
+        firstElem.classList.toggle("active");
+        secondElem.classList.toggle("active");
+      }
+    });
+  });
+
+  const questnryNavTitle = document.querySelector(".questnry-nav__mob-heading"),
+    questnryNavContent = document.querySelector(".questnry-nav__content");
+
+  if (questnryNavTitle) {
+    questnryNavTitle.addEventListener("click", function () {
+      this.classList.toggle("active");
+
+      let panel = questnryNavContent;
+
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
   // throttleScroll
 
   let isScrolling = false;
@@ -316,6 +367,3 @@ function onTabClick(item) {
 }
 
 document.querySelector('.controlTitle').click();
-
-
-

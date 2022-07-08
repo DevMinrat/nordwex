@@ -1,21 +1,93 @@
 .questnry {
   margin-bottom: 10rem;
+
+  @include breakpoint($sm-bp) {
+    margin-top: 2rem;
+  }
+
+  input {
+    height: 4rem;
+
+    padding: 0 1.5rem;
+
+    border: 0.1rem solid #dadada;
+  }
+
+  label {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #503e3f;
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.4rem;
+    }
+  }
 }
 
 .questnry__inner {
   display: flex;
   align-items: flex-start;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+  }
 }
 
 .questnry-nav {
-  display: grid;
-
   width: 100%;
   max-width: 30rem;
 
   margin-right: 6rem;
 
+  @include breakpoint($lg-bp) {
+    max-width: unset;
+    margin-bottom: 6rem;
+  }
+}
+
+.questnry-nav__mob-heading {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+
+  color: $primary;
+
+  padding: 1rem 1.4rem;
+  cursor: pointer;
+
+  border: 0.1rem solid $primary;
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    fill: $primary;
+    transform: rotate(90deg);
+  }
+
+  &.active {
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+
+  @include breakpoint($lg-bp) {
+    display: flex;
+  }
+}
+
+.questnry-nav__content {
+  display: grid;
+
   background-color: $black;
+
+  transition: all 0.2s linear;
+
+  @include breakpoint($lg-bp) {
+    max-height: 0;
+    overflow: hidden;
+  }
 }
 
 .questnry-nav__link {
@@ -52,11 +124,23 @@
   width: 100%;
 }
 
+.questnry__content-wrapper {
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+
+  border-bottom: 0.1rem solid #dadada;
+
+  @include breakpoint($sm-bp) {
+    padding-bottom: 4rem;
+    margin-bottom: 3rem;
+  }
+}
+
 .questnry-heading {
   width: 100%;
   max-width: 84.5rem;
 
-  height: 5.4rem;
+  min-height: 5.4rem;
 
   padding: 1.2rem 2.4rem;
   margin-bottom: 6rem;
@@ -68,6 +152,18 @@
   background-color: #2e2a2b;
 
   clip-path: polygon(0 0, 96% 0, 100% 100%, 0% 100%);
+
+  @include breakpoint($sm-bp) {
+    min-height: unset;
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
+    padding: 1.2rem;
+    clip-path: none;
+  }
+
+  &--addl {
+    margin-bottom: 4rem;
+  }
 }
 
 .questnry-subheading {
@@ -77,16 +173,31 @@
   color: #240e0e;
 
   margin-bottom: 3.2rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+
+    margin-bottom: 2.4rem;
+  }
 }
 
 .questnry-section__inner {
   padding-left: 2.5rem;
   margin-bottom: 10rem;
+
+  @include breakpoint($sm-bp) {
+    padding-left: 0;
+    margin-bottom: 5rem;
+  }
 }
 
 .questnry-section__box {
   & + & {
     margin-top: 5.2rem;
+
+    @include breakpoint($sm-bp) {
+      margin-top: 4rem;
+    }
   }
 }
 
@@ -94,6 +205,11 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(33rem, 40rem));
   gap: 2.8rem 4rem;
+
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
 }
 
 .questnry-customer__item {
@@ -101,18 +217,7 @@
   row-gap: 0.8rem;
 
   label {
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1;
     color: rgba(0, 0, 0, 0.5);
-  }
-
-  input {
-    height: 4rem;
-
-    padding: 0 1.5rem;
-
-    border: 0.1rem solid #dadada;
   }
 }
 
@@ -127,18 +232,13 @@
   input {
     width: 100%;
     max-width: 84rem;
-    height: 4rem;
-
-    padding: 0 1.5rem;
-
-    border: 0.1rem solid #dadada;
   }
 }
 
 .questnry-checkbox__wrapper,
 .questnry-radio__wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem 4rem;
 }
 
@@ -157,10 +257,6 @@
   .custom-checkbox:checked + label::before {
     border-color: $secondary;
   }
-
-  label {
-    color: #503e3f;
-  }
 }
 
 .req-inputs-select__heading {
@@ -172,8 +268,372 @@
 .questnry-radio {
   display: flex;
   align-items: center;
+}
 
-  label {
-    color: #503e3f;
+.req-inputs__heading {
+  margin-bottom: 1.2rem;
+}
+
+.req-inputs__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem 5rem;
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.req-inputs__item {
+  display: flex;
+  align-items: center;
+
+  input {
+    margin-right: 1.2rem;
+  }
+}
+
+.req-input-lg {
+  width: 100%;
+  max-width: 22rem;
+}
+.req-input-sm {
+  width: 100%;
+  max-width: 11rem;
+}
+
+.req-inputs_select {
+  .sm-select-wrapper {
+    width: 100%;
+    max-width: 17rem;
+
+    input {
+      width: 100%;
+      margin-right: 0;
+
+      @include breakpoint($sm-bp) {
+        max-width: 11rem;
+      }
+    }
+    .choices {
+      overflow: visible;
+    }
+  }
+}
+
+.questnry-checktabs__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem 2rem;
+}
+
+.questnry-checktab {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 0.1rem;
+  height: 0.1rem;
+}
+
+.questnry-checktab + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 1.3rem 1.7rem;
+  border: 0.1rem solid #dadada;
+  border-radius: 30rem;
+  transition: all 0.1s linear;
+  color: #240e0e;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.questnry-checktab:not(:disabled):not(:checked) + label:hover {
+  border-color: $primary;
+}
+
+.questnry-checktab:not(:disabled):active + label {
+  background-color: rgb(240, 134, 134);
+  border-color: $secondary;
+}
+
+.questnry-checktab:focus + label {
+  box-shadow: 0 0 0 0.1rem white;
+}
+
+.questnry-checktab:checked + label {
+  border: 0.1rem solid $primary;
+  background-color: $primary;
+  color: white;
+}
+
+.questnry-checktab:disabled + label {
+  background-color: #e9ecef;
+}
+
+.param-select__heading {
+  margin-bottom: 1.2rem;
+}
+
+.param-select__item {
+  width: 100%;
+  max-width: 30rem;
+
+  @include breakpoint($sm-bp) {
+    max-width: unset;
+  }
+}
+
+.questnry-def-select {
+  width: 100%;
+  max-width: 30rem;
+}
+
+.sm-select-wrapper {
+  width: 100%;
+  max-width: 30rem;
+
+  display: flex;
+  align-items: center;
+
+  .choices__inner {
+    min-width: 5.5rem;
+    padding: 1rem;
+  }
+
+  .choices__list--dropdown .choices__item,
+  .choices__list[aria-expanded] .choices__item {
+    padding: 0.5rem;
+  }
+
+  .choices[data-type*="select-one"]::after {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .choices[data-type*="select-one"].is-open::after {
+    width: 1.4rem;
+    height: 1.4rem;
+    transform: translateY(-50%) rotate(180deg);
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.40071 9.0507L5.75079 10.7006L14.0004 18.9502L22.25 10.7006L20.6001 9.05066L14.0004 15.6504L7.40071 9.0507Z' fill='%23E30613'/%3E%3C/svg%3E");
+  }
+
+  input {
+    border-right: none;
+  }
+}
+
+.questnry-switch__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem 2rem;
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+  }
+
+  .questnry-switch-first,
+  .questnry-switch-second {
+    opacity: 0.5;
+    transition: all 0.1s linear;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .questnry-switch {
+    display: inline-block;
+    height: 2.4rem;
+    position: relative;
+    width: 4.4rem;
+
+    @include breakpoint($sm-bp) {
+      transform: rotate(90deg);
+    }
+  }
+
+  .questnry-switch input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 0.1rem;
+    height: 0.1rem;
+  }
+
+  .questnry-switch__slider {
+    background-color: $primary;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+  }
+
+  .questnry-switch__slider:before {
+    content: "";
+    position: absolute;
+    bottom: 0.4rem;
+    left: 0.4rem;
+
+    height: 1.6rem;
+    width: 1.6rem;
+
+    background-color: white;
+
+    transition: 0.4s;
+  }
+
+  input:checked + .questnry-switch__slider {
+    background-color: $primary;
+  }
+
+  input:checked + .questnry-switch__slider:before {
+    transform: translateX(2rem);
+  }
+
+  .questnry-switch__slider.round {
+    border-radius: 34px;
+  }
+
+  .questnry-switch__slider.round:before {
+    border-radius: 50%;
+  }
+}
+
+.questnry-textarea {
+  width: 100%;
+  max-width: 84.5rem;
+  height: 19rem;
+
+  padding: 1.6rem 2rem;
+  margin-bottom: 2rem;
+
+  border: 0.1rem solid #dadada;
+}
+
+.attachment-files__wrapper {
+  display: flex;
+
+  margin-bottom: 2rem;
+}
+
+.attach__item-list {
+  list-style-type: none;
+  counter-reset: num;
+  font-size: 1.6rem;
+
+  .attach__item {
+    position: relative;
+    padding-left: 2rem;
+
+    &:before {
+      content: counter(num) ".";
+      counter-increment: num;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 0rem;
+      color: #240e0e;
+      text-align: right;
+      transform: translateY(-50%);
+    }
+  }
+
+  .attach__item-content {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .attach__item + .attach__item {
+    margin-top: 1rem;
+  }
+
+  .attach__name {
+    margin-right: 0.8rem;
+  }
+
+  .attach__delete {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+
+      fill: #dadada;
+    }
+
+    &:hover {
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+  .attach__folder {
+    margin-right: 0.8rem;
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      fill: #323232;
+    }
+  }
+}
+
+.attach__up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  width: 100%;
+  height: 5.6rem;
+
+  padding: 1rem 2.5rem;
+
+  color: $primary;
+
+  border: 0.1rem solid $primary;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+    fill: $primary;
+
+    margin-right: 0.4rem;
+  }
+}
+
+.questnry-footer__btns {
+  display: flex;
+  align-items: center;
+
+  margin-top: 4rem;
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+  }
+
+  button + button {
+    margin-left: 1.6rem;
+
+    @include breakpoint($sm-bp) {
+      margin-left: 0;
+      margin-top: 1.6rem;
+    }
+  }
+
+  button {
+    @include breakpoint($sm-bp) {
+      width: 100%;
+    }
   }
 }
