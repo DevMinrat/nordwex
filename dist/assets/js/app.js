@@ -11141,4 +11141,5 @@ function onTabClick(item) {
   });
 }
 
+;
 document.querySelector('.controlTitle').click();

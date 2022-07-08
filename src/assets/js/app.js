@@ -313,7 +313,7 @@ function onTabClick(item) {
       currentTab.classList.add('radioContainerActive')
     }
   })
-}
+};
 
 document.querySelector('.controlTitle').click();
 
