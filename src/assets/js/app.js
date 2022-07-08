@@ -256,3 +256,114 @@ document.addEventListener("DOMContentLoaded", () => {
     isScrolling = true;
   }
 });
+
+
+//headerMobile scroll
+
+const header = document.querySelector(".headerMob");
+let lastScroll = 0;
+
+const throttle = (func, time = 20) => {
+  let lastTime = 0;
+  return () => {
+    const now = new Date();
+    if (now - lastTime >= time) {
+      func();
+      time = now;
+    }
+  };
+};
+
+const validateHeader = () => {
+  const windowY = window.scrollY;
+  const windowH = 108;
+  if (windowY > windowH) {
+    header.classList.add("is-fixed");
+    if (windowY > windowH + 40) {
+      header.classList.add("can-animate");
+      if (windowY < lastScroll) {
+        header.classList.add("scroll-up");
+      } else {
+        header.classList.remove("scroll-up");
+      }
+    } else {
+      header.classList.remove("scroll-up");
+    }
+  } else {
+    header.classList.remove("is-fixed", "can-animate");
+  }
+  lastScroll = windowY;
+};
+
+window.addEventListener("scroll", throttle(validateHeader, 20));
+
+
+//header desctop scroll
+
+const headerDesctop = document.querySelector(".slickyContainer");
+let lastScrollDesctop = 0;
+
+const throttleFunction = (func, time = 20) => {
+  let lastTime = 0;
+  return () => {
+    const now = new Date();
+    if (now - lastTime >= time) {
+      func();
+      time = now;
+    }
+  };
+};
+
+const validateHeaderFunction = () => {
+  const windowY = window.scrollY;
+  const windowH = 430;
+  if (windowY > windowH) {
+    headerDesctop.classList.add("is-fixed");
+    if (windowY > windowH + 40) {
+      headerDesctop.classList.add("can-animate");
+      if (windowY < lastScrollDesctop) {
+        headerDesctop.classList.add("scroll-up");
+      } else {
+        headerDesctop.classList.remove("scroll-up");
+      }
+    } else {
+      headerDesctop.classList.remove("scroll-up");
+    }
+  } else {
+    headerDesctop.classList.remove("is-fixed", "can-animate");
+  }
+  lastScrollDesctop = windowY;
+};
+
+window.addEventListener("scroll", throttleFunction(validateHeaderFunction, 20));
+
+
+//brandsSecondLevel tabs 
+
+const tabsBtn = document.querySelectorAll(".controlTitle");
+const tabsItems = document.querySelectorAll(".radioCotainer")
+
+tabsBtn.forEach(onTabClick);
+
+function onTabClick(item) {
+  item.addEventListener('click', function() {
+    let currentBtn = item;
+    let tabId = currentBtn.getAttribute("data-tab");
+    let currentTab = document.querySelector(tabId);
+
+    if( !currentBtn.classList.contains('activeTabBtn')) {
+      tabsBtn.forEach(function(item) {
+        item.classList.remove('activeTabBtn')
+      })
+  
+      tabsItems.forEach(function(item) {
+        item.classList.remove('radioContainerActive')
+      })
+  
+      currentBtn.classList.add('activeTabBtn')
+      currentTab.classList.add('radioContainerActive')
+    }
+  })
+}
+
+document.querySelector('.controlTitle').click();
