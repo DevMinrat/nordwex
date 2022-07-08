@@ -452,11 +452,16 @@ textarea {
 
 html {
   box-sizing: border-box;
-  font-size: 0.5208333333vw;
+  font-size: 10px;
+}
+@media (max-width: 1340px) {
+  html {
+    font-size: 0.7462686567vw;
+  }
 }
 @media (max-width: 1024px) {
   html {
-    font-size: 0.7220216606vw;
+    font-size: 0.7692307692vw;
   }
 }
 @media (max-width: 920px) {
