@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   //= ../../../node_modules/swiper/swiper-bundle.js
+  //= ../../../node_modules/choices.js/public/assets/scripts/choices.js
   //= components/
 
   class ItcTabs {
@@ -186,6 +187,56 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // questnry selects
+
+  const questnryDefSelects = document.querySelectorAll(".questnry-def-select");
+
+  if (questnryDefSelects.length > 0) {
+    questnryDefSelects.forEach((el) => {
+      new Choices(el, {
+        searchEnabled: false,
+        shouldSort: false,
+        itemSelectText: "",
+      });
+    });
+  }
+
+  //questnry switch
+
+  let questnrySwitchsPar = document.querySelectorAll(
+    ".questnry-switch__wrapper"
+  );
+
+  questnrySwitchsPar.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      let target = e.target;
+      let firstElem = el.querySelector(".questnry-switch-first");
+      let secondElem = el.querySelector(".questnry-switch-second");
+
+      if (target && target.tagName == "INPUT") {
+        firstElem.classList.toggle("active");
+        secondElem.classList.toggle("active");
+      }
+    });
+  });
+
+  const questnryNavTitle = document.querySelector(".questnry-nav__mob-heading"),
+    questnryNavContent = document.querySelector(".questnry-nav__content");
+
+  if (questnryNavTitle) {
+    questnryNavTitle.addEventListener("click", function () {
+      this.classList.toggle("active");
+
+      let panel = questnryNavContent;
+
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
   // throttleScroll
 
   let isScrolling = false;
@@ -207,3 +258,112 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+//headerMobile scroll
+
+const header = document.querySelector(".headerMob");
+let lastScroll = 0;
+
+const throttle = (func, time = 20) => {
+  let lastTime = 0;
+  return () => {
+    const now = new Date();
+    if (now - lastTime >= time) {
+      func();
+      time = now;
+    }
+  };
+};
+
+const validateHeader = () => {
+  const windowY = window.scrollY;
+  const windowH = 108;
+  if (windowY > windowH) {
+    header.classList.add("is-fixed");
+    if (windowY > windowH + 40) {
+      header.classList.add("can-animate");
+      if (windowY < lastScroll) {
+        header.classList.add("scroll-up");
+      } else {
+        header.classList.remove("scroll-up");
+      }
+    } else {
+      header.classList.remove("scroll-up");
+    }
+  } else {
+    header.classList.remove("is-fixed", "can-animate");
+  }
+  lastScroll = windowY;
+};
+
+window.addEventListener("scroll", throttle(validateHeader, 20));
+
+
+//header desctop scroll
+
+const headerDesctop = document.querySelector(".slickyContainer");
+let lastScrollDesctop = 0;
+
+const throttleFunction = (func, time = 20) => {
+  let lastTime = 0;
+  return () => {
+    const now = new Date();
+    if (now - lastTime >= time) {
+      func();
+      time = now;
+    }
+  };
+};
+
+const validateHeaderFunction = () => {
+  const windowY = window.scrollY;
+  const windowH = 430;
+  if (windowY > windowH) {
+    headerDesctop.classList.add("is-fixed");
+    if (windowY > windowH + 40) {
+      headerDesctop.classList.add("can-animate");
+      if (windowY < lastScrollDesctop) {
+        headerDesctop.classList.add("scroll-up");
+      } else {
+        headerDesctop.classList.remove("scroll-up");
+      }
+    } else {
+      headerDesctop.classList.remove("scroll-up");
+    }
+  } else {
+    headerDesctop.classList.remove("is-fixed", "can-animate");
+  }
+  lastScrollDesctop = windowY;
+};
+
+window.addEventListener("scroll", throttleFunction(validateHeaderFunction, 20));
+
+
+//brandsSecondLevel tabs 
+
+const tabsBtn = document.querySelectorAll(".controlTitle");
+const tabsItems = document.querySelectorAll(".radioCotainer")
+
+tabsBtn.forEach(onTabClick);
+
+function onTabClick(item) {
+  item.addEventListener('click', function() {
+    let currentBtn = item;
+    let tabId = currentBtn.getAttribute("data-tab");
+    let currentTab = document.querySelector(tabId);
+
+    if( !currentBtn.classList.contains('activeTabBtn')) {
+      tabsBtn.forEach(function(item) {
+        item.classList.remove('activeTabBtn')
+      })
+  
+      tabsItems.forEach(function(item) {
+        item.classList.remove('radioContainerActive')
+      })
+  
+      currentBtn.classList.add('activeTabBtn')
+      currentTab.classList.add('radioContainerActive')
+    }
+  })
+}
+
+document.querySelector('.controlTitle').click();
