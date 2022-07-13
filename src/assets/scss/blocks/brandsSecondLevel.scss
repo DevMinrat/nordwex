@@ -503,11 +503,11 @@
         }
       }
 
-.container {
-  @include breakpoint($sm-bp) {
-    padding: 0;
-  }
-}
+// .container {
+//   @include breakpoint($sm-bp) {
+//     padding: 0;
+//   }
+// }
 
 .catalogBrands {
   .container {

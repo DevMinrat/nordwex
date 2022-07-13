@@ -5735,7 +5735,7 @@ button.swiper-pagination-bullet {
     margin-right: 0.5rem;
 }
 
-.compare {
+.compare-content {
     margin-bottom: 7rem;
 }
 
@@ -5746,7 +5746,6 @@ button.swiper-pagination-bullet {
 
 .compare-navs__inner {
     white-space: nowrap;
-    overflow-y: auto;
 }
 
 .compare-navs__inner ::-webkit-scrollbar {
@@ -5756,10 +5755,26 @@ button.swiper-pagination-bullet {
 .compare-navs__link {
     position: relative;
     padding-bottom: 1.2rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    color: rgba(0, 0, 0, 0.5);
+    border: none;
+    background: transparent;
+}
+
+.compare-navs__link:hover {
+    color: #e30613;
 }
 
 .compare-navs__link + .compare-navs__link {
     margin-left: 4rem;
+}
+
+.compare-navs__link.tabs-btn_active {
+    font-weight: 700;
+    color: #e30613;
+    border-bottom: 0.1rem solid #e30613;
 }
 
 .compare__inner {
@@ -5831,16 +5846,19 @@ button.swiper-pagination-bullet {
 }
 
 .compare-info {
-    position: relative;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
 }
 
+.compare-different__wrapper {
+    position: relative;
+}
+
 .compare-different {
     position: absolute;
-    right: 0;
-    top: 0;
+    left: 119.5rem;
+    top: 43rem;
     z-index: 1;
 }
 
