@@ -310,6 +310,14 @@ const articleSlider = new Swiper(".mySwiper", {
   
 // });
 
+  pagination: {
+    el: ".swiper-pagination",
+    type: 'bullets',
+    clickable: true,
+  }, 
+});
+
+
 // brands slider
 
 const brandsSwiper = new Swiper(".brandsSwiper", {
@@ -335,4 +343,13 @@ const brandsSwiper = new Swiper(".brandsSwiper", {
 
     
   }
+});
+
+// compare navs slider
+
+let compareNavSlider = new Swiper(".compare-navs__inner", {
+  slidesPerView: "auto",
+  spaceBetween: 0,
+  freeMode: true,
+  grabCursor: true,
 });
