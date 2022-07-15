@@ -269,32 +269,70 @@ let apBenefitsSlider = new Swiper(".aboutPage-benefits", {
 //article slider
 
 const articleSlider = new Swiper(".mySwiper", {
-  spaceBetween: 30,
-  navigation: {
-    nextEl: ".arrowNext",
-    prevEl: ".arrowPrev",
-  },
+  
+  
+  breakpoints: {
+
+    375: {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      spaceBetween: 30,
+      // navigation: {
+      //   nextEl: ".arrowNext",
+      //   prevEl: ".arrowPrev",
+      // },
+    },
+
+    920: {
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".arrowNext",
+        prevEl: ".arrowPrev",
+      },
+    },
+
+    
+  }
+  
 });
 
 //article slider mobile
 
-const articleSliderMobile = new Swiper(".mySwiperMobile", {
+// const articleSliderMobile = new Swiper(".mySwiperMobile", {
 
-  pagination: {
-    el: ".swiper-pagination",
-    type: 'bullets',
-    clickable: true,
-  }, 
+//   pagination: {
+//     el: ".swiper-pagination",
+//     type: 'bullets',
+//     clickable: true,
+//   }, 
   
-});
+// });
 
 // brands slider
 
 const brandsSwiper = new Swiper(".brandsSwiper", {
-  slidesPerView: 8,
+  slidesPerView: 5,
   loop: true,
+  spaceBetween: 30,
   navigation: {
     nextEl: '.arrowNextcontainer',
     prevEl: '.arrowPrevContainer',
   },
+
+  breakpoints: {
+
+    1550: {
+      slidesPerView: 8,
+      loop: true,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.arrowNextcontainer',
+        prevEl: '.arrowPrevContainer',
+      },
+    },
+
+    
+  }
 });

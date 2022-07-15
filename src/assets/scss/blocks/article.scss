@@ -338,6 +338,10 @@
         display: flex;
         gap: 17.1rem;
         margin-top: 3rem;
+
+        @include breakpoint($lg-bp) {
+            display: none;
+        }
     }
 
     .sliderText {
@@ -387,42 +391,37 @@
         }
 }
 
-@include breakpoint($lg-bp) {
-    .mySwiper {
-        display: none;
-    }
-    
-}
 
-.mySwiperMobile {
-    display: none;
 
-    @include breakpoint($lg-bp) {
-        display: block;
-        margin-top: 8rem;
-        font-family: 'Montserrat';
-        font-style: normal;
+// .mySwiperMobile {
+//     display: none;
 
-        .swiper-pagination {
-            color: #E30613;
-        }
+//     @include breakpoint($lg-bp) {
+//         display: block;
+//         margin-top: 8rem;
+//         font-family: 'Montserrat';
+//         font-style: normal;
+
+//         .swiper-pagination {
+//             color: #E30613;
+//         }
         
-        .sliderTextContainer {
-            padding-left: 0.8rem;
-            padding-right: 0.8rem;
-            margin-top: 2.9rem;
-            font-weight: 300;
-            font-size: 1.4rem;
-            line-height: 140%;
-            color: #503E3F;
-            opacity: 0.8;
+//         .sliderTextContainer {
+//             padding-left: 0.8rem;
+//             padding-right: 0.8rem;
+//             margin-top: 2.9rem;
+//             font-weight: 300;
+//             font-size: 1.4rem;
+//             line-height: 140%;
+//             color: #503E3F;
+//             opacity: 0.8;
             
-            p {
-                margin-top: 1.2rem;
-            }
-        }
-    }
-}
+//             p {
+//                 margin-top: 1.2rem;
+//             }
+//         }
+//     }
+// }
 
 .subtitleBannerContainer {
     margin-top: 10rem;

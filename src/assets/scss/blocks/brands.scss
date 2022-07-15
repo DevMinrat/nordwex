@@ -301,8 +301,12 @@ justify-content: center;
     }
     .swiper-slide {
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         align-items: center;
+
+        img {
+            object-fit: contain;
+        }
     }
 }
 

@@ -3,133 +3,166 @@
 
 const menuTabsBtn = document.querySelectorAll(".menuControlTitle");
 const menuTabsItems = document.querySelectorAll(".menuContentContainer");
+const headerButton = document.querySelector('.headerButton')
+console.log(headerButton)
+const menuContainer = document.querySelector('.menuContainer')
 
-menuTabsBtn.forEach(menuOnTabClick);
 
-function menuOnTabClick(item) {
-  item.addEventListener('click', function() {
-    let menuCurrentBtn = item;
-    let menuTabId = menuCurrentBtn.getAttribute("data-tab")
+headerButton.addEventListener('click', function () {
+  menuContainer.classList.toggle('menuContainerActive')
+})
 
-    let menuCurrentTab = document.querySelector(menuTabId)
+if (menuTabsBtn.length > 0 && menuTabsItems.length > 0 && window.matchMedia("(min-width: 920px)").matches) {
 
-    if( !menuCurrentBtn.classList.contains('activeMenuTabBtn') ) {
-      menuTabsBtn.forEach(function(item) {
-        item.classList.remove('activeMenuTabBtn')
-      })
+
+  menuTabsBtn.forEach(menuOnTabClick);
+
+  function menuOnTabClick(item) {
+    item.addEventListener('click', function() {
+      let menuCurrentBtn = item;
+      let menuTabId = menuCurrentBtn.getAttribute("data-tab")
   
-      menuTabsItems.forEach(function(item) {
-        item.classList.remove('contentActive')
-      })
+      let menuCurrentTab = document.querySelector(menuTabId)
   
-      menuCurrentBtn.classList.add('activeMenuTabBtn');
+      if( !menuCurrentBtn.classList.contains('activeMenuTabBtn') ) {
+        menuTabsBtn.forEach(function(item) {
+          item.classList.remove('activeMenuTabBtn')
+        })
+    
+        menuTabsItems.forEach(function(item) {
+          item.classList.remove('contentActive')
+        })
+    
+        menuCurrentBtn.classList.add('activeMenuTabBtn');
+    
+        menuCurrentTab.classList.add('contentActive')
+      }
   
-      menuCurrentTab.classList.add('contentActive')
-    }
+    });
+  }
+  
+  document.querySelector('.menuControlTitle').click();
+  
+  const changeTabsBtn = document.querySelectorAll(".changeCategory");
+  const menuTabs = document.querySelectorAll(".menuTabs");
+  
+  
+    changeTabsBtn.forEach(changeOnTabClick);
+  
+  function changeOnTabClick(item) {
+    item.addEventListener('click', function() {
+      let changeCurrentBtn = item;
+      let changeTabId = changeCurrentBtn.getAttribute("data-tab")
+  
+      let changeCurrentTab = document.querySelector(changeTabId)
+  
+      if( !changeCurrentBtn.classList.contains('changeCategoryActive') ) {
+        changeTabsBtn.forEach(function(item) {
+          item.classList.remove('changeCategoryActive')
+        })
+    
+        menuTabs.forEach(function(item) {
+          item.classList.remove('menuTabsActive')
+        })
+    
+        changeCurrentBtn.classList.add('changeCategoryActive');
+    
+        changeCurrentTab.classList.add('menuTabsActive')
+      }
+  
+    });
+  }
+  
+  document.querySelector('.changeCategory').click();
+  
+  }
+ 
 
-  });
+ 
+
+
+
+const burgerButton = document.querySelector(".burgerIcon")
+
+
+
+
+if (burgerButton != null) {
+  burgerButton.addEventListener('click', function() {
+    menuContainer.classList.toggle('menuContainer')
+    menuContainer.classList.toggle('mobileMenu')
+  })
 }
 
-document.querySelector('.menuControlTitle').click();
+if (window.matchMedia("(max-width: 920px)").matches) {
+  const changeTabsBtn = document.querySelectorAll(".changeCategory");
+  const menuTabs = document.querySelectorAll(".menuTabs");
 
-
-const changeTabsBtn = document.querySelectorAll(".changeCategory");
-const menuTabs = document.querySelectorAll(".menuTabs");
-
-changeTabsBtn.forEach(changeOnTabClick);
-
-function changeOnTabClick(item) {
-  item.addEventListener('click', function() {
-    let changeCurrentBtn = item;
-    let changeTabId = changeCurrentBtn.getAttribute("data-tab")
-
-    let changeCurrentTab = document.querySelector(changeTabId)
-
-    if( !changeCurrentBtn.classList.contains('changeCategoryActive') ) {
-      changeTabsBtn.forEach(function(item) {
-        item.classList.remove('changeCategoryActive')
-      })
+  console.log(changeTabsBtn)
+  console.log(menuTabs)
   
-      menuTabs.forEach(function(item) {
-        item.classList.remove('menuTabsActive')
-      })
   
-      changeCurrentBtn.classList.add('changeCategoryActive');
+    changeTabsBtn.forEach(changeOnTabClick);
   
-      changeCurrentTab.classList.add('menuTabsActive')
-    }
+  function changeOnTabClick(item) {
+    item.addEventListener('click', function() {
+      let changeCurrentBtn = item;
+      let changeTabId = changeCurrentBtn.getAttribute("data-tab")
+  
+      let changeCurrentTab = document.querySelector(changeTabId)
+  
+      if( !changeCurrentBtn.classList.contains('changeCategoryActiveMobile') ) {
+        changeTabsBtn.forEach(function(item) {
+          item.classList.remove('changeCategoryActiveMobile')
+        })
+    
+        menuTabs.forEach(function(item) {
+          item.classList.remove('menuTabsActiveMobile')
+        })
+    
+        changeCurrentBtn.classList.add('changeCategoryActiveMobile');
+    
+        changeCurrentTab.classList.add('menuTabsActiveMobile')
+      }
+  
+    });
+  }
+  
+  document.querySelector('.changeCategory').click();
 
-  });
+
+
+  menuTabsBtn.forEach(menuOnTabClick);
+
+  function menuOnTabClick(item) {
+    item.addEventListener('click', function() {
+      let menuCurrentBtn = item;
+      let menuTabId = menuCurrentBtn.getAttribute("data-tab")
+  
+      let menuCurrentTab = document.querySelector(menuTabId)
+
+      console.log(menuCurrentTab)
+  
+      if( !menuCurrentBtn.classList.contains('activeMenuTabBtn') ) {
+        menuTabsBtn.forEach(function(item) {
+          item.classList.remove('activeMenuTabBtn')
+        })
+    
+        menuTabsItems.forEach(function(item) {
+          item.classList.remove('contentActiveMobile')
+        })
+    
+        menuCurrentBtn.classList.add('activeMenuTabBtn');
+    
+        menuCurrentTab.classList.add('contentActiveMobile')
+      }
+  
+    });
+  }
+  
+  document.querySelector('.menuControlTitle').click();
+
+
+
+
 }
-
-document.querySelector('.changeCategory').click();
-
-
-
-
-
-const menuTabsBtn2 = document.querySelectorAll(".menuControlTitle2");
-const menuTabsItems2 = document.querySelectorAll(".menuContentContainer2");
-
-menuTabsBtn2.forEach(menuOnTabClick2);
-
-function menuOnTabClick2(item) {
-  item.addEventListener('click', function() {
-    let menuCurrentBtn = item;
-    let menuTabId = menuCurrentBtn.getAttribute("data-tab")
-
-    let menuCurrentTab = document.querySelector(menuTabId)
-
-    if( !menuCurrentBtn.classList.contains('activeMenuTabBtn') ) {
-      menuTabsBtn2.forEach(function(item) {
-        item.classList.remove('activeMenuTabBtn')
-      })
-  
-      menuTabsItems2.forEach(function(item) {
-        item.classList.remove('contentActive')
-      })
-  
-      menuCurrentBtn.classList.add('activeMenuTabBtn');
-  
-      menuCurrentTab.classList.add('contentActive')
-    }
-
-  });
-}
-
-document.querySelector('.menuControlTitle2').click();
-
-
-
-
-
-const changeTabsBtn2 = document.querySelectorAll(".changeCategory2");
-const menuTabs2 = document.querySelectorAll(".menuTabs2");
-
-changeTabsBtn2.forEach(changeOnTabClick2);
-
-function changeOnTabClick2(item) {
-  item.addEventListener('click', function() {
-    let changeCurrentBtn = item;
-    let changeTabId = changeCurrentBtn.getAttribute("data-tab")
-
-    let changeCurrentTab = document.querySelector(changeTabId)
-
-    if( !changeCurrentBtn.classList.contains('changeCategoryActive') ) {
-      changeTabsBtn2.forEach(function(item) {
-        item.classList.remove('changeCategoryActive')
-      })
-  
-      menuTabs2.forEach(function(item) {
-        item.classList.remove('menuTabsActive')
-      })
-  
-      changeCurrentBtn.classList.add('changeCategoryActive');
-  
-      changeCurrentTab.classList.add('menuTabsActive')
-    }
-
-  });
-}
-
-document.querySelector('.changeCategory2').click();

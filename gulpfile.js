@@ -137,19 +137,6 @@ function cssWatch(cb) {
 function js(cb) {
   return src(path.src.js, { base: srcPath + "assets/js/" })
     .pipe(rigger())
-    .pipe(
-      babel({
-        presets: ["@babel/preset-env"],
-      })
-    )
-    .pipe(gulp.dest(path.build.js))
-    .pipe(uglify())
-    .pipe(
-      rename({
-        suffix: ".min",
-        extname: ".js",
-      })
-    )
     .pipe(dest(path.build.js))
     .pipe(browserSync.reload({ stream: true }));
 
@@ -159,19 +146,6 @@ function js(cb) {
 function jsWatch(cb) {
   return src(path.src.js, { base: srcPath + "assets/js/" })
     .pipe(rigger())
-    .pipe(
-      babel({
-        presets: ["@babel/preset-env"],
-      })
-    )
-    .pipe(gulp.dest(path.build.js))
-    .pipe(uglify())
-    .pipe(
-      rename({
-        suffix: ".min",
-        extname: ".js",
-      })
-    )
     .pipe(dest(path.build.js))
     .pipe(browserSync.reload({ stream: true }));
 
