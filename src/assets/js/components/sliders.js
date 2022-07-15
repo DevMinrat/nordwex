@@ -265,6 +265,7 @@ let apBenefitsSlider = new Swiper(".aboutPage-benefits", {
   grabCursor: true,
 });
 
+
 //article slider
 
 const articleSlider = new Swiper(".mySwiper", {
@@ -278,11 +279,12 @@ const articleSlider = new Swiper(".mySwiper", {
 //article slider mobile
 
 const articleSliderMobile = new Swiper(".mySwiperMobile", {
+
   pagination: {
     el: ".swiper-pagination",
-    type: "bullets",
+    type: 'bullets',
     clickable: true,
-  },
+  }, 
 });
 
 // brands slider
@@ -291,8 +293,8 @@ const brandsSwiper = new Swiper(".brandsSwiper", {
   slidesPerView: 8,
   loop: true,
   navigation: {
-    nextEl: ".arrowNextcontainer",
-    prevEl: ".arrowPrevContainer",
+    nextEl: '.arrowNextcontainer',
+    prevEl: '.arrowPrevContainer',
   },
 });
 
