@@ -1,4 +1,10 @@
-.compare {
+.compare-page {
+  @include breakpoint($sm-bp) {
+    margin-top: 2rem;
+  }
+}
+
+.compare-content {
   margin-bottom: 7rem;
 }
 
@@ -9,10 +15,9 @@
 
 .compare-navs__inner {
   white-space: nowrap;
-  overflow-y: auto;
 
   ::-webkit-scrollbar {
-      display: none;
+    display: none;
   }
 }
 
@@ -20,19 +25,44 @@
   position: relative;
   padding-bottom: 1.2rem;
 
+  width: max-content;
+
+  color: rgba(0, 0, 0, 0.5);
+
+  border: none;
+  background: transparent;
+
+  &:hover {
+    color: $primary;
+  }
+
   & + & {
     margin-left: 4rem;
+  }
+
+  &.tabs-btn_active {
+    font-weight: 700;
+    color: $primary;
+    border-bottom: 0.1rem solid $primary;
   }
 }
 
 .compare__inner {
   overflow-y: auto;
+
+  @include breakpoint($sm-bp) {
+    margin: 0 -0.8rem;
+  }
 }
 
 .compare-cards {
   display: flex;
 
   margin-bottom: 11rem;
+
+  @include breakpoint($sm-bp) {
+    margin: 0 0.8rem 11rem;
+  }
 }
 
 .compare-cards__item {
@@ -40,6 +70,14 @@
 
   min-width: 30rem;
   min-height: 30.9rem;
+
+  @include breakpoint($sm-bp) {
+    min-width: 17rem;
+    min-height: unset;
+
+    width: 17rem;
+    height: auto;
+  }
 
   &:hover {
     .compare-cards__close {
@@ -49,6 +87,10 @@
 
   & + & {
     margin-left: 2rem;
+
+    @include breakpoint($sm-bp) {
+      margin-left: 1.2rem;
+    }
   }
 }
 
@@ -104,15 +146,29 @@
 }
 
 .compare-info {
-  position: relative;
   width: max-content;
+}
+
+.compare-different__wrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 130rem;
+  padding: 0 2rem;
+  margin: 0 auto;
 }
 
 .compare-different {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 2rem;
+  top: 43rem;
   z-index: 1;
+
+  @include breakpoint($sm-bp) {
+    right: unset;
+    left: 1.2rem;
+    top: 26rem;
+  }
 
   label {
     color: black;
@@ -133,6 +189,10 @@
 .compare-info__section {
   & + & {
     margin-top: 4rem;
+
+    @include breakpoint($sm-bp) {
+      margin-top: 1.2rem;
+    }
   }
 }
 
@@ -145,11 +205,30 @@
   cursor: pointer;
   transition: all 0.1s linear;
 
+  @include breakpoint($sm-bp) {
+    width: 100%;
+
+    color: white;
+
+    padding: 1.6rem 1.2rem;
+    margin-bottom: 0;
+
+    background-color: $secondary;
+  }
+
   &:hover {
     color: $primary;
 
+    @include breakpoint($sm-bp) {
+      color: white;
+    }
+
     svg {
       fill: $primary;
+
+      @include breakpoint($sm-bp) {
+        fill: white;
+      }
     }
   }
 
@@ -164,6 +243,11 @@
     font-weight: 500;
 
     margin-right: 1.2rem;
+
+    @include breakpoint($sm-bp) {
+      font-size: 2rem;
+      font-weight: 300;
+    }
   }
 
   svg {
@@ -173,6 +257,13 @@
     fill: black;
 
     transform: rotate(-90deg);
+
+    @include breakpoint($sm-bp) {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      fill: white;
+    }
   }
 }
 
@@ -186,7 +277,15 @@
 .compare-info__item {
   padding: 2.1rem 2.4rem;
 
-  height: 8.9rem;
+  min-height: 8.9rem;
+
+  @include breakpoint($sm-bp) {
+    min-height: unset;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 1.6rem 0.8rem;
+  }
 
   &:nth-child(odd) {
     background: rgba(183, 26, 26, 0.05);
@@ -206,6 +305,10 @@
 
       background-color: $primary;
       border-radius: 50%;
+
+      @include breakpoint($sm-bp) {
+        display: none;
+      }
     }
   }
 }
@@ -219,14 +322,32 @@
   color: rgba(0, 0, 0, 0.5);
 
   margin-bottom: 1.5rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+
+    margin-bottom: 0.8rem;
+  }
 }
 
 .compare-info__item-content {
   display: flex;
   column-gap: 2rem;
 
+  @include breakpoint($sm-bp) {
+    column-gap: 1.2rem;
+  }
+
   p {
     min-width: 30rem;
+    max-width: 30rem;
     font-size: 1.6rem;
+
+    @include breakpoint($sm-bp) {
+      min-width: 17rem;
+      max-width: 17rem;
+
+      font-size: 1.4rem;
+    }
   }
 }
